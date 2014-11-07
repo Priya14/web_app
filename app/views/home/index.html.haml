@@ -1,8 +1,230 @@
-#container
-  #cube.animate
-    %div
-    %div
-    %div
-    %div
-    %div
-    %div
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml"}
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title Ostrya Labs
+    -# %meta{:content => "Alvaro Trigo Lopez", :name => "author"}/
+    -# %meta{:content => "fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website.", :name => "description"}/
+    -# %meta{:content => "fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple", :name => "keywords"}/
+    -# %meta{:content => "Document", :name => "Resource-type"}/
+    -# %link{:href => "/stylesheets/jquery.fullPage.css", :rel => "stylesheet", :type => "text/css"}/
+    -# %link{:href => "examples.css", :rel => "stylesheet", :type => "text/css"}/
+      :css
+        /* Sections
+        * --------------------------------------- */
+      
+      #section0 img,
+      #section1 img{
+      margin: 20px 0 0 0;
+      }
+      #section2 img{
+      margin: 20px 0 0 0;
+      }
+      #section3 img{
+      margin: 20px 0 0 0;
+      }
+      #section4 img{
+      margin: 20px 0 0 0;
+      }
+      #section5 img{
+      margin: 20px 0 0 0;
+      }
+      #section6 img{
+      margin: 20px 0 0 0;
+      }
+      #section7 img{
+      margin: 20px 0 0 0;
+      }
+     
+
+      .intro p{
+      width: 50%;
+      margin: 0 auto;
+      font-size: 1.5em;
+      }
+      .twitter-share-button{
+      position: absolute;
+      z-index: 99;
+      right: 149px;
+      top: 9px;
+      }
+
+    -# %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
+    -# %script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"}
+    -# %script{:src => "../jquery.fullPage.js", :type => "text/javascript"}
+    //%script{:src => "examples.js", :type => "text/javascript"}
+    :javascript
+      $(document).ready(function() {
+      	$('#fullpage').fullpage({
+      		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#E4B5DB', '#79DEFA', '#F0E29C', '#F0C79C','#B49CF0'],
+      		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage','7thpage','8thpage'],
+      		menu: '#menu'
+      	});
+      });
+  
+  %body
+    #fullpage
+      #section0.section
+        .col-sm-4
+          %br
+          %br
+          %br
+          %br
+          
+        .col-sm-4
+          //= render 'test'
+        -# .row
+        -#   %br
+        -#   %br
+        -#   %br
+        -#   %br
+        -#   %br
+        -#   %link{:href => "http://fonts.googleapis.com/css?family=Mr+Dafoe", :rel => "stylesheet", :type => "text/css"}
+        -#   .shadow1 
+        -#     The way you start your day determines how well you live your day
+        -#     %br
+        -#     %h2 - ROBIN SHARMA
+        
+      #section1.section
+        .row
+          .col-sm-4
+            #f1_container
+              #f1_card.shadow
+                .front.face
+                  = link_to image_tag('12.jpg')
+                 
+                .back.face.center
+                  %p This is nice for exposing more information about an image.
+                  %p Any content can go here.
+          .col-sm-4
+            #f1_container
+              #f1_card.shadow
+                .front.face
+                  //%img{:src => "app/images/11.jpg"}
+                  = image_tag "13.jpg"
+                .back.face.center
+                  %p This is nice for exposing more information about an image.
+                  %p Any content can go here.
+          .col-sm-4
+            #f1_container
+              #f1_card.shadow
+                .front.face
+                  //%img{:src => "app/images/11.jpg"}
+                  = image_tag "14.jpg"
+                .back.face.center
+                  %p This is nice for exposing more information about an image.
+                  %p Any content can go here.
+        .row
+          .col-sm-4
+            #f1_container
+              #f1_card.shadow
+                .front.face
+                  //%img{:src => "app/images/11.jpg"}
+                  = image_tag "12.jpg"
+                .back.face.center
+                  %p This is nice for exposing more information about an image.
+                  %p Any content can go here.
+          .col-sm-4
+            #f1_container
+              #f1_card.shadow
+                .front.face
+                  //%img{:src => "app/images/11.jpg"}
+                  = image_tag "13.jpg"
+                .back.face.center
+                  %p This is nice for exposing more information about an image.
+                  %p Any content can go here.
+          .col-sm-4
+            #f1_container
+              #f1_card.shadow
+                .front.face
+                  //%img{:src => "app/images/11.jpg"}
+                  = image_tag "14.jpg"
+                .back.face.center
+                  %p This is nice for exposing more information about an image.
+                  %h4 Any content can go here.
+
+      #section2.section
+        
+      #section3.section
+      #section4.section
+        #container
+          .row
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+
+          .row
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+
+            .col-sm-3
+              .quote-container
+                %i.pin
+                %blockquote.note.yellow
+                  We can't solve problems by using the same kind of thinking we used when we created them.
+
+
+      #section5.section
+        .row
+          .col-sm-4
+            .pic1
+              .text1
+                Be yourself; everyone else is already taken
+          .col-sm-4
+            .pic2
+              .text2
+                Be the change that you wish to see in the world
+          .col-sm-4
+            .pic3
+              .text3
+                A problem is only a problem when viewed as a problem
+          %br
+        .row
+          .col-sm-4
+            .pic4
+              .text4
+                All change is hard at first, messy in the middle and gorgeous at the end
+          .col-sm-4
+            .pic5
+              .text5
+                If you’re not scared a lot you’re not doing very much
+          .col-sm-4
+            .pic6
+              .text6
+                The only failure is not trying
+
+
+      #section6.section
+      #section7.section
+

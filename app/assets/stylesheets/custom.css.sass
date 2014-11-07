@@ -1,8 +1,9 @@
+@import url(http://getbootstrap.com/2.3.2/assets/css/bootstrap.css)
+
+
 body 
-  margin-top: 125px
   margin-right: 100px
-  
-  
+  margin-left: 100px
 @-moz-keyframes spinningH 
   from 
     -moz-transform: rotateX(0deg) rotateY(0deg)
@@ -74,8 +75,10 @@ body
 #cube 
   position: relative
   margin: 0 auto
-  height: 50px
-  width: 50px
+  height: 30px
+  width: 30px
+  margin-top: 20px
+  margin-right: 50px
 
   -webkit-transition  : -webkit-transform 2s linear
   -moz-transition     : -moz-transform 2s linear
@@ -92,75 +95,79 @@ body
 
 #cube>div 
   position: absolute
-  height: 50px
-  width: 50px
-  padding: 10px
+  height: 30px
+  width: 30px
+  padding: 30px
   opacity: 0.9
   background-position:center center
 
 
 #cube div:nth-child(1) 
-  -webkit-transform : translateZ(50px)
-  -moz-transform    : translateZ(50px)
-  -o-transform      : translateZ(50px)
-  -ms-transform     : translateZ(50px)
-  transform         : translateZ(50px)
+  -webkit-transform : translateZ(30px)
+  -moz-transform    : translateZ(30px)
+  -o-transform      : translateZ(30px)
+  -ms-transform     : translateZ(30px)
+  transform         : translateZ(30px)
   background-color  : #2E272F
   background-image: url('Resized-XWDU6.jpg')
   background-repeat : no-repeat
 
 
 #cube div:nth-child(2) 
-  -webkit-transform : rotateY(90deg) translateZ(50px)
-  -moz-transform    : rotateY(90deg) translateZ(50px)
-  -o-transform      : rotateY(90deg) translateZ(50px)
-  -ms-transform     : rotateY(90deg) translateZ(50px)
-  transform         : rotateY(90deg) translateZ(50px)
+  -webkit-transform : rotateY(90deg) translateZ(30px)
+  -moz-transform    : rotateY(90deg) translateZ(30px)
+  -o-transform      : rotateY(90deg) translateZ(30px)
+  -ms-transform     : rotateY(90deg) translateZ(30px)
+  transform         : rotateY(90deg) translateZ(30px)
   background-color  : #2D3A4D
   background-image: url('Resized-C7IFG.jpg')
   background-repeat : no-repeat
 
 
 #cube div:nth-child(3) 
-  -webkit-transform : rotateY(180deg) translateZ(50px)
-  -moz-transform    : rotateY(180deg) translateZ(50px)
-  -o-transform      : rotateY(180deg) translateZ(50px)
-  -ms-transform     : rotateY(180deg) translateZ(50px)
-  transform         : rotateY(180deg) translateZ(50px)
+  -webkit-transform : rotateY(180deg) translateZ(30px)
+  -moz-transform    : rotateY(180deg) translateZ(30px)
+  -o-transform      : rotateY(180deg) translateZ(30px)
+  -ms-transform     : rotateY(180deg) translateZ(30px)
+  transform         : rotateY(180deg) translateZ(30px)
   background-color  : #2D1C12
   background-image: url('Resized-ZRNBS.jpg')
   background-repeat : no-repeat
 
 
 #cube div:nth-child(4) 
-  -webkit-transform : rotateY(-90deg) translateZ(50px)
-  -moz-transform    : rotateY(-90deg) translateZ(50px)
-  -o-transform      : rotateY(-90deg) translateZ(50px)
-  -ms-transform     : rotateY(-90deg) translateZ(50px)
-  transform         : rotateY(-90deg) translateZ(50px)
+  -webkit-transform : rotateY(-90deg) translateZ(30px)
+  -moz-transform    : rotateY(-90deg) translateZ(30px)
+  -o-transform      : rotateY(-90deg) translateZ(30px)
+  -ms-transform     : rotateY(-90deg) translateZ(30px)
+  transform         : rotateY(-90deg) translateZ(30px)
   background-color  : #693C1F
   background-image  : url('Resized-I2FD9.jpg')
   background-repeat : no-repeat
 
 
 #cube div:nth-child(5) 
-  -webkit-transform : rotateX(-90deg) translateZ(50px) rotate(180deg)
-  -moz-transform    : rotateX(-90deg) translateZ(50px) rotate(180deg)
-  -o-transform      : rotateX(-90deg) translateZ(50px) rotate(180deg)
-  -ms-transform     : rotateX(-90deg) translateZ(50px) rotate(180deg)
-  transform         : rotateX(-90deg) translateZ(50px) rotate(180deg)
+  -webkit-transform : rotateX(-90deg) translateZ(30px) rotate(180deg)
+  -moz-transform    : rotateX(-90deg) translateZ(30px) rotate(180deg)
+  -o-transform      : rotateX(-90deg) translateZ(30px) rotate(180deg)
+  -ms-transform     : rotateX(-90deg) translateZ(30px) rotate(180deg)
+  transform         : rotateX(-90deg) translateZ(30px) rotate(180deg)
   background-color  : #955122
   background-image  : url('Resized-BNRTS.jpg')
   background-repeat :no-repeat
 
 
 #cube div:nth-child(6)  
-  -webkit-transform : rotateX(90deg) translateZ(50px)
-  -moz-transform    : rotateX(90deg) translateZ(50px)
-  -o-transform      : rotateX(90deg) translateZ(50px)
-  -ms-transform     : rotateX(90deg) translateZ(50px)
-  transform         : rotateX(90deg) translateZ(50px)
+  -webkit-transform : rotateX(90deg) translateZ(30px)
+  -moz-transform    : rotateX(90deg) translateZ(30px)
+  -o-transform      : rotateX(90deg) translateZ(30px)
+  -ms-transform     : rotateX(90deg) translateZ(30px)
+  transform         : rotateX(90deg) translateZ(30px)
   background-color: #E34C26
   background-image: url('Resized-BNRTS.jpg')
   background-repeat: no-repeat
   text-align: center
+
+
+html 
+  overflow-y: scroll

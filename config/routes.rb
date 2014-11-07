@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   resources :home do
     collection do
-      
+      get "image_hover"
+      get "image_flip"
+      get 'blog'
+      get 'tech'
+      get 'test'
     end
   end
   
