@@ -1,5 +1,9 @@
 @import url('reset.css');
-body { background:#e2e2e2; }
+body { 
+    background:#e2e2e2;
+    margin: 100px;
+    margin-right: 100px;
+}
 
 .logo { position:absolute; left:50%; top:50%; width: 112px; height: 112px; transform: translate(-50%, -50%); } 
 
