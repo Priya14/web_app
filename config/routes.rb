@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :users do
+    collection do
+      get "contact_us" 
+    end
+  end
+
   resources :home do
     collection do
       get "image_hover"
@@ -6,6 +12,7 @@ Rails.application.routes.draw do
       get 'blog'
       get 'tech'
       get 'test'
+      get 'training'
     end
   end
   

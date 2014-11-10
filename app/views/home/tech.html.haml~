@@ -1,0 +1,51 @@
+#container
+  .row
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          = image_tag "css.jpg"
+          We can't solve problems by using the same kind of thinking we used when we created them.
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          = image_tag "html.jpg"
+          We can't solve problems by using the same kind of thinking we used when we created them.
+         
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          = image_tag "sql.jpg"
+          We can't solve problems by using the same kind of thinking we used when we created them.
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          = image_tag "an.jpg"
+          We can't solve problems by using the same kind of thinking we used when we created them.
+         
+  .row
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          We can't solve problems by using the same kind of thinking we used when we created them.
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          We can't solve problems by using the same kind of thinking we used when we created them.
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          We can't solve problems by using the same kind of thinking we used when we created them.
+         
+    .col-sm-3
+      .quote-container
+        %i.pin
+        %blockquote.note.yellow
+          We can't solve problems by using the same kind of thinking we used when we created them.
+         

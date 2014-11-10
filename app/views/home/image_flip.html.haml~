@@ -3,31 +3,7 @@
     #f1_container
       #f1_card.shadow
         .front.face
-          = image_tag "school.jpg"
-        .back.face.center
-          %p This is nice for exposing more information about an image.
-          %p Any content can go here.
-  .col-sm-4
-    #f1_container
-      #f1_card.shadow
-        .front.face
-          = image_tag "13.jpg"
-        .back.face.center
-          %p This is nice for exposing more information about an image.
-          %p Any content can go here.
-  .col-sm-4
-    #f1_container
-      #f1_card.shadow
-        .front.face
-          = image_tag "14.jpg", :border => '4'
-        .back.face.center
-          %p This is nice for exposing more information about an image.
-          %p Any content can go here.
-.row
-  .col-sm-4
-    #f1_container
-      #f1_card.shadow
-        .front.face
+          //%img{:src => "app/images/11.jpg"}
           = image_tag "12.jpg"
         .back.face.center
           %p This is nice for exposing more information about an image.
@@ -36,6 +12,7 @@
     #f1_container
       #f1_card.shadow
         .front.face
+          //%img{:src => "app/images/11.jpg"}
           = image_tag "13.jpg"
         .back.face.center
           %p This is nice for exposing more information about an image.
@@ -44,6 +21,35 @@
     #f1_container
       #f1_card.shadow
         .front.face
+          //%img{:src => "app/images/11.jpg"}
+          = image_tag "14.jpg"
+        .back.face.center
+          %p This is nice for exposing more information about an image.
+          %p Any content can go here.
+.row
+  .col-sm-4
+    #f1_container
+      #f1_card.shadow
+        .front.face
+          //%img{:src => "app/images/11.jpg"}
+          = image_tag "12.jpg"
+        .back.face.center
+          %p This is nice for exposing more information about an image.
+          %p Any content can go here.
+  .col-sm-4
+    #f1_container
+      #f1_card.shadow
+        .front.face
+          //%img{:src => "app/images/11.jpg"}
+          = image_tag "13.jpg"
+        .back.face.center
+          %p This is nice for exposing more information about an image.
+          %p Any content can go here.
+  .col-sm-4
+    #f1_container
+      #f1_card.shadow
+        .front.face
+          //%img{:src => "app/images/11.jpg"}
           = image_tag "14.jpg"
         .back.face.center
           %p This is nice for exposing more information about an image.

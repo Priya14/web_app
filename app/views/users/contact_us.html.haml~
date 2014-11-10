@@ -1,0 +1,11 @@
+%center
+  %h4
+    Fill out this quick form and we’ll be in touch for an initial chat.
+
+.row
+  .col-sm-1
+  .col-sm-5
+    //= render "contact_us"
+  .col-sm-6
+    = render "form"
+    

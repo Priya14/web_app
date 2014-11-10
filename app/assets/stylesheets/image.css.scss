@@ -77,11 +77,14 @@
 .i4:hover .text1 { opacity:0.8;text-align:center; color:#000000; font-size:20px; font-weight:700; font-family:"Times New Roman", Times, serif; padding:60px }
 
 
+
+
+
 #f1_container {
     position: relative;
     margin: 10px auto;
-    width: 450px;
-    height: 400px;
+    width: 300px;
+    height: 200px;
     z-index: 1;
 }
 #f1_container {
@@ -92,22 +95,28 @@
     height: 100%;
     transform-style: preserve-3d;
     transition: all 1.0s linear;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all 1.0s linear;
 }
 #f1_container:hover #f1_card {
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     box-shadow: -5px 5px 5px #aaa;
 }
-
 .face {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 200px;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 .face.back {
     display: block;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
     box-sizing: border-box;
+    width: 300px;
+    height: 200px;
     padding: 10px;
     color: white;
     text-align: center;
@@ -117,67 +126,38 @@
 
 
 
+
+
+
+
 .quote-container {
-  margin-top: 100px;
-  position: relative;
+    margin-top: 50px;
+    position: relative;
 }
 
 .note {
-  color: #333;
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family:'Reenie Beanie', serif;
-  font-size: 150%;
-  box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+    color: #333;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family:'Reenie Beanie', serif;
+    font-size: 100%;
+    box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
 }
 
 
 .yellow {
     background: #eae672;
-   
-    -webkit-transform: rotate(-5deg);
-    -moz-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-    -ms-transform: rotate(-5deg);
-    transform: rotate(-5deg);
-}
-.blue {
-    background: url('26.jpg') no-repeat;
-    
-   
-    
-    -webkit-transform: rotate(-2deg);
-    -moz-transform: rotate(-2deg);
-    -o-transform: rotate(-2deg);
-    -ms-transform: rotate(-2deg);
-    transform: rotate(-2deg);
-}
-.red {
-    background: url('25.jpg') no-repeat;
-    
-   
-    
-    -webkit-transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
-    -ms-transform: rotate(2deg);
-    transform: rotate(2deg);
-}
-.inb {
-    background: url('23.jpg') no-repeat;    
-   
-    
-    -webkit-transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
-    -ms-transform: rotate(2deg);
-    transform: rotate(2deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
 }
 .pin {
-  background-color: #aaa;
+    background-color: #aaa;
   display: block;
   height: 32px;
   width: 2px;
@@ -199,31 +179,35 @@
   left: -5px;
   position: absolute;
   top: -10px;
-  width: 10px;
+  width: 12px;
 }
 .pin:before {
-  background-color: hsla(0,0%,0%,0.1);
-  box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
-  content: '';
-
-  height: 24px;
-  width: 2px;
-  left: 0;
-  position: absolute;
-  top: 8px;
-
-  transform: rotate(57.5deg);
-  -moz-transform: rotate(57.5deg);
-  -webkit-transform: rotate(57.5deg);
-  -o-transform: rotate(57.5deg);
-  -ms-transform: rotate(57.5deg);
-
-  transform-origin: 50% 100%;
-  -moz-transform-origin: 50% 100%;
-  -webkit-transform-origin: 50% 100%;
-  -ms-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
+    background-color: hsla(0,0%,0%,0.1);
+    box-shadow: 0 0 .25em hsla(0,0%,0%,.1);
+    content: '';
+    
+    height: 24px;
+    width: 2px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    
+    transform: rotate(57.5deg);
+    -moz-transform: rotate(57.5deg);
+    -webkit-transform: rotate(57.5deg);
+    -o-transform: rotate(57.5deg);
+    -ms-transform: rotate(57.5deg);
+    
+    transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -webkit-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
 }
+
+
+
+
 
 
 
