@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'bourbon'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.5'
@@ -10,7 +10,7 @@ gem 'sass-rails', '~> 4.0.4'
 gem 'haml', '~> 4.0.5'
 gem 'bootstrap-sass', '~> 3.3.0.1'
 gem 'bootstrap', '~> 0.0.1'
-gem 'jquery-ui-rails', '~> 5.0.2'
+gem 'jquery-ui-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
