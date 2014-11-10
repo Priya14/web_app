@@ -3,6 +3,10 @@
   margin-left: 90px;
   margin-right: 10px;
 }
+.test-margin1 {
+  margin-left: 50px;
+  margin-right: 10px;
+}
 
 .circle {
   width: 200px;
@@ -19,8 +23,8 @@
 .circle-shadow {
   width: 200px;
   height: 200px;
-  //border-radius: 50px 50px 50px 50px;
-  //box-shadow: 0px 0px 0px 2px #000;
+  /* border-radius: 200px 200px 200px 200px; */
+  /* box-shadow: 0px 0px 0px 2px #000; */
   -webkit-transform: translateY(100px);
   -moz-transform: translateY(100px);
   -ms-transform: translateY(100px);
@@ -42,26 +46,72 @@
 .i1{
     width: 250px;
     height: 250px;
-    background: url('gopika.jpg') no-repeat;}
+    background: url('gopika.jpg') no-repeat;
+    //border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 2px #fff;
+}
 .i2{
     width: 250px;
     height: 250px;
-    background: url('arun.jpg') no-repeat;}
+    background: url('arun.png') no-repeat;
+    //border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 2px #FFF;
+}
 .i3{
     width: 250px;
     height: 250px;
-    background: url('hari.jpg') no-repeat;}
+    background: url('hari.jpg') no-repeat;
+    //border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 2px #FFF;
+}
 .i4{
     width: 250px;
     height: 250px;
-    background: url('muralee.jpg') no-repeat;}
+    background: url('srikanth.jpg') no-repeat;
+    //border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 2px #FFF;
+}
+.i5{
+    width: 250px;
+    height: 250px;
+    background: url('muralee.jpg') no-repeat;
+    //border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 2px #FFF;}
+.i6{
+    width: 250px;
+    height: 250px;
+    background: url('navya.jpg') no-repeat;
+    //border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 2px #FFF;}
+.i7{
+    width: 250px;
+    height: 250px;
+    background: url('priya.jpg') no-repeat;
+    //border-radius: 50px 50px 50px 50px;
+    box-shadow: 0px 0px 0px 2px #FFF;
+}
+
+
+.bck { 
+    background: url('03.jpg');
+
+}
+.bck1 { 
+    background: url('bck2.png');
+
+}
+.bck2 { 
+    background: url('bck3.jpg');
+
+}
+
 .text1{
     width:250px;
     height:250px; 
-    background:#FFF; 
+    background:#ccc; 
     opacity:0;
-    border-radius: 50px 50px 50px 50px;
-    box-shadow: 0px 0px 0px 5px #FFF;
+    //border-radius: 50px 50px 50px 50px;
+    //box-shadow: 0px 0px 0px 5px #FFF;
     -webkit-transform: translateY(0px);
     -moz-transform: translateY(0px);
     -ms-transform: translateY(0px);
@@ -71,11 +121,13 @@
     -moz-transition: all 0.5s;
     transition: all 0.5s;
 }
-.i1:hover .text1 { opacity:0.8;text-align:center; color:#000000; font-size:20px; font-weight:700; font-family:"Times New Roman", Times, serif; padding:60px }
-.i2:hover .text1 { opacity:0.8;text-align:center; color:#000000; font-size:20px; font-weight:700; font-family:"Times New Roman", Times, serif; padding:60px }
-.i3:hover .text1 { opacity:0.8;text-align:center; color:#000000; font-size:20px; font-weight:700; font-family:"Times New Roman", Times, serif; padding:60px }
-.i4:hover .text1 { opacity:0.8;text-align:center; color:#000000; font-size:20px; font-weight:700; font-family:"Times New Roman", Times, serif; padding:60px }
-
+.i1:hover .text1 { opacity:0.8; color:#785E0A; font-size:25px;  font-family:"Times New Roman", Times, serif; padding:40px;font-weight:700;}
+.i2:hover .text1 { opacity:0.8; color:#785E0A; font-size:25px;  font-family:"Times New Roman", Times, serif; padding:40px;font-weight:700;}
+.i3:hover .text1 { opacity:0.8; color:#785E0A; font-size:25px;  font-family:"Times New Roman", Times, serif; padding:40px;font-weight:700;}
+.i4:hover .text1 { opacity:0.8; color:#785E0A; font-size:25px;  font-family:"Times New Roman", Times, serif; padding:40px;font-weight:700;}
+.i5:hover .text1 { opacity:0.8; color:#785E0A; font-size:25px;  font-family:"Times New Roman", Times, serif; padding:40px;font-weight:700;}
+.i6:hover .text1 { opacity:0.8; color:#785E0A; font-size:25px;  font-family:"Times New Roman", Times, serif; padding:40px;font-weight:700;}
+.i7:hover .text1 { opacity:0.8; color:#785E0A; font-size:25px;  font-family:"Times New Roman", Times, serif; padding:40px;font-weight:700;}
 
 #f1_container {
     position: relative;

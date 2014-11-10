@@ -5,31 +5,70 @@
     %title Website
     = javascript_include_tag "application"
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-      
-    %header.navbar.navbar-fixed-top
-      .navbar-inner
-        .pull-left
-          = image_tag "logo.png" ,:width => "300",:height => "300"
-          %br
-          %span.rotate
-            %h4
-              Clean Code Matters
-          
-        .pull-right
-          #container
-            #cube.animate
-              %div
-              %div
-              %div
-              %div
-              %div
-              %div
-        
-        .container
-          //%link{:href => "/assets/rock.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-          // = render 'rock'
-    %br
-    %br
-    %br
+    -# .container 
+    -#   .navbar.navbar-fixed-top
+    -#     .navbar-inner
+    -#       .pull-left
+    -#         = image_tag "logo.png" ,:width => "100",:height => "100"
+            
+    -#         %br
+    -#         %span.rotate
+    -#           %h4
+    -#             Clean Code Matters
+    -#       .container
+    -#         = render 'menu'
+
+    -#       .pull-right
+    -#         #container
+    -#           #cube.animate
+    -#             %div
+    -#             %div
+    -#             %div
+    -#             %div
+    -#             %div
+    -#             %div
+                  
+    .container
+      .navbar.navbar-default.nav-links.navbar-fixed-top
+        .navbar-inner
+          .pull-left
+            = image_tag "logo.png" ,:width => "300",:height => "300"              
+            %br
+            %span.rotate
+              %h4
+                Clean Code Matters
+          .pull-right
+            #container
+              #cube.animate
+                %div
+                %div
+                %div
+                %div
+                %div
+                %div
+                  
+
+
+          %ul.nav.navbar-nav
+            %li{"data-menuanchor" => "firstPage"}
+              %a{:href => "/home#firstPage"} Home
+            %li{"data-menuanchor" => "secondPage"}
+              %a{:href => "/home#secondPage"} Projects
+            %li{"data-menuanchor" => "3rdPage"}
+              %a{:href => "/home/blog"} Blog
+            %li{"data-menuanchor" => "4thpage"}
+              %a{:href => "/home#4thpage"} Training
+            %li{"data-menuanchor" => "5thpage"}
+              %a{:href => "/home#5thpage"} Technologies
+            %li{"data-menuanchor" => "6thpage"}
+              %a{:href => "/home#6thpage"} People
+            %li{"data-menuanchor" => "7thpage"}
+              %a{:href => "/home#7thpage"} Careers
+            %li{"data-menuanchor" => "8thpage"}
+              %a{:href => "/home#8thpage"} Contact Us
+            
+            //%link{:href => "/assets/rock.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+            // = render 'rock'
+    
     = yield        
                 
