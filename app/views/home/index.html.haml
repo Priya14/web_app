@@ -56,21 +56,22 @@
     :javascript
       $(document).ready(function() {
       	$('#fullpage').fullpage({
-      		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#E4B5DB', '#79DEFA', '#CCC', '#F0C79C','#B49CF0'],
-      		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage','7thpage','8thpage'],
+      		sectionsColor: ['#ACC9E2', '#4BBFC3', '#E4B5DB', '#79DEFA', '#F8E5A4', '#F0C79C','#B49CF0'],
+      		anchors: ['firstPage', 'secondPage', '4thpage', '5thpage', '6thpage','7thpage','8thpage'],
       		menu: '#menu'
       	});
       });
   
   %body
     #fullpage
-      #section0.section
+      #section0.section.bck1
         .col-sm-4
           %br
           %br
           %br
           %br
           
+            
         .col-sm-4
           //= render 'test'
         -# .row
@@ -85,12 +86,7 @@
         -#     %br
         -#     %h2 - ROBIN SHARMA
         
-      #section1.section
-        %br
-        %br
-        %br
-        %br
-        %br
+      #section1.section.bck2
         .row
           .col-sm-3
             #f1_container
@@ -163,6 +159,7 @@
                 .back.face.center
                   %p This is nice for exposing more information about an image.
                  
+
 
 
       #section3.section.bck1
@@ -248,6 +245,8 @@
 
      
 
+        
+      
       #section4.section.bck2
         #container
           .row
@@ -315,44 +314,89 @@
                   = link_to "learn it here" , "https://www.railstutorial.org/"
                 
 
-      #section5.section
-      
-        .row
+      #section5.section.bck1
+        %br
+        %br
+        %br
+        .row.test-margin
+          .col-sm-1
           .col-sm-3
             .i1.circle-shadow
               .text1
-                Be yourself; everyone else is already taken
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Gopika UK
+                  %br
+                  Director
           .col-sm-3
             .i2.circle-shadow
               .text1
-                Be the change that you wish to see in the world
+                %br
+                %br
+                %br
+                %center
+                  Arun Vydianathan
+                  %br
+                  Founder
           .col-sm-3
             .i3.circle-shadow
               .text1
-                A problem is only a problem when viewed as a problem
+                %br
+                %br
+                %br
+                %center
+                  Hari
+                  %br
+                  Managing Director
+        %br
+        .row.test-margin1
           .col-sm-3
             .i4.circle-shadow
               .text1
-                Be Good
-        %br
-        .row
-          .test-margin
-            .col-sm-4
-              .i1.circle-shadow
-                .text1
-                  Be yourself; everyone else is already taken
-            .col-sm-4
-              .i2.circle-shadow
-                .text1
-                  Be the change that you wish to see in the world
-            .col-sm-4
-              .i3.circle-shadow
-                .text1
-                  A problem is only a problem when viewed as a problem
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Srikanth
+          
+          .col-sm-3
+            .i5.circle-shadow
+              .text1
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Muralee
+                
+          .col-sm-3
+            .i6.circle-shadow
+              .text1
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Navya
+          
+          .col-sm-3
+            .i7.circle-shadow
+              .text1
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Priya
+                
+
             
-            
-      #section6.section
-      #section7.section
+      #section6.section.bck2
+      #section7.section.bck1
         %br
         %br
         %br
@@ -378,7 +422,9 @@
               %br
               E-mail: info@ostryalabs.com
         .col-sm-3
-          = render "contact_us" 
+          = render "contact_us"
 
+
+      
 
       

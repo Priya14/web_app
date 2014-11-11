@@ -1,0 +1,91 @@
+//encoding: utf-8
+
+%link{:href => "/assets/jquery.fullPage.css", :rel => "stylesheet", :type => "text/css"}/
+%link{:href => "/assets/examples.css", :rel => "stylesheet", :type => "text/css"}/
+:css
+  /* Style for our header texts 
+  * --------------------------------------- */
+  h1{
+    font-size: 5em;	
+    font-family: arial,helvetica;
+    color: #fff;
+    margin:0;
+    padding:0;
+  }
+  .intro p{
+    color: #fff;
+  }
+
+  /* Centered texts in each section 
+  * --------------------------------------- */
+  .section{
+    text-align:center;
+  }
+  /* Fixed header and footer.
+  * --------------------------------------- */
+  #header, #footer{
+    position:fixed;
+    height: 50px;
+    display:block;
+    width: 100%;
+    background: #333;
+    z-index:9;
+    text-align:center;
+    color: #f2f2f2;
+    padding: 20px 0 0 0;
+  }
+
+  #header{
+    top:0px;
+  }
+  #footer{
+    bottom:0px;
+  }
+
+
+  /* Bottom menu
+  * --------------------------------------- */
+  #infoMenu {
+    bottom: 80px;
+  }
+  #infoMenu li a {
+    color: #fff;
+    z-index: 999;
+  }
+
+
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
+%script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"}
+%script{:src => "/assets/jquery.slimscroll.min.js", :type => "text/javascript"}
+%script{:src => "/assets/jquery.fullPage.js", :type => "text/javascript"}
+%script{:src => "/assets/examples.js", :type => "text/javascript"}
+:javascript
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+            anchors: ['firstPage', 'secondPage', '3rdPage'],
+            slidesColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+            css3: true				
+    });
+  });
+#header Header
+#footer Footer
+#fullpage
+  #section0.section
+    .intro
+      %h1 Fixed elements
+      %p Create your own headers and footers
+  #section1.section
+    #slide1.slide
+      .intro
+        %h1 How to do it
+        %p
+          You just need to move your header and footer outside the plugin main wrap.
+          This way it won't move on scrolling. Take a look at the source code of this page.
+    #slide2.slide
+      %h1 Slide 2
+      %img#iphone-two{:alt => "iphone", :src => "imgs/iphone-blue.png"}/
+  #section2.section
+    .intro
+      %h1 Enjoy it
+Status API Training Shop Blog About
+© 2014 GitHub, Inc. Terms Privacy Security Contact
