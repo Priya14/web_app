@@ -56,7 +56,7 @@
     :javascript
       $(document).ready(function() {
       	$('#fullpage').fullpage({
-      		sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#E4B5DB', '#79DEFA', '#CCC', '#F0C79C','#B49CF0'],
+      		sectionsColor: ['#ACC9E2', '#4BBFC3', '#7BAABE', '#E4B5DB', '#79DEFA', '#F8E5A4', '#F0C79C','#B49CF0'],
       		anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', '6thpage','7thpage','8thpage'],
       		menu: '#menu'
       	});
@@ -64,13 +64,14 @@
   
   %body
     #fullpage
-      #section0.section
+      #section0.section.bck1
         .col-sm-4
           %br
           %br
           %br
           %br
           
+            
         .col-sm-4
           //= render 'test'
         -# .row
@@ -85,12 +86,7 @@
         -#     %br
         -#     %h2 - ROBIN SHARMA
         
-      #section1.section
-        %br
-        %br
-        %br
-        %br
-        %br
+      #section1.section.bck2
         .row
           .col-sm-3
             #f1_container
@@ -164,9 +160,7 @@
                   %p This is nice for exposing more information about an image.
                  
 
-      #section2.section
-        
-      #section3.section
+      #section3.section.bck1
         %br
         %br
         %br
@@ -218,7 +212,7 @@
                     %br
                     &nbsp &nbsp &nbsp &nbsp Is a complete MVC solution based on Rails engines;
                     %br
-                    &nbsp &nbsp &nbsp &nbsp Allows you to have multiple models signed in at the same time;
+                     &nbsp &nbsp &nbsp &nbsp Allows you to have multiple models signed in at the same time;
                     %br
                     &nbsp &nbsp &nbsp &nbsp Is based on a modularity concept: use just what you really need.
                     %br
@@ -246,11 +240,8 @@
               %br
               25 years veteran in IT industry 
 
-      #section4.section
-        %br
-        %br
-        %br
-        %br
+     
+      #section4.section.bck2
         #container
           .row
             .col-sm-4
@@ -317,44 +308,89 @@
                   = link_to "learn it here" , "https://www.railstutorial.org/"
                 
 
-      #section5.section
-      
-        .row
+      #section5.section.bck1
+        %br
+        %br
+        %br
+        .row.test-margin
+          .col-sm-1
           .col-sm-3
             .i1.circle-shadow
               .text1
-                Be yourself; everyone else is already taken
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Gopika UK
+                  %br
+                  Director
           .col-sm-3
             .i2.circle-shadow
               .text1
-                Be the change that you wish to see in the world
+                %br
+                %br
+                %br
+                %center
+                  Arun Vydianathan
+                  %br
+                  Founder
           .col-sm-3
             .i3.circle-shadow
               .text1
-                A problem is only a problem when viewed as a problem
+                %br
+                %br
+                %br
+                %center
+                  Hari
+                  %br
+                  Managing Director
+        %br
+        .row.test-margin1
           .col-sm-3
             .i4.circle-shadow
               .text1
-                Be Good
-        %br
-        .row
-          .test-margin
-            .col-sm-4
-              .i1.circle-shadow
-                .text1
-                  Be yourself; everyone else is already taken
-            .col-sm-4
-              .i2.circle-shadow
-                .text1
-                  Be the change that you wish to see in the world
-            .col-sm-4
-              .i3.circle-shadow
-                .text1
-                  A problem is only a problem when viewed as a problem
-            
-            
-      #section6.section
-      #section7.section
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Srikanth
+          
+          .col-sm-3
+            .i5.circle-shadow
+              .text1
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Muralee
+                
+          .col-sm-3
+            .i6.circle-shadow
+              .text1
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Navya
+          
+          .col-sm-3
+            .i7.circle-shadow
+              .text1
+                %br
+                %br
+                %br
+                %br
+                %center
+                  Priya
+                
+
+
+      #section6.section.bck2
+      #section7.section.bck1
         %br
         %br
         %br
