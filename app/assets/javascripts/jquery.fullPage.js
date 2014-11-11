@@ -22,7 +22,7 @@
 
 			//scrolling
 			'css3': false,
-			'scrollingSpeed': 700,
+			'scrollingSpeed': 10,
 			'autoScrolling': true,
 			'easing': 'easeInQuart',
 			'easingcss3': 'ease',
@@ -34,7 +34,7 @@
 			'normalScrollElements': null,
 			'scrollOverflow': false,
 			'touchSensitivity': 5,
-			'normalScrollElementTouchThreshold': 5,
+			'normalScrollElementTouchThreshold': 2,
 
 			//Accessibility
 			'keyboardScrolling': true,
