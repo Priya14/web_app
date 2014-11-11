@@ -57,12 +57,12 @@ h2.ss-subtitle:after{
 	background: rgba(0,0,0,0.4);
 }
 .ss-container{
-    width: 100%;
+    width: 1100px;
     position: relative;
     text-align: left;
     float: left;
-	overflow: hidden;
-	padding-bottom: 500px;
+    overflow: hidden;
+    padding-bottom: 400px;
 }
 .ss-container h2{
     font-size: 40px;
