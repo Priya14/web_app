@@ -1,0 +1,201 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          PostgreSQL Backups with Barman
+          %br
+      %h3
+        By Arun, 09-Dec-2012
+  .col-sm-12
+    .container
+      %p
+        %h4
+          I have been experimenting with PostgreSQL Backup Strategies and trying to device a disaster recovery strategy
+      %p
+        %h4
+          for one of our client application. I stumbled on Barman which is an administration tool for disaster recovery of 
+      %p
+        %h4
+          PostgreSQL servers written in Python.
+
+          Here I am sharing my notes on installing and running Barman. First step 
+      %p
+        %h4
+
+          is to configure a backup server and install Barman in that. Barman needs Python – so first step would be install 
+      %p
+        %h4
+          Python. Here some of the additional steps which I had to do to make Barman running.
+      .small-well
+        %p
+          %h4
+            sudo apt-get install python-setuptools python-dev build-essential
+            sudo easy_install python-dateutil
+            sudo easy_install argh
+            sudo easy_install psycopg2
+      %p
+        %h4
+          Once Python is setup you can download and install Barman, as outlined in the official documentation. The next step
+      %p
+        %h4
+          would be to setup bi-directional SSH between Backup Server and Database Server. Let us assume Backup Server is
+      %p
+        %h4
+          sitting in IP 192.168.1.20 and Database Server is sitting in IP 192.168.1.30.First we have to create barman user in
+      %p
+        %h4
+          the Backup Server. In the Database Server PostgreSQL database is managed by postgres user.
+      %p
+        %h4
+          From Backup Server – login as barman
+      .small-well
+        %p
+          %h4
+
+            ssh-keygen -t rsa
+            cat ~/.ssh/id_rsa.pub | ssh postgres@192.168.1.30 'cat >> ~/.ssh/authorized_keys'
+      %p
+        %h4
+          
+          From Database Server – login as postgres
+      .small-well
+        %p
+          %h4
+
+            ssh-keygen -t rsa
+            cat ~/.ssh/id_rsa.pub | ssh barman@192.168.1.20 'cat >> ~/.ssh/authorized_keys'
+      %p
+        %h4
+ 
+          Please note – we should not be giving passphrase while generating the ssh keys in both the machines.Now we need to
+      %p
+        %h4
+          make sure we can connect to postgres db from backup server. For that we have to edit the pg_hba.conf file. This is
+      %p
+        %h4
+          the file which controls client authentication in postgres. You can read more about pg_hba.conf here.In my case I
+      %p
+        %h4
+          had to add this line to the file
+      .small-well
+        %p
+          %h4
+
+            host  all  all  192.168.1.20/32 trust
+      %p
+        %h4
+
+          What that line says is that any connection from 192.168.1.20 can be trusted and it will not ask for password. Also
+      %p
+        %h4
+
+          please note it is a good idea to put this line above other host lines in the pg_hba.conf file. This file is located
+      %p
+        %h4
+
+          in the directory /etc/postgresql/9.1/main/ in Ubuntu.With that setup through, we can test if we can connect to 
+      %p
+        %h4
+
+          database server from the backup server with the following command
+
+          
+      .small-well
+        %p
+          %h4
+
+            psql -c 'SELECT version()' -U postgres -h 192.168.1.30
+      %p
+        %h4
+
+          This should print the db version without prompting for password or anything. Now Barman need to be configured as
+      %p
+        %h4
+
+          outlined here. In the database side, we have to turn the archiving on and set the archive command.So login to the
+      %p
+        %h4
+          database machine and edit the postgresql.conf file found in /etc/postgresql/9.1/main
+      .small-well
+        %p
+          %h4
+            
+            wal_level = 'archive' # For PostgreSQL >= 9.0
+            %br
+            archive_mode = on
+            %br
+            archive_command = 'rsync -a %p barman@backup:INCOMING_WALS_DIRECTORY/%f'
+      %p
+        %h4
+          
+          The INCOMING_WALS_DIRECTORY can be found from running the following command in the backup server
+      .small-well
+        %p
+          %h4
+            
+            barman show-server main
+      %p
+        %h4
+          
+          where main is the server name you should have set while configuring Barman in the .barman.conf file, during the
+      %p
+        %h4
+          
+          configuration of Barman. Barman relies on archiving of WAL files. WAL or Write Ahead Logging files are similar to 
+      %p
+        %h4
+
+          redo log files in Oracle are used for maintaining data integrity. The basic idea is instead of committing data into 
+      %p
+        %h4
+
+          tables directly, they are written into a logfile and at a later point the actual commit to the database table happens.
+      %p
+        %h4
+            
+          To start the backup, from the backup server give
+      .small-well
+        %p
+          %h4
+
+            barman backup main
+      %p
+        %h4
+          
+          To check the backup status use
+      .small-well
+        %p
+          %h4
+
+            barman list-backup main
+      %p
+        %h4
+          
+          To recover a backup
+      .small-well
+        %p
+          %h4
+
+            barman recover main 20110920T185953 /home/barman/recover
+      %p
+        %h4
+
+          To verify the backup, copy the recovered folder to a convenient location like var/lib/postgresql/9.1/ and change
+      %p
+        %h4
+          the ownership of all files under it to postgres user.
+      .small-well
+        %p
+          %h4
+
+            chown -R postgres:postgres /var/lib/postgresql/9.1/recover
+      %p
+        %h4
+          
+          Edit the postgresql.conf to point the data-directory to the newly recovered directory and restart the database.
+      %p
+        %h4
+          Now you are all good to go and can think of setting a cron job to do the barman backup say every 10-15mts.

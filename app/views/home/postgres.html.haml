@@ -1,0 +1,95 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          PostgreSQL Import/Export & Heroku
+          %br
+      %h3
+        By Arun, 27-Apr-2013
+  .col-sm-12
+    .container
+      %p
+        %h4
+          A short post on import/export of data from Postgresql.
+      %p
+        %h4
+          Simple form of exporting and importing within the same system or different systems
+      %img{:src => '/assets/oie_zvCMsUREO1ml.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          Here I am using pg_dump to dump my production schema to a sql file. Then I drop my
+          development db and 
+      %p
+        %h4
+          recreate it. Then just export the production data fully. 
+
+          Note, here I am not running the migrations, whatever
+      %p
+        %h4
+          migrations have been run in
+
+          production will automatically come to development. Essentially pg_dump takes
+      %p
+        %h4
+          a dump
+
+          of data and as well as structure of the schema.
+      %p
+        %h4
+          Let us move on to do an import/export in scenrio of a heroku database.
+      %p
+        %h4
+          First you need to add the pgbackups add-on in heroku
+      %img{:src => '/assets/oie_LnIyXTOSB2Xj.png', :width => '900px', :height => '700px'}
+
+      %p
+        %h4
+          Now we need to take a backup and download the backup
+      %img{:src => '/assets/oie_cY7ozatZwEyD.png', :width => '900px', :height => '700px'}
+
+      %p
+        %h4
+          Now you have the dump downloaded locally in your system. To import the dump locally to your database 
+      %p
+        %h4
+          you can do
+      %img{:src => '/assets/oie_DMBZYLCpL2lI.png', :width => '900px', :height => '700px'}
+
+      %p
+        %h4
+          To import the dump to another heroku instance, you need to find the database you are using in heroku
+      %img{:src => '/assets/oie_9zke8EpxDh7E.png', :width => '900px', :height => '700px'}
+
+      %p
+        %h4
+          In my case this returned HEROKU_POSTGRESQL_JADE_URL:. The important thing here is left side which is 
+      %p
+        %h4
+          the variable name.
+      %p
+        %h4
+          To import our dump to the new instance we can again use pg_restore. But before that we need to upload 
+      %p
+        %h4
+          the dump
+      
+          in some publicly accessible URL like Amazon S3 or DropBox. Assuming it is done the command 
+      %p
+        %h4
+          to import would be
+      %p
+        .small-well
+          %br
+          %h4
+            heroku pgbackups:restore HEROKU_POSTGRESQL_JADE_URL 'URL_TO_DUMP_FILE' -a foo-bar-7113 --confirm foo-bar-7113
+          %br
+      %p
+        %h4
+          As this is a potentially destructive operation, heroku explicitly requires you to give app name and confirm it again.
+
+      %p
+        %h4
+          That is it about import/export.

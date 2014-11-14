@@ -1,0 +1,126 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          GROKKING XPATHS
+          %br
+      %h3
+        By Arun, 04-Sep-2013
+  .col-sm-12
+    .container
+      %p
+        %h4
+          XPath, the XML Path Language is a query language for selecting nodes from an XML or HTML Document.
+      %p
+        %h4
+          Recently I have been involved in a project where I had parse a lot of emails and extract info out of them.
+          %br
+          %br
+          XPath came very handy in simplifying my code and facilitated easy search and retreival from the HTML Blobs.
+      %p
+        %h4
+          Here I am going to post some of the nuances of the XPath Language.
+      %p
+        %h4
+          Let us start with a simple html snippet
+      %img{:src => '/assets/oie_x7jP8vH7nfna.png', :width => '900px', :height => '700px'}
+          
+      %p
+        %h4
+          XPath to get the second table under body element
+      %img{:src => '/assets/oie_pfGnx7pmJrhT.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          XPath to get the first table width attribute
+      %img{:src => '/assets/oie_UcW0uz1i598t.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          The above XPath should give the value 100%.
+      %p
+        %h4
+          XPath to get the td which has an “a” underneath it as child
+      %img{:src => '/assets/oie_JumkFLpWFZQK.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          The above XPath should give an array of three tds matching the HTML.
+      %p
+        %h4
+          XPath to get the img elements whose source does not point to a gif
+      %img{:src => '/assets/oie_nTJIC7NEDp7L.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          The above XPath should give the first img tag whose an src is pic.jpg.
+      %p
+        %h4
+
+          XPath to get the td elements whose text contains word “Picture”
+      %img{:src => '/assets/oie_uoOdpvJTS4KZ.png', :width => '900px', :height => '700px'}
+
+      %p
+        %h4
+          XPath to get all descendant elements within a give element – descendant include children and grand children
+      %img{:src => '/assets/oie_YlfOyrJ34TO7.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          The above XPath will fetch all td elements under the table 2. The tds can be nested any level within.
+      %p
+        %h4
+          XPath to get elements whose sibling is one particular element. For example in the above snippet choose span
+      %p
+        %h4
+
+          who has sibling of img
+      %img{:src => '/assets/oie_upc6s0DKvJik.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          The above XPath will get the span element whose class is price
+      %p
+        %h4
+          XPath to get elements whose parent is not one particular element. For example in the above snippet choose img
+      %p
+        %h4
+          who has parent is not an a
+      %img{:src => '/assets/oie_IjQcrA5uq2qP.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          The above XPath will fetch the img nodes with src spacer.gif
+      %p
+        %h4
+          XPath to match any node
+      %img{:src => '/assets/oie_cJZUKitVGmod.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          Here the * indicates that any element can be between table and td and XPath doesn’t care what it is.
+      %p
+        %h4
+
+          This is a wild card match.
+      %p
+        %h4
+          XPath to chose a element which has child element span which has child img
+
+      %img{:src => '/assets/oie_5DaqW1HMKur5.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          The above XPath will fetch the last “a” element in the snippet.
+      %p
+        %h4
+          XPath to match multiple conditions on attributes
+      %img{:src => '/assets/oie_R09jEEaVDryx.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          This will match table who has both height and width attribute set to 100%. Similar to and condition you have
+      %p
+        %h4
+
+          or condition and also not conditions.
+      %p
+        %h4
+          The difference between / and //
+      %img{:src => '/assets/oie_M9palvfMP2uT.png', :width => '900px', :height => '700px'}
+      %p
+        %h4
+          This concludes my short notes of various XPath syntax nuances. Hope you find it useful.

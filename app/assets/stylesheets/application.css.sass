@@ -25,6 +25,475 @@
   
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175)
+
 .menu-color
   color: #000000
 
+$yellow: #D9D3D3
+
+p
+  margin: 0
+  padding: 0
+
+
+
+.content-item-gopika
+  background: url('gopika.jpg')
+  @include backface-visibility( hidden )
+  height: 350px
+  margin: 20px auto
+  overflow: hidden
+  position: relative
+  width: 450px
+  .overlay
+    border-bottom: 0px solid $yellow
+    border-left: 0px solid transparent
+    bottom: 0
+    height: 0
+    opacity: .95
+    position: absolute
+    right: 0
+    text-indent: -9999px
+    @include transition(all .5s ease-out)
+    width: 0
+  
+  &:hover .overlay
+    border-bottom: 800px solid $yellow
+    border-left: 800px solid transparent
+    @include transition(all .5s ease-out)
+  
+  .corner-overlay-content
+    bottom: 9px
+    color: #333
+    position: absolute
+    right: 9px
+    @include transition(all .5s ease-out)
+  
+  &:hover .corner-overlay-content
+    opacity: 0
+    @include transition(all .5s ease-out)
+  
+  .overlay-content
+    bottom: 0
+    color: #333
+    left: 0
+    opacity: 0
+    padding: 10px
+    position: absolute
+    right: 0
+    top: 0
+    @include transition(all .3s ease-out)
+    h2
+      border-bottom: 1px solid #333
+      padding: 0 0 10px
+    
+  
+  &:hover .overlay-content
+    opacity: 1
+    @include transition(all .3s ease-out)
+    @include transition-delay(.3s)
+  
+
+.content-item-arun
+  background: url('arun.png')
+  @include backface-visibility( hidden )
+  height: 350px
+  margin: 20px auto
+  overflow: hidden
+  position: relative
+  width: 450px
+  .overlay
+    border-bottom: 0px solid $yellow
+    border-left: 0px solid transparent
+    bottom: 0
+    height: 0
+    opacity: .95
+    position: absolute
+    right: 0
+    text-indent: -9999px
+    @include transition(all .5s ease-out)
+    width: 0
+  
+  &:hover .overlay
+    border-bottom: 800px solid $yellow
+    border-left: 800px solid transparent
+    @include transition(all .5s ease-out)
+  
+  .corner-overlay-content
+    bottom: 15px
+    color: #333
+    position: absolute
+    right: 15px
+    @include transition(all .5s ease-out)
+  
+  &:hover .corner-overlay-content
+    opacity: 0
+    @include transition(all .5s ease-out)
+  
+  .overlay-content
+    bottom: 0
+    color: #333
+    left: 0
+    opacity: 0
+    padding: 30px
+    position: absolute
+    right: 0
+    top: 0
+    @include transition(all .3s ease-out)
+    h2
+      border-bottom: 1px solid #333
+      padding: 0 0 12px
+    
+  
+  &:hover .overlay-content
+    opacity: 1
+    @include transition(all .3s ease-out)
+    @include transition-delay(.3s)
+  
+
+
+.content-item-hari
+  background: url('hari.jpg')
+  @include backface-visibility( hidden )
+  height: 350px
+  margin: 20px auto
+  overflow: hidden
+  position: relative
+  width: 450px
+  .overlay
+    border-bottom: 0px solid $yellow
+    border-left: 0px solid transparent
+    bottom: 0
+    height: 0
+    opacity: .95
+    position: absolute
+    right: 0
+    text-indent: -9999px
+    @include transition(all .5s ease-out)
+    width: 0
+  
+  &:hover .overlay
+    border-bottom: 800px solid $yellow
+    border-left: 800px solid transparent
+    @include transition(all .5s ease-out)
+  
+  .corner-overlay-content
+    bottom: 15px
+    color: #333
+    position: absolute
+    right: 15px
+    @include transition(all .5s ease-out)
+  
+  &:hover .corner-overlay-content
+    opacity: 0
+    @include transition(all .5s ease-out)
+  
+  .overlay-content
+    bottom: 0
+    color: #333
+    left: 0
+    opacity: 0
+    padding: 30px
+    position: absolute
+    right: 0
+    top: 0
+    @include transition(all .3s ease-out)
+    h2
+      border-bottom: 1px solid #333
+      padding: 0 0 12px
+    
+  
+  &:hover .overlay-content
+    opacity: 1
+    @include transition(all .3s ease-out)
+    @include transition-delay(.3s)
+  
+.content-item-srikanth
+  background: url('srikanth.jpg')
+  @include backface-visibility( hidden )
+  height: 350px
+  margin: 20px auto
+  overflow: hidden
+  position: relative
+  width: 400px
+  .overlay
+    border-bottom: 0px solid $yellow
+    border-left: 0px solid transparent
+    bottom: 0
+    height: 0
+    opacity: .95
+    position: absolute
+    right: 0
+    text-indent: -9999px
+    @include transition(all .5s ease-out)
+    width: 0
+  
+  &:hover .overlay
+    border-bottom: 800px solid $yellow
+    border-left: 800px solid transparent
+    @include transition(all .5s ease-out)
+  
+  .corner-overlay-content
+    bottom: 9px
+    color: #333
+    position: absolute
+    right: 9px
+    @include transition(all .5s ease-out)
+  
+  &:hover .corner-overlay-content
+    opacity: 0
+    @include transition(all .5s ease-out)
+  
+  .overlay-content
+    bottom: 0
+    color: #333
+    left: 0
+    opacity: 0
+    padding: 10px
+    position: absolute
+    right: 0
+    top: 0
+    @include transition(all .3s ease-out)
+    h2
+      border-bottom: 1px solid #333
+      padding: 0 0 10px
+    
+  
+  &:hover .overlay-content
+    opacity: 1
+    @include transition(all .3s ease-out)
+    @include transition-delay(.3s)
+.content-item-muralee
+  background: url('muralee.jpg')
+  @include backface-visibility( hidden )
+  height: 350px
+  margin: 20px auto
+  overflow: hidden
+  position: relative
+  width: 400px
+  .overlay
+    border-bottom: 0px solid $yellow
+    border-left: 0px solid transparent
+    bottom: 0
+    height: 0
+    opacity: .95
+    position: absolute
+    right: 0
+    text-indent: -9999px
+    @include transition(all .5s ease-out)
+    width: 0
+  
+  &:hover .overlay
+    border-bottom: 800px solid $yellow
+    border-left: 800px solid transparent
+    @include transition(all .5s ease-out)
+  
+  .corner-overlay-content
+    bottom: 9px
+    color: #333
+    position: absolute
+    right: 9px
+    @include transition(all .5s ease-out)
+  
+  &:hover .corner-overlay-content
+    opacity: 0
+    @include transition(all .5s ease-out)
+  
+  .overlay-content
+    bottom: 0
+    color: #333
+    left: 0
+    opacity: 0
+    padding: 10px
+    position: absolute
+    right: 0
+    top: 0
+    @include transition(all .3s ease-out)
+    h2
+      border-bottom: 1px solid #333
+      padding: 0 0 10px
+    
+  
+  &:hover .overlay-content
+    opacity: 1
+    @include transition(all .3s ease-out)
+    @include transition-delay(.3s)
+.content-item-navya
+  background: url('navya.jpg')
+  @include backface-visibility( hidden )
+  height: 350px
+  margin: 20px auto
+  overflow: hidden
+  position: relative
+  width: 400px
+  .overlay
+    border-bottom: 0px solid $yellow
+    border-left: 0px solid transparent
+    bottom: 0
+    height: 0
+    opacity: .95
+    position: absolute
+    right: 0
+    text-indent: -9999px
+    @include transition(all .5s ease-out)
+    width: 0
+  
+  &:hover .overlay
+    border-bottom: 800px solid $yellow
+    border-left: 800px solid transparent
+    @include transition(all .5s ease-out)
+  
+  .corner-overlay-content
+    bottom: 9px
+    color: #333
+    position: absolute
+    right: 9px
+    @include transition(all .5s ease-out)
+  
+  &:hover .corner-overlay-content
+    opacity: 0
+    @include transition(all .5s ease-out)
+  
+  .overlay-content
+    bottom: 0
+    color: #333
+    left: 0
+    opacity: 0
+    padding: 10px
+    position: absolute
+    right: 0
+    top: 0
+    @include transition(all .3s ease-out)
+    h2
+      border-bottom: 1px solid #333
+      padding: 0 0 10px
+    
+  
+  &:hover .overlay-content
+    opacity: 1
+    @include transition(all .3s ease-out)
+    @include transition-delay(.3s)
+.content-item-priya
+  background: url('priya.jpg')
+  @include backface-visibility( hidden )
+  height: 350px
+  margin: 20px auto
+  overflow: hidden
+  position: relative
+  width: 400px
+  .overlay
+    border-bottom: 0px solid $yellow
+    border-left: 0px solid transparent
+    bottom: 0
+    height: 0
+    opacity: .95
+    position: absolute
+    right: 0
+    text-indent: -9999px
+    @include transition(all .5s ease-out)
+    width: 0
+  
+  &:hover .overlay
+    border-bottom: 800px solid $yellow
+    border-left: 800px solid transparent
+    @include transition(all .5s ease-out)
+  
+  .corner-overlay-content
+    bottom: 9px
+    color: #333
+    position: absolute
+    right: 9px
+    @include transition(all .5s ease-out)
+  
+  &:hover .corner-overlay-content
+    opacity: 0
+    @include transition(all .5s ease-out)
+  
+  .overlay-content
+    bottom: 0
+    color: #333
+    left: 0
+    opacity: 0
+    padding: 10px
+    position: absolute
+    right: 0
+    top: 0
+    @include transition(all .3s ease-out)
+    h2
+      border-bottom: 1px solid #333
+      padding: 0 0 10px
+    
+  
+  &:hover .overlay-content
+    opacity: 1
+    @include transition(all .3s ease-out)
+    @include transition-delay(.3s)
+
+.brown
+  color: #783E3E
+.blue
+  color: #55ACD4
+.go-well
+  width: 300
+  height: 500
+  background-color: #B4AEB2
+.go-well1
+  width: 300
+  height: 500
+  background-color: #B4AEB2
+.go-well2
+  width: 300
+  height: 500
+  background-color: #C3C14A
+.white
+  color: white
+.border-container 
+  border: 1px solid #aaa
+  margin-left: 20px
+  margin-right: 20px
+  margin-top: 50px
+  width: 1660px
+  -webkit-border-radius: 7px
+  -moz-border-radius: 7px
+  border-radius: 7px
+
+.gradient-text
+  font-family: source-sans-pro, sans-serif
+  font-weight: 100
+  font-style: normal
+  font-size: 92px
+  text-align: center
+  
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#F31221), to(#7C7373))
+  background: -webkit-linear-gradient(#F31221, #7C7373)
+  background: -moz-linear-gradient(#F31221, #7C7373)
+  background: -o-linear-gradient(#F31221, #7C7373)
+  background: linear-gradient(#F31221, #7C7373)
+  
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+/* @font-face 
+/*   font-family: 'Snowburst One'
+/*   src: url(http://themes.googleusercontent.com/static/fonts/snowburstone/v1/zSQzKOPukXRux2oTqfYJjIkaQb-UsZVONjobs91YQtw.woff)
+.font-text
+  font-family: 'Comic Sans MS', cursive
+.cont1
+  background-color: #FECDCF
+.red
+  color: #E30E27
+.yel
+  background-color: #CDF9FE
+#grad 
+  width: 100%
+  height: 400px
+  
+  /* background: -moz-linear-gradient( left, #CCFAF4 15%, #F6F7B1 85%)
+  /* background: -webkit-gradient( linear, left center, right center, color-stop( 15%, #CCFAF4 ), color-stop( 85%, #F6F7B1) )
+  background: -moz-linear-gradient( left, #f2f2f2 15%, #828080 85%)
+  background: -webkit-gradient( linear, left center, right center, color-stop( 15%, #f2f2f2 ), color-stop( 85%, #828080) )
+.small-well
+  width: 900px
+  height: 70px
+  background-color: #333333
+  color: white

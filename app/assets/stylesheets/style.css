@@ -57,7 +57,7 @@ h2.ss-subtitle:after{
 	background: rgba(0,0,0,0.4);
 }
 .ss-container{
-    width: 1100px;
+    width: 100%;
     position: relative;
     text-align: left;
     float: left;

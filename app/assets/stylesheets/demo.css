@@ -1,8 +1,7 @@
 @import url('reset.css');
 body {
-   
     margin: 100px;
-    margin-right: 100px;
+    
 }
 
 .logo { position:absolute; left:50%; top:50%; width: 112px; height: 112px; transform: translate(-50%, -50%); } 
@@ -55,14 +54,12 @@ animation: clockWise 10s ease 0 infinite;
 }
 
 /* General Demo Style */
-/* body{ */
-/*     background: #f7f7f7 url('bck2.png') repeat top left; */
-/*     color: rgba(0,0,0,0.8); */
-/*     margin-left: 100px; */
-/*     margin-right: 100px; */
-/*     /\* font-family: 'Kelly Slab','Myriad Pro', Arial, sans-serif; *\/ */
-/*     /\* font-size: 15px; *\/ */
-/* } */
+body{ 
+    background-color: #f7f7f7;
+    color: rgba(0,0,0,0.8);
+   /* font-family: 'Kelly Slab','Myriad Pro', Arial, sans-serif; */
+    /* font-size: 15px; */
+}
 /* a{ */
 /*     color: #fff; */
 /*     text-decoration: none; */

@@ -9,60 +9,49 @@
       .navbar.navbar-default.nav-links.navbar-fixed-top
         .navbar-inner
           .pull-left
-            = image_tag "logo.png" ,:width => "300",:height => "300"              
-            %br
-            %span.rotate
-              %h4
-                Clean Code Matters
-          .pull-right
-            #container
-              #cube.animate
-                %div
-                %div
-                %div
-                %div
-                %div
-                %div
-                  
-
+            = image_tag "logo.jpg" ,:width => "300",:height => "300"              
+          
 
           %ul.nav.navbar-nav
             %li{"data-menuanchor" => "firstPage"}
               %a{:href => "/home#firstPage"}
                 .menu-color
-                  Home
+                  HOME
     
             %li{"data-menuanchor" => "secondPage"}
               %a{:href => "/home#secondPage"}
                 .menu-color
-                  Projects
+                  PROJECTS
             %li{"data-menuanchor" => "3rdPage"}
               %a{:href => "/home/blog"}
                 .menu-color
-                  Blog
+                  BLOG
             %li{"data-menuanchor" => "4thpage"}
               %a{:href => "/home#4thpage"} 
                 .menu-color
-                  Training
+                  TRAINING
             %li{"data-menuanchor" => "5thpage"}
               %a{:href => "/home#5thpage"}
                 .menu-color
-                  Technologies
+                  TECHNOLOGIES
             %li{"data-menuanchor" => "6thpage"}
               %a{:href => "/home#6thpage"}
                 .menu-color
-                  People
+                  PEOPLE
             %li{"data-menuanchor" => "7thpage"}
               %a{:href => "/home#7thpage"}
                 .menu-color
-                  Careers
+                  CAREERS
             %li{"data-menuanchor" => "8thpage"}
               %a{:href => "/home#8thpage"}
                 .menu-color
-                  Contact Us
+                  CONTACT US
             
             //%link{:href => "/assets/rock.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
             // = render 'rock'
     %br
+    %br
+    %br
     = yield        
+    
                 

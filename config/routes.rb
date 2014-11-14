@@ -13,6 +13,9 @@ Rails.application.routes.draw do
       get 'tech'
       get 'test'
       get 'training'
+      get 'grokking'
+      get 'postgres'
+      get 'barman'
     end
   end
   root 'home#index'
