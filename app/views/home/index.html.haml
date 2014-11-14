@@ -87,6 +87,12 @@
         -#     %h2 - ROBIN SHARMA
         
       #section1.section.bck2
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
         .row
           .col-sm-3
             #f1_container
@@ -111,7 +117,7 @@
               #f1_card.shadow
                 .front.face
                   //%img{:src => "app/images/11.jpg"}
-                  = image_tag "onlineexam.jpg"
+                  = image_tag "online.jpg"
                 .back.face.center
                   %p This is nice for exposing more information about an image.
           .col-sm-3
@@ -119,17 +125,19 @@
               #f1_card.shadow
                 .front.face
                   //%img{:src => "app/images/11.jpg"}
-                  = image_tag "bank.jpg"
+                  = image_tag "property1.jpg"
                 .back.face.center
                   %p This is nice for exposing more information about an image.
-                 
+        
+        %br
+        %br
         .row
           .col-sm-3
             #f1_container
               #f1_card.shadow
                 .front.face
                   //%img{:src => "app/images/11.jpg"}
-                  = image_tag "property.jpg"
+                  = image_tag "mar.jpg"
                 .back.face.center
                   %p This is nice for exposing more information about an image.
                  
@@ -147,7 +155,7 @@
               #f1_card.shadow
                 .front.face
                   //%img{:src => "app/images/11.jpg"}
-                  = image_tag "123.jpg"
+                  = image_tag "mone.jpg"
                 .back.face.center 
                   %p This is nice for exposing more information about an image.
           .col-sm-3
@@ -155,11 +163,10 @@
               #f1_card.shadow
                 .front.face
                   //%img{:src => "app/images/11.jpg"}
-                  = image_tag "property.jpeg"
+                  = image_tag "con.jpg"
                 .back.face.center
                   %p This is nice for exposing more information about an image.
                  
-
 
 
       #section3.section.bck1
@@ -247,71 +254,114 @@
 
         
       
-      #section4.section.bck2
-        #container
+      #section4.section
+        %br
+        %br
+        %br
+        %br
+        %br
+        %h4
           .row
-            .col-sm-4
-              .quote-container
-                %i.pin
-                %blockquote.note.yellow
-                  = image_tag "css.jpg"
-                  %b CSS 
+            .col-sm-12
+              .col-sm-6
+                .well1
+                  .well6
+                    %h4.normal1
+                      &nbsp 
+                      = image_tag "css.jpg"
+                      %b CSS 
                   %br
-                  Style Sheet Language used for describing the look and formatting of a document written in a markup language.
-                  %br 
-                  = link_to "learn it here" , "http://www.csstutorial.net/"
-            .col-sm-4
-              .quote-container
-                %i.pin
-                %blockquote.note.yellow
-                  = image_tag "html.jpg"
-                  %b HTML
+                  &nbsp &nbsp 
+                  Style Sheet Language used for describing the look and formatting of a
+                  document written in a markup language.
                   %br
+                  %br
+                  &nbsp &nbsp &nbsp
+                  = link_to "learn it here" , 'http://www.csstutorial.net/'
+              .col-sm-6
+                .well1
+                  .well3
+                    %h4.normal1
+                      &nbsp 
+                      = image_tag "html.jpg"
+                      %b HTML
+                  %br
+                  &nbsp &nbsp 
                   A standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
-                  %br 
-                  = link_to "learn it here" , "http://www.html5-tutorials.org/"
-         
-            .col-sm-4
-              .quote-container
-                %i.pin
-                %blockquote.note.yellow
-                  = image_tag "sql.jpg"
-                  %b PSQL
                   %br
+                  %br
+                  &nbsp &nbsp &nbsp
+                  = link_to "learn it here ", "http://www.html5-tutorials.org/"
+
+                  
+          %br
+          .row
+            .col-sm-12
+              .col-sm-6
+                .well1
+                  .well2
+                    %h4.normal1
+                      &nbsp 
+                      = image_tag "rails.png"
+                      %b RAILS
+                  %br
+                  &nbsp &nbsp 
+                  Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
+                  %br
+                  %br
+                  &nbsp &nbsp &nbsp
+                  = link_to "learn it here" , "https://www.railstutorial.org/"
+
+              .col-sm-6
+                .well1
+                  .well2
+                    %h4.normal1
+                      &nbsp 
+                      = image_tag "an.jpg"
+                      %b ANGULAR JS 
+                  %br
+                  &nbsp &nbsp 
+                  AngularJS, is an open-source web application framework, that assists with creating single-page applications,
+                  %br
+                  %br
+                  &nbsp &nbsp &nbsp
+                  = link_to "learn it here","https://docs.angularjs.org/tutorial"
+
+          %br
+          .row
+            .col-sm-12
+              .col-sm-6
+                .well1
+                  .well5
+                    %h4.normal1
+                      &nbsp 
+                      = image_tag "js.jpg"
+                      %b JAVA SCRIPT   
+                  %br
+                  &nbsp &nbsp 
+                  An object-oriented computer programming language commonly used to create interactive effects within web browsers.
+                  %br
+                  %br
+                  &nbsp &nbsp &nbsp
+                  = link_to "learn it here" , "http://www.codecademy.com/en/tracks/javascript"
+              .col-sm-6
+                .well1
+                  .well4
+                    %h4.normal1
+                      &nbsp 
+                      = image_tag "sql.jpg"
+                      %b PSQL
+                  %br
+                  &nbsp &nbsp 
                   Query language for requesting information from a database.
                   %br
-                  = link_to "learn it here", "http://www.postgresqltutorial.com/"
-                  
-          .row
-            .col-sm-4
-              .quote-container
-                %i.pin
-                %blockquote.note.yellow
-                  = image_tag "an.jpg"
-                  %b ANGULAR JS 
                   %br
-                  AngularJS, is an open-source web application framework, that assists with creating single-page applications,
-                  %br 
-                  = link_to "learn it here" , "https://docs.angularjs.org/tutorial"
-                  
-            .col-sm-4
-              .quote-container
-                %i.pin
-                %blockquote.note.yellow
-                  = image_tag "js.jpg"
-                  %b JAVA SCRIPT   
-                  %br  An object-oriented computer programming language commonly used to create interactive effects within web browsers.
-                  %br 
-                  = link_to "learn it here" ,"http://www.codecademy.com/en/tracks/javascript"
-            .col-sm-4
-              .quote-container
-                %i.pin
-                %blockquote.note.yellow
-                  = image_tag "rails.jpg"
-                  %b RAILS
-                  %br Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
-                  %br  
-                  = link_to "learn it here" , "https://www.railstutorial.org/"
+                  &nbsp &nbsp &nbsp
+                  = link_to "learn it here" , "http://www.postgresqltutorial.com/"
+
+
+        
+             
                 
 
       #section5.section.bck1
@@ -396,35 +446,57 @@
 
             
       #section6.section.bck2
-      #section7.section.bck1
-        %br
-        %br
-        %br
-        %br
-        %br
-        
-        .col-sm-4
-          = render "form"
-        .col-sm-3
-          %h4
-            %b
-              IIIT-H Campus,
-              %br
-              %br
-              2nd Floor, Vindhya C4, 
-              %br
-              %br
-              Gachibowli, Hyderabad-500032
-              %br
-              %br
-              Contact: +91 9866402306 
-              %br
-              %br
-              E-mail: info@ostryalabs.com
-        .col-sm-3
-          = render "contact_us"
-
-
+      #section7.section.bck3
+        .row
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+        .row
+          .col-sm-1
+          .col-sm-10
+            %h3.normal  We love agile and lean methodologies. We believe in continuous integration and continuous delivery. We don't like to surprise the customer at the end of the project and we don't want to be surprised ourselves as well! We follow an iterative model and deliver frequently. 
+          %br
+          %br
+        .row
+          %br
+          %br
+          .col-sm-1
+          .col-sm-4
+            = render "form"
+          .col-sm-3
+            %h4.normal
+              %b
+                %span.fa.fa-home
+                  IIIT-H Campus,
+                  %br
+                  %br
+                  &nbsp &nbsp 2nd Floor, Vindhya C4, 
+                  %br
+                  %br
+                  &nbsp &nbsp Gachibowli,
+                  %br
+                  %br
+                  &nbsp &nbsp Hyderabad-500032
+                  %br
+                  %br
+                %span.fa.fa-phone
+                  Contact: +91 9866402306 
+                  %br
+                  %br
+                %span.fa.fa-envelope
+                  info@ostryalabs.com
+                  %br
+                  %br
+                %span.fa.fa-globe
+                  www.ostryalabs.com
+          .col-sm-3
+            = render "contact_us"
+       
+                
       
 
       
