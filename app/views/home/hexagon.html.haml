@@ -1,0 +1,450 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          Hexagonal Refactoring of a Rails Controller
+          %br
+      %h3
+        By Arun, 27-Nov-2012
+  .col-sm-12
+    .container
+      %p
+        %h4
+          Hexagonal Architecture is generating a lot of steam in Rails community especially with the thrust for writing fast tests and getting quick feedback. Here I want to share my small experience experimenting with hexagonal architecture in a Rails Controller based on this talk.
+      %p
+        %h4
+          In the begining a CustomersController had a create method which looked like this
+      %p
+        %h4
+          .well
+            class CustomersController
+            %br
+            def create
+            %br
+            @customer=Customer.new(params[:customer])
+            %br
+            if @customer.save
+            %br
+            flash[:success] = "Customer Created"
+            %br
+            redirect_to @customer
+            %br
+            else
+            %br
+            flash[:fail] = "Some problems prevented the Customer being created"
+            %br
+            render 'new'
+            %br
+            end
+            %br
+            end
+            %br
+            end
+      %p
+        %h4
+          Nothing special going on here – the standard way of wiring up a Rails Controller.
+      %p
+        %h4
+          Now let us step back and wear the cloak of SRP police and analyze the create method. What does SRP say – A method should have one and only one reason to change. So let’s question the create method above – “You create what can make you change?”. And the unashamed answer from create would be
+      %p
+        %h4
+          I can change if flash message changes
+      %p
+        %h4
+          I can change if redirection page is changed
+      %p
+        %h4
+          I can change if you want to do something before save with the @customer
+      %p
+        %h4
+          I can change if you want to return something else other than true/false after saving a customer
+      %p
+        %h4
+          I can also change if something funny needs to be done with params
+      %p
+        %h4
+          I think that is lot of smells packaged into a small method. For a trivial application or application boot-strapping this is a perfect compromise and should live on with this. The trouble starts when you want to add more complexity into this and you can very well end up something like this
+      %p
+        %h4
+          .well
+            def create
+            %br
+            begin
+            %br
+            @customer = Customer.new(params[:customer])
+            %br
+            if @customer.save
+            %br
+            create_default_cart
+            %br
+            create_default_preferences
+            %br
+            @customer.cart_no = @customer.cart.cart_no
+            %br
+            if @customer.save
+            %br
+            if params[:customer][:image].present? or params[:customer][:signature].present?
+            %br
+            render :crop
+            %br
+            else
+            %br
+            flash[:success] = I18n.t :success, :scope => [:customer, :create]
+            %br
+            redirect_to @customer
+            %br
+            end
+            %br
+            else
+            %br
+            flash[:error] = I18n.t :fail, :scope => [:customer, :create]
+            %br
+            render 'new' and return
+            %br
+            end
+            %br
+            else
+            %br
+            flash[:error] = I18n.t :fail, :scope => [:customer, :create]
+            %br
+            render 'new'
+            %br
+            end
+            %br
+            rescue ActiveRecord::RecordNotUnique
+            %br
+            @customer.errors.add(:code, I18n.t(:duplicate, :scope => [:customer, :error]))
+            %br
+            flash[:error] = I18n.t :fail, :scope => [:customer, :create]
+            %br
+            render 'new'
+            %br
+            end
+            %br
+            end
+      %p
+        %h4
+          Ouch! that method hurts a lot while reading and most probably next change would add one more step in if..else ladder. Plus notice that there is more code hidden there in two private methods in controller. From testing perspective this method presents new nightmares – for the various combination of flash messages I need to fire so much POST requests and it really retards my progress by pro-actively making slow tests..
+
+      %p
+        %h3
+          .red
+            A Hexagonal Refactoring
+      %p
+        %h4
+          Hexagonal Architecture in Rails was first espoused by 
+          = link_to 'Matt Wayne', 'http://blog.mattwynne.net/category/hexagonal-rails/'
+          and he was inspired by Alistair Cockburn’s work on the same
+          = link_to 'topic', 'http://alistair.cockburn.us/Hexagonal+architecture'
+          Make sure you read the two great posts linked above. The idea behind hexagonal architecture is your app is visualized as two hexagons as shown 
+          = link_to 'here', 'http://blog.mattwynne.net/wp-content/uploads/2012/06/hexagonal_architecture_sketch.jpg'
+          , the inner hexagon is your core business logic and that stays independent of UI, framework or DB lives as just Plain Objects. The outer hexagon has adapters which communicate to inner hexagon through what are called “Ports” and converts the output as required by the consumer. This architecture is also called as “Ports & Adapters”.
+    
+      
+
+      %p
+        %h4
+          You can think of Rails ERB file as a adapter which takes input from the port (Controller) and adapts it as a HTML for human consumption. On the other side ActiveRecord is another adapter which takes data from inner hexagon and converts it to be saved to db.
+      
+      %p
+        %h3
+          .sky
+            Time to refactor
+
+
+      %p
+        %h4
+          .well
+            class CustomerCreationService < Struct.new(:listener)
+            %br
+            def create(params)
+            %br
+            customer = Customer.new(params)
+            %br
+            if customer.save
+            %br
+            listener.create_succeeded(customer)
+            %br
+            else
+            %br
+            listener.create_failed(customer)
+            %br
+            end
+            %br
+            end
+            %br
+            class CustomersController
+            %br
+            def create
+            %br
+            creation_service = CustomerCreationService.new(self)
+            %br
+            creation_service.create(params[:customer])
+            %br
+            end
+            %br
+            def create_succeeded(customer)
+            %br
+            flash[:success] = "Customer Created"
+            %br
+            redirect_to customer
+            %br
+            end
+            %br
+            def create_failed(customer)
+            %br
+            flash[:fail] = "Some problems prevented the Customer being created""
+            %br
+            render 'new'
+            %br
+            end
+            %br
+            end
+            
+      %p
+        %h4
+          So I have created a class CustomerCreationService whose sole responsibility is to create customers. This class is part of my inner hexagon and Controller interfaces to it from the outer hexagon. Now let us don the robes of SRP Police and question the create method in the controller.
+      
+      %p
+        %h4
+          “Hey create, will you change if flash message gets changed?” – “Heck! No”
+
+      %p
+        %h4
+          “Hey create, will you change if I redirect to some other page?” – “WTH! Why should I bother about that?”
+        
+      %p
+        %h4
+          “Hey create, will you change if customer save returns a new status other than true/false?” – “You should be kidding! I don’t care a crap!”
+        
+      %p
+        %h4
+          Let us evaluate this small refactoring from different perspectives
+
+      %p
+        %h3 
+          .red
+            Overall Design
+      %p
+        %h3
+          .blue
+            Hollywood Principle
+      %p
+        %h3
+          .orange
+            = link_to 'Don’t call us, we’ll call you.', 'http://c2.com/cgi/wiki?HollywoodPrinciple'
+      %p
+        %h4
+
+          CustomerCreationService takes in a listener – which is the controller and when the Creation was complete it just calls and notifies the listener. In contrast in our earlier approach Controller explicitly asked the Customer what is the status of save and depended on what save returned.
+      %p
+        %h3
+          .blue
+            Tell Don’t Ask
+
+      %p
+        %h4
+
+
+          This is automatically comes for us as we have followed the Hollywood Principle, Customer Controller has stopped asking the status of Save in Customer.
+      %p
+        %h3
+          .blue
+            Dependency Injection
+      %p
+        %h4
+
+          If you have read the link I had pointed in Hollywood Principle it would have been clear that Hollywood Principle is also called “Inversion of Control” or “Dependency Injection”. So here we have a dependency which is the Controller which is getting injected into CustomerCreationService. If the term Dependency Injection brings to your mind Pico Container or Spring Framework probably you are being misguided. In it’s simplest form it just means giving an object its instance variable. Read this six year old 
+          = link_to 'post', 'http://www.jamesshore.com/Blog/Dependency-Injection-Demystified.html'
+          by James Shore on what it means.
+      %p
+        %h4
+
+          By introducing Dependency Injection, we have enabled ourselves with a powerful technique to inject stubs/mocks while testing and making the tests simpler and faster.
+      %p
+        %h3
+          .blue
+            SRP
+      %p
+        %h4
+
+          With this refactoring we tend to move closer to achieving SRP. The create method in controller is truly SRP compliant as is the case of the two call back methods. CustomerCreationService also has more or less single responsibility of creating customer and registering the appropriate callback.
+      %p
+        %h3
+          .red
+            Testing
+      %p
+        %h3
+          .blue
+            Application Code
+      %p
+        %h4
+
+          Testing CustomerCreationService is greatly simplified compared to the Controller, it doesn’t need to depend on Rails or Controller or DB. For the listener I can inject a Dependency in the form of Test Double. That leaves us with the creation and saving of Customer. Remember our goal is not test ActiveRecord layer whether it inserts a record or not but we just need to worry if we are passing the right messages to ActiveRecord.
+      %p
+        %h4
+
+          I can slightly tweak the code to inject the Customer Creation also as a dependency
+
+      %p
+        %h4
+          .well
+            class CustomerCreationService < Struct.new(:listener)
+            %br
+            attr_writer :customer_source
+            %br
+            def create(params)
+            %br
+            customer_source.call.tap do |customer|
+            %br
+            customer.assign_attributes(params)
+            %br
+            if customer.save
+            %br
+            listener.create_succeeded(customer)
+            %br
+            else
+            %br
+            listener.create_failed(customer)
+            %br
+            end
+            %br
+            end
+            %br
+            end
+            %br
+            private
+            %br
+            def customer_source
+            %br
+            @customer_source ||= Customer.public_method(:new)
+            %br
+            end
+            %br
+            end
+      %p
+        %h4
+
+          This is a method advocated by Avdi Grimm in his book Object on Rails
+      %p
+        %h4
+            
+          Now with both dependencies getting injected we just need to check if the create method sends the right messages to its dependencies. Here is a sample of the test
+      %p
+        %h4
+          .well
+            describe CustomerCreationService do
+            %br
+            let(:listener) { stub(:listener) }
+            %br
+            let(:customer) { stub(:customer) }
+            %br
+            let(:customer_source) { ->{ customer } }
+            %br
+                      
+            before do
+            %br
+            @it = described_class.new(listener)
+            %br
+            @it.customer_source = customer_source
+            %br
+            customer.stub(:assign_attributes).with({name: "arun"})
+            %br
+            end
+            %br
+
+            after do
+            %br
+            @it.create({name: "arun"})
+            %br
+            end
+            %br
+            it "registers success call back if customer created successfully" do
+            %br
+            customer.stub(:save) { true }
+            %br
+            listener.should_receive(:create_succeeded).with(customer)
+            %br
+            end
+            %br
+            it "registers failure call back if customer creation failed" do
+            %br
+            customer.stub(:save) { false }
+            %br
+            listener.should_receive(:create_failed).with(customer)
+            %br
+            end
+            %br
+            end
+      %p
+        %h3
+          .blue
+            Controller
+      %p
+        %h4
+
+          As far as the testing create method in controller that is also greatly simplified as we may really have to write only one test with POST request. Remember, earlier for each variation of flash message or page redirection we would have kept separate tests each of them doing POST request. And as far as create_succeeded and create_failed methods tests are dead simple and they need not even put a POST request, it can be a simple public method call testing.
+      %p
+        %h3
+          .red
+            Final Thoughts
+      %p
+        %h4
+
+          Sign of good code is “How costly it is to make a change?”. Say tomorrow we have requirement of sending an email to customer after creation. For that we can do a small tweak in CustomerCreationService and instead of taking in a single listener it can take an array of listeners and then it can send callbacks to all the listeners.
+      %p
+        %h4
+
+          We can create an CustomerEmailService with a method create_succeeded and register it with the CustomerCreationService. And then things just go smoothly. A new business requirement like this had a very limited impact on existing code. A procedural code would have done catharsis of create in controller or model (through callbacks?) in the earlier approach.
+      %p
+        %h4
+
+          Probably one allegation is now we are creating more and more classes and methods and code is getting more moving parts and it’s difficult to read the code. Yes we are writing more code, but each class is considerably shorter and methods which typically have less than 10 lines of code. And when viewing the code we don’t really have to worry about other unrelated parts. Like you are reading create in CustomerCreationService then you really don’t have to bother about page redirections or flash messages just think of business logic of Creating Customers and leave everything out. So in reality there are less moving parts while analyzing a particular chunk of code.
+      %p
+        %h4
+
+          As Matt Wayne said in his blog introducing Hexagonal Architecture – Procedural code reads like a story and we can perhaps understand what is going to happen, but that style is gong to really hit us when we want to change the behavior.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

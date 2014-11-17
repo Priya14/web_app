@@ -16,6 +16,13 @@ Rails.application.routes.draw do
       get 'grokking'
       get 'postgres'
       get 'barman'
+      get 'hexagon'
+      get 'callback'
+      get 'queries'
+      get 'vim'
+      get 'rspecs'
+      get 'ruby_on_rails_guide'
+      get 'setup'
     end
   end
   root 'home#index'

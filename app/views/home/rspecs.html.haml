@@ -1,0 +1,374 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          Tidying up your RSpecs - 1
+          %br
+      %h3
+        By Arun, 21-Sep-2011
+
+      
+  .col-sm-12
+    .container
+      %p
+        %h4
+          Almost everyone in Ruby world agrees that RSpecs are a great way to test code in both Ruby and Rails projects.
+
+          Today, I want to share some of the tips which I had learnt and used in my RSpecs which has really help to tidy up the RSpec code and output.
+      %p
+        %h3
+
+          .red
+            Explicit Subjects & Contexts
+      %p
+        %h4
+
+          Consider a RSpec for a Rails Controller. Assume that controller actions require a user to authenticate himself before performing any of the actions. In order to test this aspect we can write RSpec like this
+      %p
+        %h4
+          
+          .well
+            describe PlacesController do
+            %br
+            describe "access control" do
+            %br
+            describe "for non-signed in users" do
+            %br
+            it "should redirect to sign in page for delete :destroy" do
+            %br
+            delete :destroy, :id => "1234"
+            %br
+            response.should redirect_to(new_user_session_path)
+            %br
+            end
+            %br
+            
+            it "should redirect to sign in page for get :index" do
+            %br
+            get :index
+            %br
+            response.should redirect_to(new_user_session_path)
+            %br
+            end
+            %br
+            
+            it "should redirect to sign in page for get :show" do
+            %br
+            get :show, :id => "123"
+            %br
+            response.should redirect_to(new_user_session_path)
+            %br
+            end
+            %br
+            end 
+            %br
+            end
+            %br
+          The above specs can be repeated for each and every action in the controller. Now when I run the above spec the output will look something like this.
+      %p
+        %h4
+
+          .well.black-well
+            for non-signed in users
+            %br
+            should redirect to sign in page for delete :destroy
+            %br
+            should redirect to sign in page for get :index
+            %br
+            should redirect to sign in page for get :show
+            %br
+          The output doesn’t read really that great. One of the good guideline which I believe for writing good RSpec is that the output should be really readable like a prose and easily convey the behavior or intent of the code it tests. So it’s time to tweak the code and make the output more readable. Also if you look the code has lot of repeatition of response.should redirect_to all over the place. So let us clean up that with explicit subject and context.
+      %p
+        %h4
+
+          .well
+            describe PlacesController do
+            %br
+            describe "access control" do
+            %br
+            context "for non-signed in users" do
+            %br
+            
+            subject { response }
+            %br
+            context "delete :destroy" do
+            %br
+            before { delete :destroy, :id => "1234" }
+            %br
+            it { should redirect_to(new_user_session_path) }
+            %br
+            end
+            %br
+            context "get :index" do
+            %br
+            before { get :index }
+            %br
+            it { should redirect_to(new_user_session_path) }
+            %br
+            end
+            %br
+            context "get :show" do
+            %br
+            before { get :show, :id => "123" }
+            %br
+            it { should redirect_to(new_user_session_path) }
+            %br
+            end
+            %br
+            end
+            %br
+            end
+            %br
+            end
+          Notice how I have used the subject {} to specify an explicit subject. The implicit subject for any RSpec is the class which is used with the describe at top. In the above case it would be PlacesController. By specifying an explicit subject we are declaring the object which need to evaluated for subsequent tests. In this case it has been set to the response object. The usage of context really makes the code much clean and readable. Basically it sets the context for each test case while running. Now if we run the RSpec the output looks much cleaner like this.
+      %p
+        %h4
+
+          .well.black-well
+            for non-signed in users
+            %br
+            delete :destroy
+            %br
+            should redirect to "/users/sign_in"
+            %br
+            get :index
+            %br
+            should redirect to "/users/sign_in"            
+            %br
+            get :show
+            %br
+            should redirect to "/users/sign_in"
+            %br
+          Here is another example of an explicit subject below. This is an RSpec for User Role assignments with CanCan.
+      %p
+        %h4
+
+          .well
+            describe Ability do
+            %br
+            context "Admin Role" do
+            %br
+            before(:each) do
+            %br
+            @admin = Factory(:admin)
+            %br
+            @ability = Ability.new(@admin)
+            %br
+            end
+            %br
+            subject { @ability }
+            %br
+            it { should be_able_to(:manage,User) }
+            %br
+            it { should be_able_to(:manage, Restuarant)}
+            %br
+            it { should be_able_to(:manage,Place) }
+            %br
+            end
+            %br
+            end
+          The code really is looking succinct and clean with the usage of subject {} . Without the subject it would have been a drudgery to write the same piece with describe...it..end blocks.
+      %p
+        %h3
+
+          .red
+            Shared Examples
+      %p
+        %h4
+          
+          Now let us turn our attention to the technique of Shared Examples which keeps our RSpec code DRY. Here is an example which tests the Links appearing in a footer of the page based on the User Role.
+      %p
+        %h4
+
+          .well
+            shared_examples "footer" do |links|
+            %br
+            links.each do |link|
+            %br
+            it "with hash{link}" do
+            %br
+            within("div#footer") do
+            %br
+            page.should have_xpath("//nav/ul/li/a[contains(text(),'hash{link}')]")
+            %br
+            end
+            %br
+            end
+            %br
+            end
+            %br
+            end
+            %br
+            describe "Footer" do
+            %br
+            extend LinkHelpers
+            %br
+            context "not signed in user" do
+            %br
+            before { visit search_home_path }
+            %br
+            it_behaves_like "a footer", normal_links
+            %br
+            end
+            %br
+            context "Admin" do
+            %br
+            before(:each) do
+            %br
+            @admin = Factory(:admin)
+            %br
+            sign_in_user(@admin.email,"password")
+            %br
+            end
+            %br
+            it_behaves_like "a footer", admin_links
+            %br
+            end
+            %br
+            end
+          The code is pretty self-explanatory. For a noumal user I want a bunch of links to appear in the footer. For an admin user I want another set of links to appear. In the code above normal_links method gives the array of links for normal user and admin_links gives the array of links for admin user. [Note normal_links and admin_links are methods defined in a module LinkHelpers which I am extending below describe]
+
+          Coming to the DRY part. The code for doing the actual testing is put under a shared_example “footer” and it is invoked with it_behaves_like call. Also note we can pass zero or any number of arguments to shared_example. In the example above it accepts a single argument of Array type.
+
+          Let us see the output of the above code:
+      %p
+        %h4
+
+          .well.black-well
+            Footer
+            %br
+            &nbsp&nbspnot signed in user
+            %br
+            &nbsp&nbsp&nbspbehaves like a footer
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith About Us
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Feedback
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Disclaimer
+            %br
+            Admin
+            %br
+            &nbsp&nbspbehaves like a footer
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith About Us
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Feedback
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Disclaimer
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Manage Restaurant
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Manage Place
+            %br
+          Even though the behavior and output is correct, the above results and code doesn’t read proper. Probably we shouldn’t call display of footer as a behavior. RSpec to rescue again! We can customize what appears in the output (in this case “behaves like a”) as well as rename the function it_behaves_like to something which is more appropriate for the context.
+
+          So for diplay of a footer it may be good to have a function like it_has_a "footer" instead of it_behaves_like "a footer". Now let us see how this done:
+      %p
+        %h4
+
+          .well
+            RSpec.configure do |c|
+            %br
+            c.alias_it_should_behave_like_to :it_has_a, 'has a'
+            %br
+            end
+            %br
+            shared_examples "footer" do |links|
+            %br
+            links.each do |link|
+            %br
+            it "with hash{link}" do
+            %br
+            within("div#footer") do
+            %br
+            page.should have_xpath("//nav/ul/li/a[contains(text(),'hash{link}')]")
+            %br
+            end
+            %br
+            end
+            %br
+            end
+            %br
+            end
+            %br
+            describe "Footer" do
+            %br
+            extend LinkHelpers
+            %br
+            context "not signed in user" do
+            %br
+            before { visit search_home_path }
+            %br
+            it_has_a "footer", normal_links
+            %br
+            end
+            %br
+            context "Admin" do
+            %br
+            before(:each) do
+            %br
+            @admin = Factory(:admin)
+            %br
+            sign_in_user(@admin.email,"password")
+            %br
+            end
+            %br
+            it_has_a "footer", admin_links
+            %br
+            end
+            %br
+            end
+            
+          In the above code RSpec.configure block actually aliases the it_behaves_like function it_has_a and specifies that “has a” should be the output instead of “behavies like a” while the specs are run. Let us check the output now:
+      %p
+        %h4
+
+          .well.black-well
+            Footer
+            %br
+            &nbsp&nbspnot signed in user
+            %br
+            &nbsp&nbsp&nbsphas a footer
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith About Us
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Feedback
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Disclaimer
+            %br
+            Admin
+            %br
+            &nbsp&nbsphas a footer
+            %br
+            &nbsp&nbsp&nbspwith About Us
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Feedback
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Disclaimer
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Manage Restaurant
+            %br
+            &nbsp&nbsp&nbsp&nbsp&nbspwith Manage Place
+      %p
+        %h3
+
+          .red
+            To Conclude
+      %p
+        %h4
+
+          * Use context with describe and make the test more readable instead of just getting stuck with describe..describe...it kind of format.
+          %br
+          * Give a before {} block for any context to set any pre-conditions before running the context.
+          %br
+          *  Wherever possible declare an explicit subject and reduce the cruft in the specs.
+          %br
+          * DRY up your RSpec with shared_examples.
+          %br
+          * Customize the method name and output by aliasing in RSpec.configure.
+          %br
+          Hope this post was helpful, do share your thoughts if any!

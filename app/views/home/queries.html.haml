@@ -1,0 +1,88 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          Avoid N+1 queries 
+          %br
+      %h3
+        By Arun, 30-Sep-2012
+  .col-sm-12
+    .container
+      %p
+        %h4
+          N+1 Queries are bad, they increase the hits on the db, network round trip and database load. N+1 queries happens when you are fetching data from 2 tables having 1:N or 1:1 relation between them. N+1 means you hit the master table in database 1 time and child table N Times where N is the number of records being retrieved from Master Table.
+      %p
+        %h4
+
+          Consider an example where you have a Journals & Postings Table. Each Journal Entry can have many Postings. We have a requirement to fetch each Journal Entry along with its Postings and display it. The normal way to do such a query would be to
+      %p
+        %h4
+          .well
+            @journals = Journal.limit(10)
+      %p
+        %h4
+
+          In this approach while rendering the Journal entries, we fetch posting one by one when we call something like 
+          %i
+            journal.postings[0].some_field.
+      %p
+        %h4
+
+          But if you take look at the log generated at this point it will have something like this
+      %p
+        %h4
+          .well
+            Journal Load (0.6ms)  SELECT "journals".* FROM "journals" ORDER BY id DESC LIMIT 10 OFFSET 0
+            %br
+            Posting Load (0.4ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 67
+            %br
+            Posting Load (0.4ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 66
+            %br
+            Posting Load (0.4ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 65
+            %br
+            Posting Load (0.4ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 64
+            %br
+            Posting Load (0.4ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 63
+            %br
+            Posting Load (0.6ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 62
+            %br
+            Posting Load (0.5ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 61
+            %br
+            Posting Load (0.4ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 60
+            %br
+            Posting Load (0.5ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 59
+            %br
+            Posting Load (0.4ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" = 58
+      %p
+        %h4
+
+          As you can see there are 11 (10 + 1) round-trips to the database. And total time for all the queries is coming out to be 5ms. To avoid this Rails provides a neat way with includes which can be found in ActiveRecord::QueryMethods Module. So let’s modify the above query like this
+      %p
+        %h4
+          .well
+            @journals = Journal.includes(:postings).limit(10)
+      %p
+        %h4
+
+          And let’s take a look at the log
+      %p
+        %h4
+          .well
+            Journal Load (0.6ms)  SELECT "journals".* FROM "journals" ORDER BY id DESC LIMIT 10 OFFSET 0
+            %br
+            Posting Load (0.5ms)  SELECT "postings".* FROM "postings" WHERE "postings"."journal_id" IN (69, 68, 67, 66, 65, 64, 63, 62, 61, 60, 59, 58)
+      %p
+        %h4
+
+          Voila! the time for the queries have reduced to 1.1ms, that is a very good improvement in performance.
+      %p
+        %h4
+
+          So it’s always a good idea to avoid N+1 queries and get a performance boost. If you want to hunt down N+1 queries in your legacy app there is a gem available for doing it bullet. Bullet provides fancy notifications methods including emailing or growling or popping up JavaScript alert to you when it hits an N+1 query. That is pretty nifty.
+      %p
+        %h4
+
+          Hope you found this post useful.

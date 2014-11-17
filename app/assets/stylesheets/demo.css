@@ -55,8 +55,8 @@ animation: clockWise 10s ease 0 infinite;
 
 /* General Demo Style */
 body{ 
-    background-color: #f7f7f7;
-    color: rgba(0,0,0,0.8);
+    background: url('career.jpg')
+    
    /* font-family: 'Kelly Slab','Myriad Pro', Arial, sans-serif; */
     /* font-size: 15px; */
 }

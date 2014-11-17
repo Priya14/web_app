@@ -1,0 +1,138 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          Starting Your Ruby & Rails Journey
+          %br
+      %h3
+        By Arun, 18-Sep-2011
+  .col-sm-12
+    .container
+      %p
+        %h4
+          There is popular adage in Rails community “Come for Rails and Stay for Ruby” . And it’s very much true, you can dive into Rails without much knowledge of Ruby and still be productive. This is thanks to the elegance of the language Ruby which makes code easier to write and far more easier to read and understand.
+      %p
+        %h4
+
+          While the adage holds much truth, we at Ostrya Labs embarked on the Rails journey starting with Ruby. We learnt the language constructs, its object model and a small doze of metaprogramming before plunging into Rails. Perhaps this has more to do with the programming background which we were coming from.
+      %p
+        %h4
+
+          In this article I would like to share the resources which has helped in our travails in Ruby/Rails land. First let us start with Ruby. The best resource for learning Ruby are these three wonderful books
+      %p
+        %h4
+
+          = link_to 'The Ruby Programming Language', 'http://www.amazon.com/Ruby-Programming-Language-David-Flanagan/dp/0596516177/ref=sr_1_1?ie=UTF8&qid=1313600728&sr=8-1'
+      %p
+        %h4
+
+          = link_to 'Programming Ruby 1.9: The Pragmatic Programmer’s Guide','http://www.amazon.com/Programming-Ruby-1-9-Pragmatic-Programmers/dp/1934356085/ref=sr_1_2?ie=UTF8&qid=1313600728&sr=8-2'
+      %p
+        %h4
+
+          = link_to 'Metaprogramming Ruby: Program like Ruby Pros', 'http://www.amazon.com/Metaprogramming-Ruby-Program-Like-Pros/dp/1934356476/ref=sr_1_1?s=books&ie=UTF8&qid=1313601209&sr=1-1'
+      %p
+        %h4
+
+          If you ask me an opinion on how to go about these books, I would recommend pick Programming Ruby 1.9 first. That book would make you really comfortable with Ruby Language, its Object Model, style of programming and you get a good hang of the Ruby internals. Once you are comfortable with that perhaps you can dive into Rails. Once you start getting comfortable with Rails, find yourself some time and come back to Ruby. At the foremost you should try to get a grip on Metaprogramming in Ruby. Rails is what it is because of the strong metaprogramming support in Ruby. So it is time to pick up Metaprogramming Ruby book. It’s pretty intense book and covers Ruby Object Model and metaprogramming in real depth. Once you are done with Metaprogramming Ruby you can move to The Ruby Programming Language book. The Ruby Programming Language is the bible of Ruby language coming from none other than the creator of Ruby Yukhiro Matusumoto. It covers almost everything that the other two books covers but its very concise and succinct. If this book is used as the first entry point to Ruby language then it may be a bit overwhelming especially for newbie in Ruby Language. But if you have the good foundation of Ruby Language after reading Programming Ruby and Metaprogramming Ruby books, then reading The Ruby Programming Language can be quite enriching and englightening. As I said this is the Bible of Ruby and I generally keep on visiting this book as I get into some gotchas while writing Ruby Code.
+      %p
+        %h4
+
+          Apart from these books there are lot of resources in the Internet to learn Ruby like
+      %p
+        %h4
+
+          = link_to 'Humble Little Ruby Book','http://humblelittlerubybook.com/'
+      %p
+        %h4
+
+          = link_to 'Why’s Poignant Guide to Ruby','http://mislav.uniqpath.com/poignant-guide/book/'
+      %p
+        %h4
+
+          = link_to 'Ruby Learning Blog – This covers Rails also a fair bit', 'http://rubylearning.com/blog/'
+      %p
+        %h4
+
+          Now let us turn our attention to Rails. The best starting point for Rails would be the 
+          = link_to 'Rails Tutorial', 'https://www.railstutorial.org/book'
+          by Michael Hartl. A big thanks to Michael Hartl for making this wonderful book free in HTML format. This book is also available as a series of 
+          = link_to 'screencast','https://www.railstutorial.org/'
+          format where Michael takes you through the entire book through his wonderful illustrations of coding a Sample App in Rails. Doing this one book can make you really well grounded in Rails and it covers a whole gamut of things from testing with RSpecs, User Authentication to Model Associations. Another good book for Rails is 
+          = link_to 'Agile Web Development With Rails', 'http://www.amazon.com/Agile-Development-Rails-Pragmatic-Programmers/dp/1934356549/ref=sr_1_1?s=books&ie=UTF8&qid=1313602952&sr=1-1'
+          co-authored by none other than the creator of Rails DHH. This is also a wonderful book to guide you through the nuances of Rails. But my only grouse is that it uses some stuff like Prototype JavaScript, RJS templates, Test::Unit for the coverage, while the community has ditched them for better alternatives like jQuery JavaScript, JS templates and RSpecs. In fact those tools are being completely deprecated for new ones in Rails 3.1.
+      %p
+        %h4
+
+          The third book on Rails is 
+          = link_to 'Rails3 in Action','http://www.amazon.com/Rails-3-Action-Yehuda-Katz/dp/1935182277/ref=sr_1_1?s=books&ie=UTF8&qid=1313603194&sr=1-1'
+          which is in its beta stage and is due on Sept 28, 2011. It is again written by the creator of Merb and Rails contributor Yehuda Katz. The good thing about Rails3 in Action is its approach it takes by teaching Behavioral Driven Development with Cucumber along with Rails. Other good things that are of real help in this book are the chapters on Deployment which talks about setting up VM with Vagrant doing deployment with Capistrano and its tips on building Gems, Performance Enhancements on Rails etc. Overall a very good book for any one aspiring to learn Rails!
+      %p
+        %h4
+
+          The best open-source resource available for Rails is the 
+          = link_to 'Rails Guide', 'http://guides.rubyonrails.org/'
+          This can be considered the single point reference for the entire Rails stack and it covers a whole lot of topics in depth ranging from Routers to Active Records to even Contributing to Rails code. So this can be considered the bible for Rails and eventually you will keep looking into it as you code your Rails app. The 
+          = link_to 'Rails API','http://api.rubyonrails.org/'
+          is also an awesome companion while developing in Rails.
+      %p
+        %h4
+
+          In Rails world, testing and development goes hand-in-hand, in fact it is highly recommended to do a Test Driven Development or even better do a Behavioral Driven Development. The 
+          = link_to 'RSpec Book','https://pragprog.com/book/achbd/the-rspec-book'
+          is highly recommended for getting you in to the test-driven and behavioral-driven paradigm of development. If you are going to work on any commercial project it would be really good if you can follow the approach taken in the book while doing your design and coding.
+      %p
+        %h4
+
+          Now if you are the one who prefer screencasts to flapping pages of a book, then Rails have some great screencasts for your help. One of them which I had already mentioned above is the one by Michael Hartl. Apart from this you have some good screencasts on Rails (and also Ruby) from 
+          = link_to 'Peepcode.','http://www.pluralsight.com/'
+          = link_to 'Code School','https://www.codeschool.com/'
+          also has some nice screencasts on Rails. One of the most popular among them is the 
+          = link_to 'Rails for Zombies','https://www.codeschool.com/courses/rails-for-zombies-redux'
+          which is a free screencast catering to the newbie in Rails. Also their other screencast 
+          = link_to 'Rails Best Practices','https://www.codeschool.com/courses/rails-best-practices'
+          though priced slightly on the higher side is highly recommended.
+      %p
+        %h4
+
+          The above resources will clearly make you up and running with Rails. But your learning never stops in Rails world because the rate of churning of new innovations by the great programmers in Ruby Community. To keep you abreast with latest Gems and happenings in Ruby and Rails world keep a tab on the following channels every week
+      %p
+        %h4
+
+          = link_to 'Rails Casts', 'http://railscasts.com/'
+          by Ryan Bates
+      %p
+        %h4
+
+          = link_to 'Ruby5','http://ruby5.envylabs.com/'
+      %p
+        %h4
+
+          = link_to 'Ruby Inside','http://www.rubyinside.com/'
+      %p
+        %h4
+
+          = link_to 'Ruby Show','http://rubyshow.com/'
+      %p
+        %h4
+
+          Also you can subscribe to 
+          = link_to 'Ruby Weekly News Letter','http://rubyweekly.com/'
+      %p
+        %h4
+
+          And finally the greatest resource available for you is 
+          = link_to 'github.','https://github.com/'
+          Since Ruby and Rails are both open-sourced almost all of the tools and libraries available for programmers are open-sourced too. And reading through code of great programmers gives you some great ideas and logic which books and blog may not be able to cover. Some of the great programmers out there whose code seem like poetry are 
+          = link_to 'jose valim,','https://github.com/plataformatec'
+          = link_to 'aaron paterson,','https://github.com/tenderlove'
+          = link_to 'avdi grimm,','https://github.com/avdi'
+          = link_to 'jonas nicklas.','https://github.com/jnicklas'
+          And there are numerous others big and small. Do try to read the code of the libraries you use, I am sure nothing can be more edifying that this.
+      %p
+        %h4
+
+          Hope you find the resources mentioned above useful. Happy Hacking Ruby & Rails!

@@ -1,0 +1,139 @@
+%br
+%br
+.row
+  .col-sm-12
+    .pull-left
+      .red
+        %h2
+          Active Record Callbacks
+          %br
+      %h3
+        By Arun, 22-Nov-2012
+  .col-sm-12
+    .container
+      %p
+        %h4
+          Rails provide two methods of callbacks in Active Record
+      %p
+        %h4
+
+          Observers
+      %p
+        %h4
+
+          Callbacks
+      %p
+        %h4
+          .red
+            Observers
+      %p
+        %h4
+
+          Observers are real bad to use as it is difficult to read the code and debug it. I stumbled on this nice Stack Overflow
+          = link_to 'link', 'http://stackoverflow.com/questions/4866509/rails-observers-when-to-and-when-not-to-use-observers-in-rails'
+          on why observers really suck. To sum up from the stack overflow post Observers
+      %p
+        %h4
+
+          Makes it hard to write unit tests
+      %p
+        %h4
+
+          Require State
+      %p
+        %h4
+
+          Order Assumption Problems
+      %p
+        %h4
+
+          Leads to Poor Design
+      %p
+        %h4
+
+          Anyways good news is that from Rails 4 onwards Observers will not be part of the core Rails framework and has been removed from it, though it will be available as plugin. So you will be better off not using it.
+      %p
+        %h4
+          .red
+            Callbacks
+      %p
+        %h4
+
+          Rails also provides a bevy of callbacks in the form of before_* and after_* methods. * can be create/update/destroy/initialize/save/validation. Using these callbacks are equally bad as is the case of observers. The main reason why they are bad is they fragment the codebase and makes it confusing to understand. We have to end up hunting in the model classes for the various callbacks and decipher the business logic [of course tests can help here a bit].
+      %p
+        %h4
+
+          Let us take a small example of a Customer class
+      %p
+        %h4
+          .well
+            class Customer
+            %br
+            before_save :generate_code
+            %br
+            
+            private
+            %br
+            def generate_code
+            %br
+            unless code.present?
+            %br
+            logic for code generation
+            %br
+            end
+
+            %br
+            end
+            %br
+            end
+
+      %p
+        %h4
+
+          The idea is simple before save we are generating the Customer Code and also it gets generated only if code is already not generated. One of the problem with this callback is it gets fired everytime you save a customer record. We are interested in generating code only the first time customer record gets inserted. But a Customer record may be saved many times like update of address or profile etc. Agreed it doesn’t generate the code because we are checking if code is present, but still it is an unwanted code path which it has to take everytime a commit happens.
+      %p
+        %h4
+
+          Now let us look this from a design perspective. Generating code for a customer is part of the core domain/business logic. It need not be obscured inside a callback and perhaps deserve its own space.
+      %p
+        %h4
+          .well
+            class CustomerRegistration
+            %br
+            def register_customer(params)
+            %br
+            customer = Customer.new(params)
+            %br
+            customer.code = generate_code
+            %br
+            customer.save
+            %br
+            customer
+            %br
+            end
+            %br
+            private
+            %br
+            def generate_code
+            %br
+            some logic
+            %br
+            end
+            %br
+            end
+      %p
+        %h4
+
+          Here I have pulled out a separate class called CustomerRegistration , this is responsible for generating the code and saving the customer. Ideally the generate_code would delegate to a separate class like CustomerCodeGenerator whose responsibility would be to produce unique codes, that way this class will have sole responsibility of how to register the Customer. CustomerCodeGenerator will have the single responsibility of generating codes and we will comply with Single Responsibility principle as well in both the classes.
+      %p
+        %h4
+
+          The biggest advantage of taking this approach is extensibility – imagine tomorrow you are also asked to send an email after Customer Registration – in the previous approach of callbacks perhaps you will end up adding one more callback to send email thereby mucking the Model class further with unwanted responsibilities. Whereas in the newer approach it just a matter of calling a function in register_customer.
+      %p
+        %h4
+
+          And from testing perspective for testing callbacks you will end tests which have to load Rails and would hit the database resulting in slow tests. Creating a separate class like CustomerRegistration will give us scope to use Stubs and Mocks and speed up the tests.
+      %p
+        %h4
+
+          So if you are using callbacks in Rails code, it is time to stop and think and perhaps refactor things out of the bloated models and produce code which aligns with the business logic. On a final note the only callback which I found useful and tend to use is after_initialize. This I typically use when I have serialized fields like Hash or Array or some other seralizer stored in db column and I want to extract values out of those and populate into some transient variables in Model, apart from that I don’t use the callbacks much in my models.
