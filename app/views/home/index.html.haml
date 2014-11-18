@@ -56,7 +56,7 @@
     :javascript
       $(document).ready(function() {
       	$('#fullpage').fullpage({
-        sectionsColor: ['#DCDCDC', '#dcdcdc', '#dcdcdc', '#dcdcdc', '#dcdcdc','#dcdcdc','#000'],
+        sectionsColor: ['#FFFFFF', '#E4E4E4', '#BABABA', '#919191', '#6D6C6C','#4B4B4B','#000'],
         anchors: ['firstPage', 'secondPage', '4thpage', '5thpage', '6thpage','7thpage','8thpage'],
         menu: '#menu'
       	});
@@ -67,12 +67,12 @@
       #section0.section
         %img{:src => '/assets/corporate.jpg', :width => '1750px', :height => '800px'}
         
-      #section1.section.bck2
-        %br
-
+      #section1.section
         %br
         %br
-
+        %br
+        %br
+        %br
         .row
           .col-sm-3
             #f1_container
@@ -111,6 +111,8 @@
         
         %br
         %br
+        %br
+        %br
         .row
           .col-sm-3
             #f1_container
@@ -147,20 +149,21 @@
                 .back.face.center
                   %p This is nice for exposing more information about an image.
         %br
-        .row
-          .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  = link_to image_tag('school.jpg')
+        %br
+        -# .row
+        -#   .col-sm-3
+        -#     #f1_container
+        -#       #f1_card.shadow
+        -#         .front.face
+        -#           = link_to image_tag('school.jpg')
                  
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
+        -#         .back.face.center
+        -#           %p This is nice for exposing more information about an image.
                  
 
 
 
-      #section3.section.bck2
+      #section3.section
         .row
           .col-sm-12
             .col-sm-6
@@ -243,7 +246,7 @@
         
       
 
-      #section4.section.bck2
+      #section4.section
         %br
         %br
         %br
@@ -355,10 +358,10 @@
              
                 
 
-      #section5.section.bck2
-        %br
+      #section5.section
+        
     
-        %br
+        
         .row
           .col-sm-12
             
@@ -460,7 +463,7 @@
 
 
             
-      #section6.section.bck2
+      #section6.section
         %br
         %br
         %br
@@ -514,10 +517,8 @@
             %h3.normal You want a workshop on Rails. You want to know how to drive a rails project with BDD. You want to learn how to use the various ruby gems and build a great rails app real fast. Or you just want to learn the Ruby language and do some cool programming.We can train you with our hands-on workshops. Get on the fast lane and kick start your ruby/rails sojourn with us.
             %h3.normal You need a great web-app to power your business/idea. You need it in time without budget overruns. You want a predictable development cycle. Or you want to enhance or maintain an existing Ruby app. We can be of help.We follow a truly agile model, test driving the application, thus ensuring timely and dependable delivery quality. Our continuous, iterative delivery weeds out the surprise elements from the software.
 
-          %br
-          %br
+
         .row.half-black
-          %br
           %br
           .col-sm-1
           .col-sm-4
