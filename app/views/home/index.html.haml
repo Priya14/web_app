@@ -75,39 +75,34 @@
         %br
         .row
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  = link_to image_tag('school.jpg')
-                 
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
-                 
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/school.jpg'}
+   
+                .back
+                  %p This is nice for exposing more information about an image.     
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  //%img{:src => "app/images/11.jpg"}
-                  = image_tag "exam.jpg"
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
-                 
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/exam.jpg'}
+                .back
+                  %p This is nice for exposing more information about an image.     
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  //%img{:src => "app/images/11.jpg"}
-                  = image_tag "online.jpg"
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/online.jpg'}
+                .back
+                  %p This is nice for exposing more information about an image.     
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  //%img{:src => "app/images/11.jpg"}
-                  = image_tag "property1.jpg"
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/property1.jpg'}
+                .back
+                  %p This is nice for exposing more information about an image.     
         
         %br
         %br
@@ -115,39 +110,35 @@
         %br
         .row
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  //%img{:src => "app/images/11.jpg"}
-                  = image_tag "mar.jpg"
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/mar.jpg'}
+                .back
+                  %p This is nice for exposing more information about an image.     
                  
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  //%img{:src => "app/images/11.jpg"}
-                  = image_tag "deal.jpg"
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/deal.jpg'}
+                .back
+                  %p This is nice for exposing more information about an image.     
                  
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  //%img{:src => "app/images/11.jpg"}
-                  = image_tag "mone.jpg"
-                .back.face.center 
-                  %p This is nice for exposing more information about an image.
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/mone.jpg'}
+                .back
+                  %p This is nice for exposing more information about an image.     
           .col-sm-3
-            #f1_container
-              #f1_card.shadow
-                .front.face
-                  //%img{:src => "app/images/11.jpg"}
-                  = image_tag "con.jpg"
-                .back.face.center
-                  %p This is nice for exposing more information about an image.
+            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+              .flipper
+                .front
+                  %img{:src => '/assets/con.jpg'}
+                .back
+                  %p This is nice for exposing more information about an image.     
         %br
         %br
         -# .row
