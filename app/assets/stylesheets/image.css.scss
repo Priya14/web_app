@@ -123,6 +123,7 @@
     //position: absolute;
     font-size: 1.5em;
     color: white;
+    width: 350px;
 }    
 
 .back p {
@@ -278,41 +279,6 @@
 .rel {
     position: relative;
 }
-/* .test-margin { */
-/*   margin-left: 90px; */
-/*   margin-right: 10px; */
-/* } */
-/* .test-margin1 { */
-/*   margin-left: 50px; */
-/*   margin-right: 10px; */
-/* } */
-
-/* .circle { */
-/*   width: 200px; */
-/*   border-radius: 200px; */
-/*   -webkit-transform: translateY(100px); */
-/*   -moz-transform: translateY(100px); */
-/*   -ms-transform: translateY(100px); */
-/*   -o-transform: translateY(100px); */
-/*   -webkit-transform: translateY(100px); */
-/*   -webkit-transition: all 0.5s; */
-/*   -moz-transition: all 0.5s; */
-/*   transition: all 0.5s; */
-/* } */
-/* .circle-shadow { */
-/*   width: 200px; */
-/*   height: 200px; */
-/*   /\* border-radius: 200px 200px 200px 200px; *\/ */
-/*   /\* box-shadow: 0px 0px 0px 2px #000; *\/ */
-/*   -webkit-transform: translateY(100px); */
-/*   -moz-transform: translateY(100px); */
-/*   -ms-transform: translateY(100px); */
-/*   -o-transform: translateY(100px); */
-/*   -webkit-transform: translateY(100px); */
-/*   -webkit-transition: all 0.5s; */
-/*   -moz-transition: all 0.5s; */
-/*   transition: all 0.5s; */
-/* } */
 
 h3.normal {
     font-style: italic;
@@ -385,53 +351,4 @@ h4.normal1 {
 .fa1 {
     color: white;
 }
-
-
-/* #f1_container { */
-/*     position: relative; */
-/*     margin: 10px auto; */
-/*     width: 368px; */
-/*     height: 260px; */
-/*     z-index: 1; */
-/* } */
-/* #f1_container { */
-/*     perspective: 1000; */
-/* } */
-/* #f1_card { */
-/*     width: 100%; */
-/*     height: 100%; */
-/*     transform-style: preserve-3d; */
-/*     transition: all 1.0s linear; */
-/*     -webkit-transform-style: preserve-3d; */
-/*     -webkit-transition: all 1.0s linear; */
-/* } */
-/* #f1_container:hover #f1_card { */
-/*     transform: rotateY(180deg); */
-/*     -webkit-transform: rotateY(180deg); */
-/*     box-shadow: -5px 5px 5px #aaa; */
-/* } */
-/* .face { */
-/*     position: absolute; */
-/*     width: 368px; */
-/*     height: 260px; */
-/*     -webkit-backface-visibility: hidden; */
-/*     backface-visibility: hidden; */
-/* } */
-/* .face.back { */
-/*     display: block; */
-/*     transform: rotateY(180deg); */
-/*     -webkit-transform: rotateY(180deg); */
-/*     box-sizing: border-box; */
-/*     width: 368px; */
-/*     height: 260px; */
-/*     padding: 10px; */
-/*     color: white; */
-/*     text-align: center; */
-/*     background-color: #aaa; */
-/* } */
-
-
-
-
-
 
