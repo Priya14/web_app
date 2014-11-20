@@ -4,46 +4,39 @@
     %title Website
     = javascript_include_tag "application"
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-                  
-    .container
-      .navbar.navbar-default.nav-links.navbar-fixed-top
-        .navbar-inner
-          .pull-left
-            = image_tag "logo.jpg" ,:width => "310",:height => "100"              
-          
-
-          %ul.nav.navbar-nav
-            %li{"data-menuanchor" => "firstPage"}
-              %a{:href => "/home#firstPage"}
-                HOME
     
-            %li{"data-menuanchor" => "secondPage"}
-              %a{:href => "/home#secondPage"}
-                PROJECTS
-            %li{"data-menuanchor" => "3rdPage"}
-              %a{:href => "/home/blog"}
-                BLOG
-            %li{"data-menuanchor" => "4thpage"}
-              %a{:href => "/home#4thpage"} 
-                TRAINING
-            %li{"data-menuanchor" => "5thpage"}
-              %a{:href => "/home#5thpage"}
-                TECHNOLOGIES
-            %li{"data-menuanchor" => "6thpage"}
-              %a{:href => "/home#6thpage"}
-                PEOPLE
-            %li{"data-menuanchor" => "7thpage"}
-              %a{:href => "/home#7thpage"}
-                CAREERS
-            %li{"data-menuanchor" => "8thpage"}
-              %a{:href => "/home#8thpage"}
-                CONTACT US
-            
-            //%link{:href => "/assets/rock.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
-            // = render 'rock'
-    %br
-    %br
-    %br
-    = yield        
+    .container-fluid
+
+      .header
+        .pull-left
+          = image_tag "logo.jpg" 
+        %ul.nav.navbar-nav
+          %li{"data-menuanchor" => "firstPage"}
+            %a{:href => "/home#firstPage"}
+              HOME
+
+          %li{"data-menuanchor" => "secondPage"}
+            %a{:href => "/home#secondPage"}
+              PROJECTS
+          %li{"data-menuanchor" => "3rdPage"}
+            %a{:href => "/home/blog"}
+              BLOG
+          %li{"data-menuanchor" => "4thpage"}
+            %a{:href => "/home#4thpage"} 
+              TRAINING
+          %li{"data-menuanchor" => "5thpage"}
+            %a{:href => "/home#5thpage"}
+              TECHNOLOGIES
+          %li{"data-menuanchor" => "6thpage"}
+            %a{:href => "/home#6thpage"}
+              PEOPLE
+          %li{"data-menuanchor" => "7thpage"}
+            %a{:href => "/home#7thpage"}
+              CAREERS
+          %li{"data-menuanchor" => "8thpage"}
+            %a{:href => "/home#8thpage"}
+              CONTACT US
+        
+      = yield        
     
                 

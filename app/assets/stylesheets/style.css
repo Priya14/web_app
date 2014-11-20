@@ -1,3 +1,4 @@
+
 h2.ss-subtitle{
     padding: 10px 10px 40px;
     font-size: 52px;
@@ -28,33 +29,6 @@ h2.ss-subtitle:after{
 	right: 50%;
 	margin-right: -1px;
 	bottom: -4px;
-}
-.ss-links{
-	position: fixed;
-	right: 10px;
-	top: 1000px;
-	width: 25%;
-	z-index: 100;
-}
-.ss-links a{
-	background: rgba(0,0,0,0.2);
-	font-size: 16px;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	margin: 5px;
-	float: left;
-	border-radius: 50%;
-	display: block;
-	text-align: center;
-	-webkit-transition: background 0.2s linear;
-	-moz-transition: background 0.2s linear;
-	-o-transition: background 0.2s linear;
-	-ms-transition: background 0.2s linear;
-	transition: background 0.2s linear;
-}
-.ss-links a:hover{
-	background: rgba(0,0,0,0.4);
 }
 .ss-container{
     width: 100%;

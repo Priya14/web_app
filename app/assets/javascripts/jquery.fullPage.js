@@ -22,7 +22,7 @@
 
 			//scrolling
 			'css3': false,
-			'scrollingSpeed': 10,
+			'scrollingSpeed': 25,
 			'autoScrolling': true,
 			'easing': 'easeInQuart',
 			'easingcss3': 'ease',
@@ -33,7 +33,7 @@
 			'fitSection': false,
 			'normalScrollElements': null,
 			'scrollOverflow': false,
-			'touchSensitivity': 5,
+			'touchSensitivity': 1,
 			'normalScrollElementTouchThreshold': 2,
 
 			//Accessibility
@@ -75,7 +75,7 @@
 		//Defines the delay to take place before being able to scroll to the next section
 		//BE CAREFUL! Not recommened to change it under 400 for a good behavior in laptops and
 		//Apple devices (laptops, mouses...)
-		var scrollDelay = 600;
+		var scrollDelay = 100;
 
 		$.fn.fullpage.setAutoScrolling = function(value){
 			options.autoScrolling = value;

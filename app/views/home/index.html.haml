@@ -56,7 +56,8 @@
     :javascript
       $(document).ready(function() {
       	$('#fullpage').fullpage({
-        sectionsColor: ['#FFFFFF', '#E4E4E4', '#BABABA', '#919191', '#6D6C6C','#4B4B4B','#000'],
+        sectionsColor: ['#222', 'whitesmoke', '#CCCC99', 'whitesmoke', '#CCCC99','#f4f4f4','#f4f4f4'],
+        scrollingSpeed: 300,
         anchors: ['firstPage', 'secondPage', '4thpage', '5thpage', '6thpage','7thpage','8thpage'],
         menu: '#menu'
       	});
@@ -64,112 +65,175 @@
   
   %body
     #fullpage
-      #section0.section
-        %img{:src => '/assets/corporate.jpg', :width => '1750px', :height => '800px'}
+      #section1.section.hero
+        .inner
+          .copy
+                
         
-      #section1.section
-        %br
-        %br
-        %br
-        %br
-        %br
-        .row
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/school.jpg', :width => '368px', :height => '260px'}
-   
-                .back
-                  %p This is nice for exposing more information about an image.     
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/exam.jpg', :width => '368px', :height => '260px'}
-                .back
-                  %p This is nice for exposing more information about an image.     
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/online.jpg', :width => '368px', :height => '260px'}
-                .back
-                  %p This is nice for exposing more information about an image.     
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/property1.jpg', :width => '368px', :height => '260px'}
-                .back
-                  %p This is nice for exposing more information about an image.     
         
-        %br
-        %br
-        %br
-        %br
+      #section2.section
         .row
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/mar.jpg', :width => '368px', :height => '260px'}
-                .back
-                  %p This is nice for exposing more information about an image.     
-                 
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/deal.jpg', :width => '368px', :height => '260px'}
-                .back
-                  %p This is nice for exposing more information about an image.     
-                 
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/mone.jpg', :width => '368px', :height => '260px'}
-                .back
-                  %p This is nice for exposing more information about an image.     
-          .col-sm-3
-            .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
-              .flipper
-                .front
-                  %img{:src => '/assets/con.jpg', :width => '368px', :height => '260px'}
-                .back
-                  %p This is nice for exposing more information about an image.     
         %br
         %br
-        -# .row
-        -#   .col-sm-3
-        -#     #f1_container
-        -#       #f1_card.shadow
-        -#         .front.face
-        -#           = link_to image_tag('school.jpg')
-                 
-        -#         .back.face.center
-        -#           %p This is nice for exposing more information about an image.
-                 
+        %br
+        %br
+        %br
+        %br
+        %br
+       
+          
+          .col-sm-12
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/school2.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        Educational ERP
+                                                
+                  .back
+                    %p This is nice for exposing more information about an image.     
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/exam_test.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        Examination  Controller
+                        
+                        
+                  .back
+                    %p This is nice for exposing more information about an image.     
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/online_exam.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        Online Examination Package
+                  .back
+                    %p This is nice for exposing more information about an image.     
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/homes.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        Property Management System
+                  .back
+                    %p This is nice for exposing more information about an image.     
 
-
-
-      #section3.section
+        .row
+        %br
+        %br
+        %br
+        %br
+        %br
         .row
           .col-sm-12
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/globe.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        Online Social Marketing Application
+                  .back
+                    %p This is nice for exposing more information about an image.     
+
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/online_deal.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        Online Property Deal Application
+                  .back
+                    %p This is nice for exposing more information about an image.     
+
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/coins.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        End to End Benefit Fund Solution
+                  .back
+                    %p This is nice for exposing more information about an image.     
+            .col-sm-3
+              .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
+                .flipper
+                  .front
+                    %img{:src => '/assets/online_shop.jpg', :width => '370px', :height => '260px'}
+                    .bottom-color
+                      %center
+                        Consumer Application
+                       
+                        
+
+                  .back
+                    %p This is nice for exposing more information about an image.     
+        %br
+        %br
+                 
+
+
+      #section3.section.hero
+        
+        .row.inner
+          %br
+          %br
+          
+          .col-sm-12
             .col-sm-6
-              
+                              
+              %h3.block-text.rel.zmin
+                %center
+                  %a{:href => "#", :title => ""} BDD with Ruby on Rails
+                %p BDD helps to write test cases in a natural language that non-programmers can read and 
+                %p there by facilitates in obtaining clear understanding of desired software behavior.
                 
-              %h3.block-text1.rel.zmin
-                %a{:href => "#", :title => ""} BDD with Ruby on Rails
-                %p BDD helps to write test cases in a natural language that non-programmers can read and there by facilitates in obtaining clear understanding of desired software behavior.
                 %p During this two day hands-on workshop, you will learn about 
+                
                 %p * Ruby on Rails
                 %p * Developing Rails 3.0 app
                 %p * Distributed Version Control with Git and Github
                 %p * Introduction to TDD & BDD
                 %p * Driving the Rails 3.0 app using BDD
                 %p * Deploying the application to the cloud
+              
+              %h3.block-text.rel.zmin
+                %center
+                  %a{:href => "#", :title => ""} Angularjs
+                %p AngularJS is a JavaScript MVC framework developed by Google that lets you build well
+                %p structured, easily testable, and maintainable front-end applications. The framework 
+                %p will help you build well structured, rich client-side applications in a modular 
+                %p fashion—with less code and more flexibility.This workshop will  help you learn
+                %p AngularJS as quickly and efficiently as possible.You 
+                %p will learn all the basics of AngularJS: directives, expressions, templates, data binding,
+                %p Controllers, Modules, Events, DOM, Forms, Input, Validation, Http, and much more.
+              %h3.block-text.rel.zmin
+                %center
+                  %a{:href => "#", :title => ""} Devise
+                %p  Devise is a flexible authentication solution for Rails based on Warden. It:
+                %p * Is Rack based.
+                %p * Is a complete MVC solution based on Rails engines.
+                %p * Allows you to have multiple models signed in at the same time.
+                %p * Is based on a modularity concept: use just what you really need.
+                %p * Installation of the gem and adding Authentication to an Application.
+                
+     
+                
+
+            .col-sm-6
+              %br
               .item
                 .col-md-6.col-sm-6
                   .block-text1.rel.zmin
@@ -182,98 +246,77 @@
                       Arun is one of the thorough professionals and the in-depth knowledge of the topics showed during the workshop. The personal touch to the training - of ensuring that the pace matched every single person on-board was a stand-out feature!
                     %ins.ab.zmin.sprite.sprite-i-triangle.block
                     &nbsp &nbsp
-                    %br
                     .person-text.rel
-                      %br
+                    
                       //%img{:alt => "", :src => "http://myinstantcms.ru/images/img13.png"}
-                      %a{:href => "https://www.linkedin.com/profile/view?authType=OUT_OF_NETWORK&id=2189352&authToken=mK7E&trk=hb_upphoto", :title => ""} Ritesh Gupta
-                      %i.brown
+                      %a{:href => "https://www.linkedin.com/profile/view?authType=OUT_OF_NETWORK&id=2189352&authToken=mK7E&trk=hb_upphoto", :title => "", :target => "_blank"} Ritesh Gupta
+                      %i
                         %br
                         Senior Technical Architect (Java/J2EE),
                         %br
                         11 years experience in IT
-     
-                
-
-            .col-sm-6
          
-              %h3.block-text.rel.zmin
-                %a{:href => "#", :title => ""} Angularjs
-                %p AngularJS is a JavaScript MVC framework developed by Google that lets you build well structured, easily testable, and maintainable front-end applications. The framework  will help you build well structured, rich client-side applications in a modular fashion—with less code and more flexibility.
-                %p This workshop will  help you learn AngularJS as quickly and efficiently as possible.You will learn all the basics of AngularJS: directives, expressions, templates, data binding,Controllers, Modules, Events, DOM, Forms, Input, Validation, Http, and much more.
-          
-              %h3.block-text.rel.zmin
-                %a{:href => "#", :title => ""} Devise
-                %p  Devise is a flexible authentication solution for Rails based on Warden. It:
-                %p
-                  * Is Rack based.
-                %p * Is a complete MVC solution based on Rails engines.
-                %p * Allows you to have multiple models signed in at the same time.
-                %p * Is based on a modularity concept: use just what you really need.
-                %p * Installation of the gem and adding Authentication to an Application.
-          
-            
-            .item
-              .col-md-6.col-sm-6.hidden-xs
-                .block-text.rel.zmin
-                  %a{:href => "#", :title => ""} Cucumber, Rspec & GitHub
                   %br
                   %br
-                  %p Arun  did a great job of covering Ruby on Rails and related technologies like cucumber, RSpec, github, etc. with a good mix of presentation and hands-on lab time! Highly recommended for anyone who wants to learn these technologies.
-                  %ins.ab.zmin.sprite.sprite-i-triangle.block
-                .person-text.rel
-                  //%img{:alt => "", :src => "http://myinstantcms.ru/images/img14.png"}
                   %br
-                  %b
-                    %a{:href => "https://www.linkedin.com/profile/view?id=770021&pvs=ps&srchindex=2&authToken=iEBL&authType=NAME_SEARCH&trk=pp_profile_name_link&srchid=02b9a517-1a38-44a1-98e5-f0117fd86eac-0&goback=%2Efps_PBCK_Krishna+Natarajan_*1_*1_*1_*1_*1_*1_*2_*1_Y_*1_*1_*1_false_1_R_*1_*51_*1_*51_true_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2&locale=en_US&srchtotal=48", :title => ""} Krishna Natarajan 
-                  %i.brown
+                  %br
+                  %br
+                  %br
+                  %br
+                  .block-text2.rel.zmin
+                    %a{:href => "#", :title => ""} Cucumber, Rspec & GitHub
                     %br
-                    25 years veteran in IT industry
-        
+                    %br
+                    %p Arun  did a great job of covering Ruby on Rails and related technologies like cucumber, RSpec, github, etc. with a good mix of presentation and hands-on lab time! Highly recommended for anyone who wants to learn these technologies.
+                    %ins.ab.zmin.sprite.sprite-i-triangle.block
+                    &nbsp &nbsp
+                    
+                    .person-text.rel
+                      %br
+                      %br
+                      //%img{:alt => "", :src => "http://myinstantcms.ru/images/img14.png"}
+                      %a{:href => "https://www.linkedin.com/profile/view?id=770021&pvs=ps&srchindex=2&authToken=iEBL&authType=NAME_SEARCH&trk=pp_profile_name_link&srchid=02b9a517-1a38-44a1-98e5-f0117fd86eac-0&goback=%2Efps_PBCK_Krishna+Natarajan_*1_*1_*1_*1_*1_*1_*2_*1_Y_*1_*1_*1_false_1_R_*1_*51_*1_*51_true_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2_*2&locale=en_US&srchtotal=48", :title => "", :target => "_blank"} Krishna Natarajan 
+                      %i
+                        %br
+                        25 years veteran in IT industry
 
-
-
-
-        
-      
 
       #section4.section
-        %br
-        %br
-        %br
-        %br
-        %h4
-
         #container.margin-center
-
           .row
+            %br
+            %br
+            %br
+            %br
+            %br
+            %br
             .col-sm-12
               .col-sm-6
                 .well1
                   .well6
-                    %h4.normal1
+                    %h4.blue
                       &nbsp 
                       = image_tag "css.jpg"
                       %b CSS 
-                  %br
+               
                   &nbsp &nbsp 
                   Style Sheet Language used for describing the look and formatting of a
                   document written in a markup language.
-                  %br
+               
                   %br
                   &nbsp &nbsp &nbsp
                   = link_to "learn it here" , 'http://www.csstutorial.net/'
               .col-sm-6
                 .well1
                   .well3
-                    %h4.normal1
+                    %h4.orange
                       &nbsp 
                       = image_tag "html.jpg"
                       %b HTML
-                  %br
+               
                   &nbsp &nbsp 
                   A standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
-                  %br
+               
                   %br
                   &nbsp &nbsp &nbsp
                   = link_to "learn it here ", "http://www.html5-tutorials.org/"
@@ -285,14 +328,14 @@
               .col-sm-6
                 .well1
                   .well2
-                    %h4.normal1
+                    %h4.red
                       &nbsp 
                       = image_tag "rails.png"
                       %b RAILS
-                  %br
+               
                   &nbsp &nbsp 
                   Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
-                  %br
+               
                   %br
                   &nbsp &nbsp &nbsp
                   = link_to "learn it here" , "https://www.railstutorial.org/"
@@ -300,14 +343,14 @@
               .col-sm-6
                 .well1
                   .well2
-                    %h4.normal1
+                    %h4.red
                       &nbsp 
                       = image_tag "an.jpg"
                       %b ANGULAR JS 
-                  %br
+               
                   &nbsp &nbsp 
                   AngularJS, is an open-source web application framework, that assists with creating single-page applications,
-                  %br
+               
                   %br
                   &nbsp &nbsp &nbsp
                   = link_to "learn it here","https://docs.angularjs.org/tutorial"
@@ -318,28 +361,28 @@
               .col-sm-6
                 .well1
                   .well5
-                    %h4.normal1
+                    %h4.yellow
                       &nbsp 
                       = image_tag "js.jpg"
                       %b JAVA SCRIPT   
-                  %br
+               
                   &nbsp &nbsp 
                   An object-oriented computer programming language commonly used to create interactive effects within web browsers.
-                  %br
+               
                   %br
                   &nbsp &nbsp &nbsp
                   = link_to "learn it here" , "http://www.codecademy.com/en/tracks/javascript"
               .col-sm-6
                 .well1
                   .well4
-                    %h4.normal1
+                    %h4.blue
                       &nbsp 
                       = image_tag "sql.jpg"
                       %b PSQL
-                  %br
+               
                   &nbsp &nbsp 
                   Query language for requesting information from a database.
-                  %br
+               
                   %br
                   &nbsp &nbsp &nbsp
                   = link_to "learn it here" , "http://www.postgresqltutorial.com/"
@@ -349,46 +392,64 @@
              
                 
 
-      #section5.section
+      #section3.section.hero
         
-    
-        
-        .row
+        .row.inner
+          %br
+          %br
+          %br
+          %br
+          %br
           .col-sm-12
-            
             .col-sm-4
               .content-item-gopika
                 .overlay
                 .corner-overlay-content 
                 .overlay-content
-                  %br
-                  %h2
-                    Gopika Uk
-                  %h3
+                
+                  %center
+                    %br
+                    %br
+                    %br
+                    %br
+                    %h1 
+                      .black
+                        Gopika
                     .sky
-                      Director
-                  %h4
-                    Gopika, an enterprising manager with a technical inclination having almost 11 years experience in software delivery, was associated with Infosys before joining OstryaLabs. Gopika has been part of many technically challenging projects for various Banking and Insurance clients. She has coded in COBOL, Java, DB2, JCL, .Net, VBScript and now is deeply exploring Ruby and Rails.
+                      %h3
+                        Director, CEO
             .col-sm-4
               .content-item-arun
                 .overlay
                 .corner-overlay-content 
                 .overlay-content
-                  %h2 Arun Vydianathan 
-                  %h3
+                  %center
+                    %br
+                    %br
+                    %br
+                    %br
+                    %h1 
+                      .black
+                        Arun Vydianathan
                     .sky
-                      Founder & Technical Advisor
-                  %h4
-                    Arun,the founder of Ostrya Labs and served as its CTO for two years. Prior to OL he was associated with Progen, Oracle, and Infosys. He is an experienced Ruby, Rails, Java/J2EE, PL/SQL, JavaScript,CoffeeScript programmer, well versed with BDD and TDD techniques and currently trying to learn Clojure.
+                      %h3
+                        Founder, Technical Advisor
             .col-sm-4
               .content-item-hari
                 .overlay
                 .corner-overlay-content
                 .overlay-content
-                  %h2 Hari
-                  %h3 
+                  %center
+                    %br
+                    %br
+                    %br
+                    %br
+                    %h1 
+                      .black
+                        Dr. Srihari V
                     .sky
-                      Founder
+                      %h3
+                        Director, Marketing
           .col-sm-12
             .col-sm-3
               .content-item-srikanth
@@ -401,7 +462,8 @@
                     %br
                     %br
                     %h1 
-                      Srikanth
+                      .black
+                        Srikanth
                     .sky
                       %h3
                         Associate
@@ -416,7 +478,8 @@
                     %br
                     %br
                     %h1 
-                      Muralee
+                      .black
+                        Muralee
                     .sky
                       %h3
                         Associate
@@ -431,7 +494,8 @@
                     %br
                     %br
                     %h1 
-                      Navya
+                      .black
+                        Navya
                     .sky
                       %h3
                         Associate
@@ -446,7 +510,8 @@
                     %br
                     %br
                     %h1 
-                      Priya
+                      .black
+                        Priya
                     .sky
                       %h3
                         Associate
@@ -454,97 +519,109 @@
 
 
             
-      #section6.section
-        %br
-        %br
-        %br
-        %br
-        %br
-        %br
-        %br
-        .row
-          .container.white-background
+      #section3.section.hero
+        .row.inner
+          %br
+          %br
+          %br
+          .container
             %h2
-              .blue
-                Programmer
-            %h3
+              %center
+                .white
+                  Programmer
+            %h3.red
               Looking for a passionate programmer who cares a lot for the craft for working in enticing Ruby/Rails projects. You would fit the bill if you :-
-            .col-sm-8
-              %h3.red
-                Love to write code 
+            .col-sm-12
+              %h3.white
+                %p * Love to write code 
                 %br
-                Test Drive your code 
+                %p * Test Drive your code 
                 %br        
-                Work on open source technologies 
+                %p * Work on open source technologies 
                 %br
-                Are familiar with Web App Development / Deployment / Scaling / Monitoring 
+                %p * Are familiar with Web App Development / Deployment / Scaling / Monitoring 
                 %br
-                Apply OOP & OOD in day-to-day work 
+                %p * Apply OOP & OOD in day-to-day work 
                 %br
-                *nix or Mac is your primary OS of comfort 
+                %p * nix or Mac is your primary OS of comfort 
                 %br
-                Are familiar with git 
+                %p * Are familiar with git 
                 %br
-                Get kicks on using vi or emacs
+                %p * Get kicks on using vi or emacs
                 %br
-                Huge Plus Ruby/Rails Experience
+                %p * Huge Plus Ruby/Rails Experience
                 
             .col-sm-12
-              %h3
-                If you are interested send us your GitHub Handle (if any), reference to any previous work, blog and linkedin profile to 
-                .blue
-                  contact@ostryalabs.com.
+              %h3.white
+                %p 
+                  If you are interested send us your GitHub Handle (if any), reference to any previous work, blog and linkedin profile to  
+                  = link_to 'contact@ostryalabs.com', '#'
+                    
 
 
 
-      #section7.section
+      #section7.section.hero
+        .inner
+          %br
+          %br
+          %br
         
-        .row.half-white
-          %br
-        .row.half-white
-          .col-sm-1
-          .col-sm-10
-            %h3.normal We love Ruby and we love Rails! We are passionate about crafting beautiful web apps using Rails. After all, Rails is one of the cleanest and fastest way to develop industrial strength web apps today!
-            %h3.normal  We love agile and lean methodologies. We believe in continuous integration and continuous delivery. We don't like to surprise the customer at the end of the project and we don't want to be surprised ourselves as well! We follow an iterative model and deliver frequently. 
-            %h3.normal You want a workshop on Rails. You want to know how to drive a rails project with BDD. You want to learn how to use the various ruby gems and build a great rails app real fast. Or you just want to learn the Ruby language and do some cool programming.We can train you with our hands-on workshops. Get on the fast lane and kick start your ruby/rails sojourn with us.
-            %h3.normal You need a great web-app to power your business/idea. You need it in time without budget overruns. You want a predictable development cycle. Or you want to enhance or maintain an existing Ruby app. We can be of help.We follow a truly agile model, test driving the application, thus ensuring timely and dependable delivery quality. Our continuous, iterative delivery weeds out the surprise elements from the software.
+          .white
+            %center
+              %h1
+                Contact Us
+          .col-sm-12
+            .col-sm-1
+            .col-sm-4
+              .white
+                %br
+                %br
+                %br
+                %br
+                %br
+                = render "form"
+            .col-sm-4
+              %br
+              %br
+              %br
+              %br
+              %br
+
+              %h4.normal.white
+                %b
+                  %span.fa.fa-home
+                    IIIT-H Campus,
+                    %br
+                    %br
+                    &nbsp &nbsp 2nd Floor, Vindhya C4, 
+                    %br
+                    %br
+                    &nbsp &nbsp Gachibowli,
+                    %br
+                    %br
+                    &nbsp &nbsp Hyderabad-500032
+                  %br
+                  %br
+                  %span.fa.fa-phone
+                    Contact: +91 9866402306 
+                  %br
+                  %br
+                  %span.fa.fa-envelope
+                    info@ostryalabs.com
+                  %br
+                  %br
+                  %span.fa.fa-globe
+                    www.ostryalabs.com
+            .col-sm-3
+              %br
+              %br
+              %br
+              %br
+              %br
+
+              %img{:src => '/assets/maps.png', :width => '400px', :height => '300px'}
 
 
-        .row.half-black
-          %br
-          .col-sm-1
-          .col-sm-4
-            = render "form"
-          .col-sm-3
-            %h4.normal
-              %b
-                %span.fa.fa-home
-                  IIIT-H Campus,
-                  %br
-                  %br
-                  &nbsp &nbsp 2nd Floor, Vindhya C4, 
-                  %br
-                  %br
-                  &nbsp &nbsp Gachibowli,
-                  %br
-                  %br
-                  &nbsp &nbsp Hyderabad-500032
-                  %br
-                  %br
-                %span.fa.fa-phone
-                  Contact: +91 9866402306 
-                  %br
-                  %br
-                %span.fa.fa-envelope
-                  info@ostryalabs.com
-                  %br
-                  %br
-                %span.fa.fa-globe
-                  www.ostryalabs.com
-          .col-sm-3
-            %img{:src => '/assets/maps.png', :width => '400px', :height => '300px'}
-       
-                
-      
 
-      
+
+
