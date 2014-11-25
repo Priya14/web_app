@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     if @user.save
       UserMailer.welcome_email(@user).deliver
       flash.now[:success] = I18n.t :success, :scope => [:user, :create]
-      redirect_to contact_us_users_path
+      redirect_to root_path
     else
       flash.now[:fail] = I18n.t :fail, :scope => [:user, :create]
       render "new"

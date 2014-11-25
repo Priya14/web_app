@@ -68,34 +68,40 @@
             Configure gEdit
       %p
         %h4
-
-          enable
+          .col-sm-12
+            .col-sm-12
+              %u Enable
+              %li  View
+              %li Display line numbers
+              %br
+              
+          .col-sm-12
+            %u Editor
+            .col-sm-12
+              %ul 
+                Tab Stops
+                %li
+                  Tab width: 2
+                %li 
+                  Insert spaces instead of tabs
+              %ul
+                Automatic indentation
+                %li
+                  Enable automatic indentation
+                %br
+          .col-sm-12
+            %u Font
+            .col-sm-12
+              %ul
+                Remove “Use the system fixed width font”
+                %li
+                  Select “Inconsolata 11” as font
+          .col-sm-12
+            %u 
+              Color Scheme
+              .col-sm-12
+                %li Oblivion
           %br
-          View
-          %br
-          Display line numbers
-          %br
-          Editor
-          %br
-          Tab Stops
-          %br
-          Tab width: 2
-          %br
-          Insert spaces instead of tabs
-          %br
-          Automatic indentation
-          %br
-          Enable automatic indentation
-          %br
-          Font
-          %br
-          Remove “Use the system fixed width font”
-          %br
-          Select “Inconsolata 11” as font
-          %br
-          Color Scheme
-          %br
-          Oblivion
       %p
         %h3
           .red
@@ -105,11 +111,11 @@
 
           View
           %br
-          Default view Compact
+          &nbsp &nbsp &nbsp &nbsp Default view Compact
           %br
-          Arrange Items by Modification Date
+          &nbsp &nbsp &nbsp &nbsp Arrange Items by Modification Date
           %br
-          Zoom 50%
+          &nbsp &nbsp &nbsp &nbsp Zoom 50%
       %p
         %h3
           .red
@@ -144,18 +150,18 @@
       %p
         %h4
 
-          = link_to 'http://www.chromium.org/getting-involved/dev-channel',''
+          = link_to 'http://www.chromium.org/getting-involved/dev-channel','http://www.chromium.org/getting-involved/dev-channel', :target => "_blank"
           %br
-          = link_to 'http://googlesystem.blogspot.com/2010/07/install-google-web-apps-in-google.html',''
+          = link_to 'http://googlesystem.blogspot.com/2010/07/install-google-web-apps-in-google.html','http://googlesystem.blogspot.in/2010/07/install-google-web-apps-in-google.html', :target => "_blank"
           %br
-          = link_to 'http://www.readwriteweb.com/archives/weekend_project_install_google_web_apps_in_chrome_or_chromium.php',''
+          = link_to 'http://www.readwriteweb.com/archives/weekend_project_install_google_web_apps_in_chrome_or_chromium.php','http://readwrite.com/2010/07/16/weekend_project_install_google_web_apps_in_chrome_or_chromium', :target => "_blank"
           %br
-          = link_to 'http://downloadsquad.switched.com/2010/07/06/more-google-chrome-web-apps/',''
+          = link_to 'http://downloadsquad.switched.com/2010/07/06/more-google-chrome-web-apps/','http://downloadsquad.switched.com/2010/07/06/more-google-chrome-web-apps/', :target => "_blank"
       %p
         %h4
           
           Also reinstall “Mail Checker Plus for Google Mail” from 
-          = link_to 'https://chrome.google.com/webstore/detail/gffjhibehnempbkeheiccaincokdjbfe##',''
+          = link_to 'https://chrome.google.com/webstore/detail/gffjhibehnempbkeheiccaincokdjbfe##','https://chrome.google.com/webstore/detail/gffjhibehnempbkeheiccaincokdjbfe', :target => "_blank"
       %p
         %h4
           .red
@@ -164,9 +170,9 @@
         %h4
           Don’t install “window applets” using the first link (though it is fine) below, but do use it to install “Window Picker” and Maximus.
           %br
-          = link_to 'http://www.omgubuntu.co.uk/2011/01/maximising-screen-space-in-ubuntu/',''
+          = link_to 'http://www.omgubuntu.co.uk/2011/01/maximising-screen-space-in-ubuntu/','http://www.omgubuntu.co.uk/2011/01/maximising-screen-space-in-ubuntu/', :target => "_blank"
           %br
-          = link_to 'http://www.webupd8.org/2010/12/window-applets-0210-released.html',''
+          = link_to 'http://www.webupd8.org/2010/12/window-applets-0210-released.html','http://www.webupd8.org/2010/12/window-applets-0210-released.html', :target => "_blank"
           %br
           To install Window Applets 0.2.10 in Ubuntu, you can use the WebUpd8 PPA:
       %p
@@ -181,7 +187,7 @@
         %h4
 
           You might have to run “killall gnome-panel” before you can see “Window Buttons” and “Window Title” in the “Add to Panel” list, as mentioned in the FAQ in this page: 
-          = link_to 'http://gnome-look.org/content/show.php?content=103732',''
+          = link_to 'http://gnome-look.org/content/show.php?content=103732','http://gnome-look.org/content/show.php?content=103732', :target => "_blank"
       %p
         %h4
 
@@ -193,7 +199,7 @@
       %p
         %h4
 
-          = link_to 'http://banshee.fm/download/',''
+          = link_to 'http://banshee.fm/download/','http://banshee.fm/download/', :target => "_blank"
       %p
         %h4
           .black-well
@@ -210,7 +216,7 @@
         %h4
 
           Inconsolata font 
-          = link_to 'http://kevin.vanzonneveld.net/techblog/article/install_the_best_coding_font/',''
+          = link_to 'http://kevin.vanzonneveld.net/techblog/article/install_the_best_coding_font/','http://kvz.io/blog/2009/05/25/install-the-best-coding-font/', :target => "_blank"
       %p
         %h4
           .black-well
@@ -239,7 +245,7 @@
         %h4
 
           Grab it from 
-          = link_to 'http://picasa.google.com/linux/',''
+          = link_to 'http://picasa.google.com/linux/','http://picasa.google.com/linux/', :target => "_blank"
       %p
         %h3
           .red
@@ -264,12 +270,12 @@
         %h4
 
           Install the Kindle for PC application on your Linux computer: 
-          = link_to 'http://www.fewt.com/2009/11/install-kindle-for-pc-application-on.html',''
+          = link_to 'http://www.fewt.com/2009/11/install-kindle-for-pc-application-on.html','http://www.fewt.com/2009/11/install-kindle-for-pc-application-on.html', :target => "_blank"
       %p
         %h4
           
           Installing Kindle for PC on Debian Squeeze: 
-          = link_to 'http://okomestudio.net/biboroku/?p=931',''
+          = link_to 'http://okomestudio.net/biboroku/?p=931','http://okomestudio.net/biboroku/?p=931', :target => "_blank"
       %p
         %h4
 
@@ -286,7 +292,7 @@
         %h3
           .red
             Enter Pinta: 
-            = link_to 'http://www.ubuntugeek.com/pinta-paint-net-clone-for-linux.html#more-4476',''
+            = link_to 'http://www.ubuntugeek.com/pinta-paint-net-clone-for-linux.html#more-4476','http://www.ubuntugeek.com/pinta-paint-net-clone-for-linux.html#more-4476', :target => "_blank"
       %p
         %h4
           .black-well
@@ -315,7 +321,7 @@
         %h4
 
           Refer http:
-          = link_to '//www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm',''
+          = link_to '//www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm','http://www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm', :target => "_blank"
       %p
         %h4
           .red
@@ -324,9 +330,9 @@
         %h4
 
           Install LAMP
-          = link_to 'http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/','' 
+          = link_to 'http://tuxtweaks.com/2010/04/installing-lamp-on-ubuntu-10-04-lucid-lynx/','http://tuxtweaks.com/2012/04/installing-lamp-on-ubuntu-12-04-precise-pangolin/' , :target => "_blank"
           [I stopped short of installing phpAdmin which is mentioned at the end]
-          = link_to 'http://surferzworld.com/2010/10/installing-lamp-linux-apache-mysql-php-server-ubuntu/',''
+          = link_to 'http://surferzworld.com/2010/10/installing-lamp-linux-apache-mysql-php-server-ubuntu/','http://surferzworld.com/2010/10/installing-lamp-linux-apache-mysql-php-server-ubuntu/', :target => "_blank"
           [looks promising, but I didn’t follow this]
           Install gvim
       %p
@@ -364,7 +370,8 @@
       %p
         %h4
 
-          Installing RoR in Ubuntu: http://arunsark.wordpress.com/2011/02/25/installing-ror-in-ubuntu/
+          Installing RoR in Ubuntu:
+          = link_to 'http://arunsark.wordpress.com/2011/02/25/installing-ror-in-ubuntu/','https://arunsark.wordpress.com/2011/02/25/installing-ror-in-ubuntu/', :target => "_blank"
       %p
         %h4
 
@@ -372,7 +379,7 @@
       %p
         %h4
 
-          http://ruby.railstutorial.org/ruby-on-rails-tutorial-book#sec:up_and_running
+          = link_to 'http://ruby.railstutorial.org/ruby-on-rails-tutorial-book#sec:up_and_running','https://www.railstutorial.org/book#sec:up_and_running', :target => "_blank"
       %p
         %h4
 
@@ -380,7 +387,7 @@
       %p
         %h4
 
-          http://ruby.railstutorial.org/ [check the section Table of Contents for links to free videos]
+          = link_to 'http://ruby.railstutorial.org/ [check the section Table of Contents for links to free videos]','https://www.railstutorial.org/', :target => "_blank"
       %p
         %h4
 
@@ -388,9 +395,11 @@
       %p
         %h4
 
-          Ruby On Rails Development On Ubuntu 10.10 With git, vim, And RVM: http://appogee.posterous.com/ubuntu-1010-ruby-on-rails-setup
+          Ruby On Rails Development On Ubuntu 10.10 With git, vim, And RVM: 
+          = link_to 'http://appogee.posterous.com/ubuntu-1010-ruby-on-rails-setup','http://appogee.posterous.com/ubuntu-1010-ruby-on-rails-setup', :target => "_blank"
           %br
-          How to install Rails 3.0 and Ruby 1.9.2 on Ubuntu: http://toranbillups.com/blog/archive/2010/09/01/How-to-install-Rails-3.0-and-Ruby-1.9.2-on-Ubuntu
+          How to install Rails 3.0 and Ruby 1.9.2 on Ubuntu: 
+          = link_to 'http://toranbillups.com/blog/archive/2010/09/01/How-to-install-Rails-3.0-and-Ruby-1.9.2-on-Ubuntu','http://toranbillups.com/blog/archive/2010/09/01/How-to-install-Rails-3.0-and-Ruby-1.9.2-on-Ubuntu/', :target => "_blank"
       %p
         %h4
           .red
@@ -410,7 +419,9 @@
       %p
         %h4
 
-          I had to download the latest git source (tar ball) from http://git-scm.com/download, extract it, and use the file that was available inside the contrib/completion folder (your version number might be different based on when you are downloading):
+          I had to download the latest git source (tar ball) from 
+          = link_to 'http://git-scm.com/download','http://git-scm.com/download', :target => "_blank"
+          , extract it, and use the file that was available inside the contrib/completion folder (your version number might be different based on when you are downloading):
       %p
         %h4
 
@@ -418,7 +429,9 @@
       %p
         %h4
 
-          Refer http://ruby.railstutorial.org/bashrc for the exact contents that goes into the ~/.bashrc file
+          Refer
+          = link_to 'http://ruby.railstutorial.org/bashrc','http://ruby.railstutorial.org/bashrc', :target => "_blank"
+          for the exact contents that goes into the ~/.bashrc file
       %p
         %h4
 
@@ -442,7 +455,8 @@
           %br
           $ gvim ~/.bashrc
           %br
-          Now, Paste the contents from http://ruby.railstutorial.org/bashrc into the file.
+          Now, Paste the contents from 
+          = link_to 'http://ruby.railstutorial.org/bashrc into the file.','http://ruby.railstutorial.org/bashrc', :target => "_blank"
           %br
           Next, run the following to source the bashrc file.
           %br
@@ -462,7 +476,9 @@
       %p
         %h4
 
-          Refer https://rvm.beginrescueend.com/rvm/install/ and follow along.
+          Refer 
+          = link_to 'https://rvm.beginrescueend.com/rvm/install/','https://rvm.beginrescueend.com/rvm/install/', :target => "_blank"
+          and follow along.
       %p
         %h4
           
@@ -528,7 +544,8 @@
       %p
         %h4
 
-          If you had followed along from the top (referring to the different sources, you would have already installed both mysql and sqlite3). If you haven’t, please refer the “Databases” step of http://appogee.posterous.com/ubuntu-1010-ruby-on-rails-setup.
+          If you had followed along from the top (referring to the different sources, you would have already installed both mysql and sqlite3). If you haven’t, please refer the “Databases” step of 
+          = link_to 'http://appogee.posterous.com/ubuntu-1010-ruby-on-rails-setup.','http://www.ubuntugeek.com/pinta-paint-net-clone-for-linux.html#more-4476', :target => "_blank"
       %p
         %h4
 
@@ -546,7 +563,8 @@
       %p
         %h4
 
-          This allows you to open a terminal from any path in the file manager Nautilus. From: http://superuser.com/questions/166407/how-to-open-a-menu-with-open-terminal-h……
+          This allows you to open a terminal from any path in the file manager Nautilus. From: 
+          = link_to 'http://superuser.com/questions/166407/how-to-open-a-menu-with-open-terminal-h……','http://superuser.com/questions/166407/how-to-open-a-menu-with-open-terminal-here-in-ubuntu-10-04-by-left-clicking-de', :target => "_blank"
       %p
         %h4
           .blackwell

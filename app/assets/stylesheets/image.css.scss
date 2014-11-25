@@ -1,23 +1,43 @@
 #section6{
-    background:url('/assets/scenic-desktop-background-1920x1080-1012110.jpg.jpg');
+    background:url('/assets/download1.jpg');
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+}
+#section5{
+    background:url('/assets/sass-1.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section7{
-    background:url('/assets/by_the_light_of_the_moon_scott_river_klamath_national_forest_california.jpg');
+    background:url('/assets/heroku.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section3{
-    background:url('/assets/q.jpg');
+    background:url('/assets/HTML-5-Logo-HD-Wallpaper.jpg');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section1{
-    background:url('/assets/program.jpg');
+    background:url('/assets/ruby-l.jpg');
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    
+}
+#section2{
+    background:url('/assets/angular_bg1.png');
+    background-size:cover;
+    background-position:center center;
+    background-attachment:fixed;
+    
+}
+#section4{
+    background:url('/assets/github.jpg');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
@@ -127,15 +147,16 @@
 }    
 
 .back p {
-	position: absolute;
-	top: 20px;
-	left: 0;
-	right: 0;
-	text-align: center;
-	//padding: 0 20px;
-        font-family: arial;
-        font-size: 21px;
-        line-height: 2em;
+    color: black;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    //padding: 0 20px;
+    font-family: arial;
+    font-size: 21px;
+    line-height: 2em;
 }
 .margin-center {
     margin-right: 100px;
@@ -336,16 +357,16 @@ h4.normal1 {
 .well1 
 {
     
-    background:#222;
+//    background:#222;
     color: white;
     height: 180px;
     width:680px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
+    //-webkit-border-radius: 7px;
+    //-moz-border-radius: 7px;
+    //border-radius: 7px;
     font-size: 21px;
-    box-shadow: 0 3px 0 #2c2222;
- 
+    //box-shadow: 0 3px 0 #2c2222;
+    //background: rgba(0,0,0,0.125)
    }
 
 .fa1 {

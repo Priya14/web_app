@@ -71,15 +71,15 @@
                 
         
         
-      #section2.section
-        .row
-        %br
-        %br
-        %br
-        %br
-        %br
-        %br
-        %br
+      #section2.section.hero
+        .row.inner
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
+          %br
        
           
           .col-sm-12
@@ -127,14 +127,11 @@
                   .back
                     %p This is nice for exposing more information about an image.     
 
-        .row
-        %br
-        %br
-        %br
-        %br
-        %br
-        .row
+        
           .col-sm-12
+            %br
+            %br
+            %br
             .col-sm-3
               .flip-container{:ontouchstart => "this.classList.toggle('hover');"}
                 .flipper
@@ -281,118 +278,119 @@
                         25 years veteran in IT industry
 
 
-      #section4.section
-        #container.margin-center
-          .row
-            %br
-            %br
-            %br
-            %br
-            %br
-            %br
-            .col-sm-12
-              .col-sm-6
-                .well1
-                  .well6
-                    %h4.blue
-                      &nbsp 
-                      = image_tag "css.jpg"
-                      %b CSS 
-               
-                  &nbsp &nbsp 
-                  Style Sheet Language used for describing the look and formatting of a
-                  document written in a markup language.
-               
-                  %br
-                  &nbsp &nbsp &nbsp
-                  = link_to "learn it here" , 'http://www.csstutorial.net/'
-              .col-sm-6
-                .well1
-                  .well3
-                    %h4.orange
-                      &nbsp 
-                      = image_tag "html.jpg"
-                      %b HTML
-               
-                  &nbsp &nbsp 
-                  A standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
-               
-                  %br
-                  &nbsp &nbsp &nbsp
-                  = link_to "learn it here ", "http://www.html5-tutorials.org/"
+      #section4.section.hero
+        .inner
+          .margin-center
+            .row
+              %br
+              %br
+              %br
+              %br
+              %br
+              %br
+              .col-sm-12
+                .col-sm-6
+                  .well1
+                    .well6
+                      %h4.blue
+                        &nbsp 
+                        = image_tag "css.jpg"
+                        %b CSS 
 
-                  
-          %br
-          .row
-            .col-sm-12
-              .col-sm-6
-                .well1
-                  .well2
-                    %h4.red
-                      &nbsp 
-                      = image_tag "rails.png"
-                      %b RAILS
-               
-                  &nbsp &nbsp 
-                  Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
-               
-                  %br
-                  &nbsp &nbsp &nbsp
-                  = link_to "learn it here" , "https://www.railstutorial.org/"
+                    &nbsp &nbsp 
+                    Style Sheet Language used for describing the look and formatting of a
+                    document written in a markup language.
 
-              .col-sm-6
-                .well1
-                  .well2
-                    %h4.red
-                      &nbsp 
-                      = image_tag "an.jpg"
-                      %b ANGULAR JS 
-               
-                  &nbsp &nbsp 
-                  AngularJS, is an open-source web application framework, that assists with creating single-page applications,
-               
-                  %br
-                  &nbsp &nbsp &nbsp
-                  = link_to "learn it here","https://docs.angularjs.org/tutorial"
+                    %br
+                    &nbsp &nbsp &nbsp
+                    = link_to "learn it here" , 'http://www.csstutorial.net/'
+                .col-sm-6
+                  .well1
+                    .well3
+                      %h4.orange
+                        &nbsp 
+                        = image_tag "html.jpg"
+                        %b HTML
 
-          %br
-          .row
-            .col-sm-12
-              .col-sm-6
-                .well1
-                  .well5
-                    %h4.yellow
-                      &nbsp 
-                      = image_tag "js.jpg"
-                      %b JAVA SCRIPT   
-               
-                  &nbsp &nbsp 
-                  An object-oriented computer programming language commonly used to create interactive effects within web browsers.
-               
-                  %br
-                  &nbsp &nbsp &nbsp
-                  = link_to "learn it here" , "http://www.codecademy.com/en/tracks/javascript"
-              .col-sm-6
-                .well1
-                  .well4
-                    %h4.blue
-                      &nbsp 
-                      = image_tag "sql.jpg"
-                      %b PSQL
-               
-                  &nbsp &nbsp 
-                  Query language for requesting information from a database.
-               
-                  %br
-                  &nbsp &nbsp &nbsp
-                  = link_to "learn it here" , "http://www.postgresqltutorial.com/"
+                    &nbsp &nbsp 
+                    A standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
+
+                    %br
+                    &nbsp &nbsp &nbsp
+                    = link_to "learn it here ", "http://www.html5-tutorials.org/"
 
 
-        
-             
-                
+            %br
+            .row
+              .col-sm-12
+                .col-sm-6
+                  .well1
+                    .well2
+                      %h4.red
+                        &nbsp 
+                        = image_tag "rails.png"
+                        %b RAILS
 
-      #section3.section.hero
+                    &nbsp &nbsp 
+                    Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
+
+                    %br
+                    &nbsp &nbsp &nbsp
+                    = link_to "learn it here" , "https://www.railstutorial.org/"
+
+                .col-sm-6
+                  .well1
+                    .well2
+                      %h4.red
+                        &nbsp 
+                        = image_tag "an.jpg"
+                        %b ANGULAR JS 
+
+                    &nbsp &nbsp 
+                    AngularJS, is an open-source web application framework, that assists with creating single-page applications,
+
+                    %br
+                    &nbsp &nbsp &nbsp
+                    = link_to "learn it here","https://docs.angularjs.org/tutorial"
+
+            %br
+            .row
+              .col-sm-12
+                .col-sm-6
+                  .well1
+                    .well5
+                      %h4.yellow
+                        &nbsp 
+                        = image_tag "js.jpg"
+                        %b JAVA SCRIPT   
+
+                    &nbsp &nbsp 
+                    An object-oriented computer programming language commonly used to create interactive effects within web browsers.
+
+                    %br
+                    &nbsp &nbsp &nbsp
+                    = link_to "learn it here" , "http://www.codecademy.com/en/tracks/javascript"
+                .col-sm-6
+                  .well1
+                    .well4
+                      %h4.blue
+                        &nbsp 
+                        = image_tag "sql.jpg"
+                        %b PSQL
+
+                    &nbsp &nbsp 
+                    Query language for requesting information from a database.
+
+                    %br
+                    &nbsp &nbsp &nbsp
+                    = link_to "learn it here" , "http://www.postgresqltutorial.com/"
+
+
+
+
+
+
+      #section5.section.hero
         
         .row.inner
           %br
@@ -519,7 +517,7 @@
 
 
             
-      #section3.section.hero
+      #section6.section.hero
         .row.inner
           %br
           %br
@@ -565,7 +563,8 @@
           %br
           %br
           %br
-        
+          %br
+          %br
           .white
             %center
               %h1
