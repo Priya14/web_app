@@ -8,13 +8,14 @@
     .container-fluid
 
       .header
-        .pull-left
-          = image_tag "logo.jpg" 
-        %ul.nav.navbar-nav
-          %li{"data-menuanchor" => "firstPage"}
+        
+        %ul#myMenu
+          .pull-left
+            %img.img-responsive{:src => "/assets/logo.jpg", :style => "width:80%; height:auto;"}/
+          %li.active{"data-menuanchor" => "firstPage"}
             %a{:href => "/home#firstPage"}
               HOME
-
+              
           %li{"data-menuanchor" => "secondPage"}
             %a{:href => "/home#secondPage"}
               PROJECTS
@@ -36,7 +37,7 @@
           %li{"data-menuanchor" => "8thpage"}
             %a{:href => "/home#8thpage"}
               CONTACT US
-        
+
       = yield        
     
                 
