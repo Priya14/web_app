@@ -222,36 +222,32 @@
 
       #section4.section.hero
         .row.inner
-          %br
-          %br
-          %br
-          %br
-          .margin-center
+          .container
             .row
               .col-sm-12
                 .col-sm-6
                   .well1
                     .well6
-                      %h4.blue
+                      %h3.blue
                         &nbsp 
                         %img.img-responsive{:src => '/assets/css.jpg', :style => "width:10%; height:auto;"}
                         %b CSS 
 
-                    &nbsp &nbsp 
-                    Style Sheet Language used for describing the look and formatting of a
-                    document written in a markup language.
-                    = link_to "Learn here...!" , 'http://www.csstutorial.net/', :target => "_blank"
+                    
+                    %h4
+                      Style Sheet Language used for describing the look and formatting of a
+                      document written in a markup language.
+                      = link_to "Learn here...!" , 'http://www.csstutorial.net/', :target => "_blank"
                 .col-sm-6
                   .well1
                     .well3
-                      %h4.orange
+                      %h3.orange
                         &nbsp 
                         %img.img-responsive{:src => '/assets/html.jpg', :style => "width:10%; height:auto;"}
                         %b HTML
-
-                    &nbsp &nbsp 
-                    A standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
-                    = link_to "Learn here..! ", "http://www.html5-tutorials.org/", :target => "_blank"
+                    %h4
+                      A standardized system for tagging text files to achieve font, colour, graphic, and hyperlink effects on World Wide Web pages.
+                      = link_to "Learn here..! ", "http://www.html5-tutorials.org/", :target => "_blank"
 
 
             %br
@@ -260,26 +256,26 @@
                 .col-sm-6
                   .well1
                     .well2
-                      %h4.red
+                      %h3.red
                         &nbsp 
                         %img.img-responsive{:src => '/assets/rails.png', :style => "width:10%; height:auto;"}
                         %b RAILS
 
-                    &nbsp &nbsp 
-                    Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
-                    = link_to "Learn here..!" , "https://www.railstutorial.org/", :target => "_blank"
+                    %h4
+                      Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
+                      = link_to "Learn here..!" , "https://www.railstutorial.org/", :target => "_blank"
 
                 .col-sm-6
                   .well1
                     .well2
-                      %h4.red
+                      %h3.red
                         &nbsp 
                         %img.img-responsive{:src => '/assets/an.jpg', :style => "width:10%; height:auto;"}
                         %b ANGULAR JS 
 
-                    &nbsp &nbsp 
-                    AngularJS, is an open-source web application framework, that assists with creating single-page applications,
-                    = link_to "Learn here..!","https://docs.angularjs.org/tutorial", :target => "_blank"
+                    %h4
+                      AngularJS, is an open-source web application framework, that assists with creating single-page applications,
+                      = link_to "Learn here..!","https://docs.angularjs.org/tutorial", :target => "_blank"
 
             %br
             .row
@@ -287,25 +283,24 @@
                 .col-sm-6
                   .well1
                     .well5
-                      %h4.yellow
+                      %h3.yellow
                         &nbsp 
                         %img.img-responsive{:src => '/assets/js.jpg', :style => "width:10%; height:auto;"}
                         %b JAVA SCRIPT   
 
-                    &nbsp &nbsp 
-                    An object-oriented computer programming language commonly used to create interactive effects within web browsers.
-                    = link_to "Learn here..!" , "http://www.codecademy.com/en/tracks/javascript", :target => "_blank"
+                    %h4
+                      An object-oriented computer programming language commonly used to create interactive effects within web browsers.
+                      = link_to "Learn here..!" , "http://www.codecademy.com/en/tracks/javascript", :target => "_blank"
                 .col-sm-6
                   .well1
                     .well4
-                      %h4.blue
+                      %h3.blue
                         &nbsp 
                         %img.img-responsive{:src => '/assets/sql.jpg', :style => "width:10%; height:auto;"}
                         %b PSQL
-
-                    &nbsp &nbsp 
-                    Query language for requesting information from a database.
-                    = link_to "Learn here..!" , "http://www.postgresqltutorial.com/", :target => "_blank"
+                    %h4
+                      Query language for requesting information from a database.
+                      = link_to "Learn here..!" , "http://www.postgresqltutorial.com/", :target => "_blank"
 
 
 
@@ -315,72 +310,63 @@
       #section5.section.hero
         
         .row.inner
-          %br
-          %br
-          %br
-          %br
-          %br
-          %br
-          %br
-          .col-sm-12
-            .view1.view-portfolio
-              %img.img-responsive{:src => "/assets/gopika.jpg"}
-              .mask
-                %h2 Gopika UK
-                %p Director & CEO
-                
-            .view1.view-portfolio
-              %img.img-responsive{:src => "/assets/arun.jpg"}
-              .mask
-                %h2 Arun Vydianathan
-                %p Founder & Technical Advisor
-                
-            .view1.view-portfolio
-              %img.img-responsive{:src => "/assets/hari.jpg"}
-              .mask
-                %h2 Dr. Srihari V
-                %p Founder & Marketing
-                
-          .col-sm-12
-            .view.view-portfolio
-              %img.img-responsive{:src => "/assets/srikanth.jpg"}
-              .mask
-                %h2 Srikanth
-                %p Associate
-                
-            .view.view-portfolio
-              %img.img-responsive{:src => "/assets/muralee.jpg"}
-              .mask
-                %h2 Muralee
-                %p Associate
-                
-            .view.view-portfolio
-              %img.img-responsive{:src => "/assets/navya.jpg"}
-              .mask
-                %h2 Navya
-                %p Associate
-                
-            .view.view-portfolio
-              %img.img-responsive{:src => "/assets/priya.jpg"}
-              .mask
-                %h2 Priya
-                %p Associate
+          .pic-container
+            .col-sm-12
+              .view1.view-portfolio
+                %img.img-responsive{:src => "/assets/gopika.jpg"}
+                .mask
+                  %h2 Gopika UK
+                  %p Director & CEO
+
+              .view1.view-portfolio
+                %img.img-responsive{:src => "/assets/arun.jpg"}
+                .mask
+                  %h2 Arun Vydianathan
+                  %p Founder & Technical Advisor
+
+              .view1.view-portfolio
+                %img.img-responsive{:src => "/assets/hari.jpg"}
+                .mask
+                  %h2 Dr. Srihari V
+                  %p Founder & Marketing
+
+            .col-sm-12
+              .view.view-portfolio
+                %img.img-responsive{:src => "/assets/srikanth.jpg"}
+                .mask
+                  %h2 Srikanth
+                  %p Associate
+
+              .view.view-portfolio
+                %img.img-responsive{:src => "/assets/muralee.jpg"}
+                .mask
+                  %h2 Muralee
+                  %p Associate
+
+              .view.view-portfolio
+                %img.img-responsive{:src => "/assets/navya.jpg"}
+                .mask
+                  %h2 Navya
+                  %p Associate
+
+              .view.view-portfolio
+                %img.img-responsive{:src => "/assets/priya.jpg"}
+                .mask
+                  %h2 Priya
+                  %p Associate
                 
             
       #section6.section.hero
         .row.inner
-          %br
-          %br
-          %br
           .container
             %h2
               %center
-                .white
+                .red
                   Programmer
-            %h3.red
+            %h3.white
               Looking for a passionate programmer who cares a lot for the craft for working in enticing Ruby/Rails projects. You would fit the bill if you :-
             .col-sm-12
-              %h3.white
+              %h4.white
                 %p * Love to write code 
                 %br
                 %p * Test Drive your code 
@@ -400,7 +386,7 @@
                 %p * Huge Plus Ruby/Rails Experience
                 
             .col-sm-12
-              %h3.white
+              %h4.white
                 %p 
                   If you are interested send us your GitHub Handle (if any), reference to any previous work, blog and linkedin profile to  
                   = link_to 'contact@ostryalabs.com', '#'
@@ -410,65 +396,61 @@
 
       #section7.section.hero
         .row.inner
-          %br
-          %br
-          %br
-          %br
-          %br
-          .white
-            %center
-              %h1
-                Contact Us
-          .col-sm-12
-            .col-sm-1
-            .col-sm-4
-              .white
+          .pic-container
+            .white
+              %center
+                %h1
+                  Contact Us
+            .col-sm-12
+              .col-sm-1
+              .col-sm-4
+                .white
+                  %br
+                  %br
+                  %br
+                  %br
+                  %br
+                  = render "form"
+              .col-sm-4
                 %br
                 %br
                 %br
                 %br
                 %br
-                = render "form"
-            .col-sm-4
-              %br
-              %br
-              %br
-              %br
-              %br
 
-              %h4.normal.white
-                %b
-                  %span.fa.fa-home
-                    IIIT-H Campus,
+                %h4.normal.white
+                  %b
+                    %span.fa.fa-home
+                      IIIT-H Campus,
+                      %br
+                      %br
+                      &nbsp &nbsp 2nd Floor, Vindhya C4, 
+                      %br
+                      %br
+                      &nbsp &nbsp Gachibowli,
+                      %br
+                      %br
+                      &nbsp &nbsp Hyderabad-500032
                     %br
                     %br
-                    &nbsp &nbsp 2nd Floor, Vindhya C4, 
+                    %span.fa.fa-phone
+                      Contact: +91 9866402306 
                     %br
                     %br
-                    &nbsp &nbsp Gachibowli,
+                    %span.fa.fa-envelope
+                      info@ostryalabs.com
                     %br
                     %br
-                    &nbsp &nbsp Hyderabad-500032
-                  %br
-                  %br
-                  %span.fa.fa-phone
-                    Contact: +91 9866402306 
-                  %br
-                  %br
-                  %span.fa.fa-envelope
-                    info@ostryalabs.com
-                  %br
-                  %br
-                  %span.fa.fa-globe
-                    www.ostryalabs.com
-            .col-sm-3
-              %br
-              %br
-              %br
-              %br
-              %br
+                    %span.fa.fa-globe
+                      www.ostryalabs.com
+              .col-sm-3
+                %br
+                %br
+                %br
+                %br
+                %br
 
-              %img.img-responsive{:src => '/assets/maps.png', :width => '400px', :height => '300px'}
+                %img.img-responsive{:src => '/assets/maps.png', :width => '400px', :height => '300px'}
 
 
 
