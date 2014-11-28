@@ -1,17 +1,17 @@
 //----------Some Resets
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-//----------Icon Font
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
-/* fontawesome */
-/* [class*="fontawesome-"]:before { */
-/*   font-family: 'FontAwesome', sans-serif; */
+/* * { */
+/*   margin: 0; */
+/*   padding: 0; */
+/*   box-sizing: border-box; */
 /* } */
+
+/* //----------Icon Font */
+/* @import url(http://weloveiconfonts.com/api/?family=fontawesome); */
+
+/* /\* fontawesome *\/ */
+/* /\* [class*="fontawesome-"]:before { *\/ */
+/* /\*   font-family: 'FontAwesome', sans-serif; *\/ */
+/* /\* } *\/ */
 
 .slideLink {
   float: left;
@@ -107,6 +107,7 @@
     //  height: 40px;
     z-index: 10;
     width: 100%;
+    
     padding: 0;
     margin:0;
 }
@@ -300,14 +301,14 @@
     
 }
 #section1{
-    background:url('/assets/angular_bg1.png');
+    background:url('/assets/github.jpg');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
     
 }
 #section4{
-    background:url('/assets/github.jpg');
+    background:url('/assets/angular_bg1.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
@@ -599,6 +600,6 @@ h4.normal1 {
 }
 
 .fa1 {
-    color: white;
+    color: whitesmoke;
 }
 
