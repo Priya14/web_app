@@ -138,7 +138,7 @@
     position: relative;
 }
 .view1 h2 {
-    text-transform: uppercase;
+    //text-transform: uppercase;
     color: #570534;
     text-align: center;
     position: relative;
@@ -151,7 +151,7 @@
 .view1 p {
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 2em;
+    font-size: 1.5em;
     position: relative;
     //color: #000000;
     //padding: 10px 20px 20px;
@@ -202,7 +202,7 @@
 .view p {
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 2em;
+    font-size: 1.5em;
     position: relative;
    // color: #000000;
     //padding: 10px 20px 20px;
@@ -356,7 +356,7 @@
 }
 .block-text2 a {
     //color: #7d4702;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: bold;
     //line-height: 21px;
     text-decoration: none;
@@ -375,7 +375,7 @@
     //box-shadow: 0 3px 0 #2c2222;
     //color: #626262;
     font-size: 1em;
-    margin-top: 8%;
+    margin-top: 7%;
     //padding: 15px 18px;
 }
 .block-text a {
@@ -414,6 +414,7 @@
 .block-text2 ins {
     //bottom: -44px;
     left: 50%;
+    /* font-size: 1em; */
     //margin-left: -60px;
 }
 
@@ -505,6 +506,6 @@ h4.normal {
 }
 
 .fa1 {
-    color: whitesmoke;
+    color: white;
 }
 
