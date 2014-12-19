@@ -3,56 +3,13 @@
   %head
     %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
     %title Ostrya Labs
-    -# %meta{:content => "Alvaro Trigo Lopez", :name => "author"}/
-    -# %meta{:content => "fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website.", :name => "description"}/
-    -# %meta{:content => "fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple", :name => "keywords"}/
-    -# %meta{:content => "Document", :name => "Resource-type"}/
-    -# %link{:href => "/stylesheets/jquery.fullPage.css", :rel => "stylesheet", :type => "text/css"}/
-    -# %link{:href => "examples.css", :rel => "stylesheet", :type => "text/css"}/
-      :css
-        /* Sections
-        * --------------------------------------- */
-      
-      -# #section0 img,
-      -# #section1 img{
-      -# margin: 20px 0 0 0;
-      -# }
-      -# -# #section2 img{
-      -# -# margin: 20px 0 0 0;
-      -# -# }
-      -# #section3 img{
-      -# margin: 20px 0 0 0;
-      -# }
-      -# #section4 img{
-      -# margin: 20px 0 0 0;
-      -# }
-      -# #section5 img{
-      -# margin: 20px 0 0 0;
-      -# }
-      -# #section6 img{
-      -# margin: 20px 0 0 0;
-      -# }
-      -# #section7 img{
-      -# margin: 20px 0 0 0;
-      -# }
-     
+    :css
 
       .intro p{
       width: 50%;
       margin: 0 auto;
       font-size: 1.5em;
       }
-      -# .twitter-share-button{
-      -# position: absolute;
-      -# z-index: 99;
-      -# right: 149px;
-      -# top: 9px;
-      -# }
-      
-    -# %script{:src => "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"}
-    -# %script{:src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"}
-    -# %script{:src => "../jquery.fullPage.js", :type => "text/javascript"}
-    //%script{:src => "examples.js", :type => "text/javascript"}
     :javascript
       $(document).ready(function() {
       	$('#fullpage').fullpage({
@@ -69,9 +26,7 @@
       
       #section0.section.active.hero
         .row.inner
-          -# %img.img-responsive{:src => '/assets/ruby_l.png', :style => "width:100%; height: auto;"}
-                
-              
+                      
       #section1.section.hero
         .row.inner
           %br
@@ -85,56 +40,57 @@
           .row
             .col-sm-12
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-mortar-board
                     %p.title Educational ERP
-                    %p.summary Awesome
+                    %p.summary
+                      An end to end solution for educational institutions with a lot of emphasis on communication between various stakeholders, this solution provides a complete automation of all logical modules in schools and colleges
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-users
                     %p.title Examination  Controller
-                    %p.summary Awesome
+                    %p.summary Integrating all the functionalities with respect to examination controller module in colleges
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-clock-o
                     %p.title Online Examination Package
-                    %p.summary Awesome
+                    %p.summary A dynamically run online examination module with multi level authentication. Fully flexible and customization examination functionalities available
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-building-o
                     %p.title Property Management System
-                    %p.summary Awesome
+                    %p.summary Client is a Startup bootstrapping in the US.A small property management app to manage property rentals.Integration with Stripe to handle credit card payment.Google Maps and Zillow API integration to locate and manage properties
           %br
           .row
             .col-sm-12
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-cloud
                     %p.title Online Social Marketing Application
-                    %p.summary Awesome
+                    %p.summary  A perfect place for corporate employees to check out their social marketing needs
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-comments-o
                     %p.title Online Property Deal Application
-                    %p.summary Awesome
+                    %p.summary An integration platform for buyers, sellers and inter mediators to transact on property deals
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-bank
                     %p.title End to End Benefit Fund Solution
-                    %p.summary Awesome
+                    %p.summary Client is a rapidly expanding small segment bank with 25 odd branches in India.Covers all aspects of banking like Account Opening, Interest Calucations, printing , maintaining Journals, preparing Balance Sheet, P&L, Trail Balance etc
               .col-sm-3
-                %a.slideLink{:href => "#0"}
+                %a.slideLink
                   .slideContainer
                     %span.icon.fa.fa-user
                     %p.title Consumer Application
-                    %p.summary Awesome
+                    %p.summary Client is a Startup bootstrapping in the US.RESTful services for a mobile client.Designed for high Availability & Scalability.Javascript based web app.Lots of Image manipulations using ImageMagick and RMagick
 
       #section3.section.hero
         
@@ -176,8 +132,7 @@
                   %a{:href => "#", :title => ""} Devise
                 
                 %p Devise is a flexible authentication solution for Rails based on Warden. It:
-                %p * Is Rack based.
-                %p * Is a complete MVC solution based on Rails engines.
+                %p * Is Rack based and complete MVC solution based on Rails engines.
                 %p * Allows you to have multiple models signed in at the same time.
                 %p * Is based on a modularity concept: use just what you really need.
                 %p * Installation of the gem and adding Authentication to an Application.
@@ -331,7 +286,7 @@
                 %img.img-responsive{:src => "/assets/hari.jpg"}
                 .mask
                   %h2 Dr. SRIHARI V
-                  %p Director & Marketing
+                  %p Director, Marketing
 
             .col-sm-12
               .view.view-portfolio
