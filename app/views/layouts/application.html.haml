@@ -1,40 +1,40 @@
 !!!
 %html
   %head
-    %title Website
+    %title Ostrya Labs
     = javascript_include_tag "application"
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    
+    = favicon_link_tag 'favicon.ico'
     .container-fluid
       .header
-        %ul#myMenu
-          .pull-left
-            %img.img-responsive{:src => "/assets/logo.jpg", :style => "width:70%; height:auto;"}/
-          %li.active{"data-menuanchor" => "firstPage"}
-            %a{:href => "/home#firstPage"}
-              HOME
-          %li{"data-menuanchor" => "secondPage"}
-            %a{:href => "/home#secondPage"}
-              PROJECTS
-          %li{"data-menuanchor" => "3rdPage"}
-            %a{:href => "/home/blog"}
-              BLOG
-          %li{"data-menuanchor" => "4thpage"}
-            %a{:href => "/home#4thpage"} 
-              TRAINING
-          %li{"data-menuanchor" => "5thpage"}
-            %a{:href => "/home#5thpage"}
-              TECHNOLOGIES
-          %li{"data-menuanchor" => "6thpage"}
-            %a{:href => "/home#6thpage"}
-              PEOPLE
-          %li{"data-menuanchor" => "7thpage"}
-            %a{:href => "/home#7thpage"}
-              CAREERS
-          %li{"data-menuanchor" => "8thpage"}
-            %a{:href => "/home#8thpage"}
-              CONTACT US
-      
-        = yield        
+        %center
+          %ul#myMenu
+            -# .pull-left
+            -#   %img.img-responsive{:src => "/assets/logo.jpg", :style => "width:70%; height:auto;"}/
+            %li.active{"data-menuanchor" => "home"}
+              %a{:href => "/home"}
+                HOME
+            %li{"data-menuanchor" => "projects"}
+              %a{:href => "/home#projects"}
+                PROJECTS
+            %li{"data-menuanchor" => "blog"}
+              %a{:href => "/home/blog"}
+                BLOG
+            %li{"data-menuanchor" => "training"}
+              %a{:href => "/home#training"} 
+                TRAINING
+            %li{"data-menuanchor" => "technologies"}
+              %a{:href => "/home#technologies"}
+                TECHNOLOGIES
+            %li{"data-menuanchor" => "people"}
+              %a{:href => "/home#people"}
+                PEOPLE
+            %li{"data-menuanchor" => "careers"}
+              %a{:href => "/home#careers"}
+                CAREERS
+            %li{"data-menuanchor" => "contact"}
+              %a{:href => "/home#contact"}
+                CONTACT US
+      = yield        
       
                 

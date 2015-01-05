@@ -1,3 +1,77 @@
+    
+.bdd-cont {
+    height: 300px;
+    background-color: #6C7A89;
+}
+.bdd {
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    color: green;
+    font-size: 1.2em;
+    padding: 5px ;
+    
+}
+.bdd-container {
+    width: 100%;
+    height: 10%;
+   // background-color: white;
+    color: white;
+}
+
+
+.angular-cont {
+    height: 300px;
+    background-color: #95A5A6;
+}
+.angular {
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    color: green;
+    font-size: 1.2em;
+    padding: 5px ;
+    
+}
+.angular-container {
+    width: 100%;
+    height: 10%;
+   // background-color: white;
+    color: white;
+}
+
+
+.ruby-cont {
+    height: 300px;
+    background-color: #6C7A89;
+}
+.ruby {
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    color: green;
+    font-size: 1.2em;
+    padding: 5px ;
+    
+}
+.ruby-container {
+    width: 100%;
+    height: 10%;
+   // background-color: white;
+    color: white;
+}
+
+.circle
+{
+width:30%;
+height: 80%;
+border-radius:50%;
+font-size:50px;
+color:#fff;
+line-height:150px;
+text-align:center;
+background:#000
+}
 .slideLink {
   float: left;
   padding: 0.8rem;
@@ -15,7 +89,7 @@
   
   .icon {
     font-size: 5rem;
-    color: whitesmoke;
+    //color: whitesmoke;
   }
   
   .title {
@@ -61,7 +135,6 @@
     margin: 0.5%;
     font-size: 1em;
     margin-left: 0.2%;
-    //color: #000;
     background:#fff;
     background: rgba(255,255,255, 0.5);
     -webkit-border-radius: 10px; 
@@ -94,7 +167,6 @@
     position:fixed;
     top:0;
     left:0;
-    //  height: 40px;
     z-index: 10; 
     width: 100%;
     
@@ -138,23 +210,18 @@
     position: relative;
 }
 .view1 h2 {
-    //text-transform: uppercase;
     color: #570534;
     text-align: center;
     position: relative;
     font-size: 2em;
-    //padding: 10px;
     background: #757575;
     top: 30%;
-    //margin: 20px 0 0 0
 }
 .view1 p {
     font-family: Georgia, serif;
     font-style: italic;
     font-size: 1.5em;
     position: relative;
-    //color: #000000;
-    //padding: 10px 20px 20px;
     text-align: center;
     top :30%;
 }
@@ -194,18 +261,14 @@
     text-align: center;
     position: relative;
     font-size: 2em;
-    //padding: 10px;
     background: #757575;
     top: 30%;
-    //margin: 20px 0 0 0
 }
 .view p {
     font-family: Georgia, serif;
     font-style: italic;
     font-size: 1.5em;
     position: relative;
-   // color: #000000;
-    //padding: 10px 20px 20px;
     text-align: center;
     top :30%;
 }
@@ -237,7 +300,6 @@
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
    filter: alpha(opacity=0);
    opacity: 0;
-   //color: black;
    -webkit-transition: all 0.2s linear;
    -moz-transition: all 0.2s linear;
    -o-transition: all 0.2s linear;
@@ -247,6 +309,7 @@
 .view-portfolio:hover .mask {
    right: 0;
 }
+
 .view-portfolio:hover img {
    margin-left: 100%;
 }
@@ -260,81 +323,78 @@
 
 
 #section6{
-    background:url('/assets/download1.jpg');
+    /* background:url('/assets/download1.jpg'); */
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section5{
-    background:url('/assets/sass-1.png');
+    /* background:url('/assets/sass-1.png'); */
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section7{
-    background:url('/assets/heroku.png');
+    /* background:url('/assets/heroku.png'); */
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section3{
-    background:url('/assets/HTML-5-Logo-HD-Wallpaper.jpg');
+    /* background:url('/assets/HTML-5-Logo-HD-Wallpaper.jpg'); */
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section0{
-    background:url('/assets/ruby_l.png');
+    //background:url('/assets/ruby_logo.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
-    //padding: 6% 0 0 0;    
-   
+      
 }
 #section1{
-    background:url('/assets/github.jpg');
+    /* background:url('/assets/github.jpg'); */
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
     
 }
 #section4{
-    background:url('/assets/angular_bg1.png');
+    /* background:url('/assets/angular_bg1.png'); */
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
     
 }
-.hero, .content{
-  //text-align:center; 
-  /* position:relative; */
-  width: 100%;
-}
+/* .hero, .content{ */
+/*     width: 100%; */
+/* } */
 
-.inner{
-    min-height: 100%;
-    /* position: relative; */
-}
+/* .inner{ */
+/*     min-height: 100%; */
+/*     /\* position: relative; *\/ */
+/* } */
 
-.hero .inner{
-  background: rgba(0,0,0,0.6) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}
+/* .hero .inner{ */
+/*   background: rgba(0,0,0,0.6) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;} */
 
 
-.copy{
-  position:absolute; 
-  top:20%; 
-  height:10em; 
-  margin-top:-5em; 
-  width:100%;
-}
+/* .copy{ */
+/*   position:absolute;  */
+/*   top:20%;  */
+/*   height:10em;  */
+/*   margin-top:-5em;  */
+/*   width:100%; */
+/* } */
 
-.hero h1, .hero p{ 
-  color:#fff;
-}
+/* .hero h1, .hero p{  */
+/*   color:#fff; */
+/* } */
 
-.content h1, .content p{
-  color:#333;
-}
+/* .content h1, .content p{ */
+/*   color:#333; */
+/* } */
 
 .margin-center {
     margin-right: 100px;
@@ -342,7 +402,7 @@
 }
 
 .block-text2 {
-    width: 100%;
+    width: 80%;
     height: 80%;
     border: 1px solid white;
     //background-color: #E4E496;
