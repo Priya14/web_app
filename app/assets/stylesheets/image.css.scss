@@ -1,6 +1,36 @@
+.hero, .content{
+  //text-align:center; 
+  /* position:relative; */
+  width: 100%;
+}
+
+.inner{
+    min-height: 100%;
+    /* position: relative; */
+}
+
+.hero .inner{
+  background: rgba(0,0,0,0.6) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAYAAACddGYaAAAAD0lEQVQIW2NkQABjRmQOAAM+AGkQsDBSAAAAAElFTkSuQmCC) repeat;}
+
+
+.copy{
+  position:absolute; 
+  top:20%; 
+  height:10em; 
+  margin-top:-5em; 
+  width:100%;
+}
+
+.hero h1, .hero p{ 
+  color:#fff;
+}
+
+.content h1, .content p{
+  color:#333;
+}
 
 .bdd-cont {
-    height: 250px;
+    height: 200px;
     background-color: #6C7A89;
 }
 .bdd {
@@ -21,7 +51,7 @@
 
 
 .angular-cont {
-    height: 250px;
+    height: 200px;
     background-color: #95A5A6;
 }
 .angular {
@@ -42,7 +72,7 @@
 
 
 .ruby-cont {
-    height: 250px;
+    height: 200px;
     background-color: #6C7A89;
 }
 .ruby {
@@ -323,45 +353,45 @@ background:#000
 
 
 #section6{
-    /* background:url('/assets/download1.jpg'); */
+    background:url('/assets/download1.jpg');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section5{
-    /* background:url('/assets/sass-1.png'); */
+    background:url('/assets/sass-1.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section7{
-    /* background:url('/assets/heroku.png'); */
+    background:url('/assets/heroku.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section3{
-    /* background:url('/assets/HTML-5-Logo-HD-Wallpaper.jpg'); */
+    background:url('/assets/HTML-5-Logo-HD-Wallpaper.jpg');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
 }
 #section0{
-    //background:url('/assets/ruby_logo.png');
+    background:url('/assets/ruby-logo.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
       
 }
 #section1{
-    /* background:url('/assets/github.jpg'); */
+    background:url('/assets/github.jpg');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
     
 }
 #section4{
-    /* background:url('/assets/angular_bg1.png'); */
+    background:url('/assets/angular_bg1.png');
     background-size:cover;
     background-position:center center;
     background-attachment:fixed;
@@ -402,7 +432,7 @@ background:#000
 }
 
 .block-text2 {
-    width: 80%;
+    width: 100%;
     height: 80%;
     border: 1px solid white;
     //background-color: #E4E496;

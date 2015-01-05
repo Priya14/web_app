@@ -25,24 +25,21 @@
     #fullpage
       
       #section0.section.active.hero
-        .row
-          %svg{:height => "220", :width => "720"}
-            %circle{:cx => "100", :cy => "100", :r => "60", :style => "fill:#E08283;"}
-            %circle{:cx => "230", :cy => "60", :r => "40", :style => "fill:#E08283;"}
-            %circle{:cx => "330", :cy => "60", :r => "17.11724276862369", :style => "fill:#E08283;"}
-        %br
-        %br
-        .row
+        .row.inner
+          %br
+          %br
+          %br
+
           .col-sm-12
-            
-            .white
-              .home-container
+            .home-container
+              .white
                 %i
                   %center
                     "CLEAN CODE MATTERS"
+         
         
       #section1.section.hero
-        .row
+        .row.inner
           %br
           %br
           %br
@@ -56,34 +53,34 @@
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-mortar-board{:style => "color: #019875;"}
+                    %span.icon.fa.fa-mortar-board{:style => "color: #FFF;"}
                     %p.title 
-                      .fa.green
+                      .white
                         Educational ERP
                     %p.summary
                       An end to end solution for educational institutions with a lot of emphasis on communication between various stakeholders.
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-users{:style => "color: #D35400;"}
+                    %span.icon.fa.fa-users{:style => "color: #FFF;"}
                     %p.title
-                      .fa.orange
+                      .white
                         Examination  Controller
                     %p.summary Integrating all the functionalities with respect to examination controller module in colleges.
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-clock-o{:style => "color: #4B77BE;"}
+                    %span.icon.fa.fa-clock-o{:style => "color: #FFF;"}
                     %p.title 
-                      .fa.blue
+                      .white
                         Online Examination Package
                     %p.summary A dynamically run online examination module with multi level authentication. Fully flexible and customization examination functionalities available.
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-building-o{:style => "color: #8E44AD;"}
+                    %span.icon.fa.fa-building-o{:style => "color: #FFF;"}
                     %p.title
-                      .fa.purple
+                      .white
                         Property Management System
                     %p.summary Solution to manage rental requirements for small to medium level properties in the US.
           %br
@@ -92,33 +89,33 @@
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-cloud{:style => "color: #DB0A5B;"}
+                    %span.icon.fa.fa-cloud{:style => "color: #FFF;"}
                     %p.title 
-                      .fa.pink
+                      .white
                         Online Social Marketing Application
                     %p.summary  A perfect place for corporate employees to check out their social marketing needs.
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-comments-o{:style => "color: #1F3A93;"}
+                    %span.icon.fa.fa-comments-o{:style => "color: #FFF;"}
                     %p.title 
-                      .fa.navy
+                      .white
                         Online Property Deal Application
                     %p.summary An integration platform for buyers, sellers and inter mediators to transact on property deals.
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-bank{:style => "color: #F64747;"}
+                    %span.icon.fa.fa-bank{:style => "color: #FFF;"}
                     %p.title 
-                      .fa.sunset
+                      .white
                         End to End Benefit Fund Solution
                     %p.summary Solution for a rapidly expanding small segment bank covering all aspects of benefit fund transactions.
               .col-sm-3
                 %a.slideLink
                   .slideContainer
-                    %span.icon.fa.fa-user{:style => "color: #F9BF3B;"}
+                    %span.icon.fa.fa-user{:style => "color: #FFF;"}
                     %p.title
-                      .fa.yellow
+                      .white
                         Consumer Application
                     %p.summary RESTful services for a mobile client.Designed for high Availability & Scalability.Javascript based web app.
 
@@ -127,7 +124,7 @@
         %br
         %br
  
-        .col-sm-12 
+        .col-sm-12.inner 
           .col-sm-12
             .col-sm-3
             .col-sm-2
@@ -184,8 +181,8 @@
 
                 
           .col-sm-12
-            .col-sm-1
-            .col-sm-5
+            
+            .col-sm-6
               %br
               .item
                 .col-sm-12
@@ -205,7 +202,7 @@
                         Senior Technical Architect (Java/J2EE),
                         %br
                         11 years experience in IT
-            .col-sm-5
+            .col-sm-6
             
               %br
               .item
@@ -229,10 +226,10 @@
 
 
       #section4.section.hero
-        .row 
+        .row.inner 
           .container
             .col-sm-6
-              %h3.black
+              %h3.white
                 CSS
 
               %IMG{:ALIGN => "Left", :BORDER => "0", :SRC => "/assets/s113143830.png"} 
@@ -240,21 +237,25 @@
                 Style Sheet Language used for describing the look and formatting of a document written in a markup language.
                 = link_to "Learn here...!" , 'http://www.w3.org/Style/CSS/Overview.en.html', :target => "_blank"
               %br
-              %h3.black
+              %br
+              %br
+              %h3.white
                 RAILS
               %IMG{:ALIGN => "Left", :BORDER => "0", :SRC => "/assets/s113106595.png"} 
               %h4.white
                 Ruby on Rails is an open-source web framework that’s optimized for programmer happiness and sustainable productivity. 
                 = link_to "Learn here...!" , 'http://rubyonrails.org/', :target => "_blank"
               %br
-              %h3.black
+              %br
+              %br
+              %h3.white
                 ANGULAR JS
               %IMG{:ALIGN => "Left", :BORDER => "0", :SRC => "/assets/s112905632.png"}  
               %h4.white
                 AngularJS, is an open-source web application framework, that assists with creating single-page applications,
                 = link_to "Learn here..!","https://docs.angularjs.org/tutorial", :target => "_blank"         
             .col-sm-6
-              %h3.black
+              %h3.white
                 HTML
               %IMG{:ALIGN => "Left", :BORDER => "0", :SRC => "/assets/s113815267.png"} 
               %h4.white
@@ -262,14 +263,18 @@
                 = link_to "Learn here..! ", "http://www.w3.org/TR/html5/", :target => "_blank"
 
               %br
-              %h3.black
+              %br
+              %br
+              %h3.white
                 JAVA SCRIPT   
               %IMG{:ALIGN => "Left", :BORDER => "0", :SRC => "/assets/s113224132.png"} 
               %h4.white
                 An object-oriented computer programming language commonly used to create interactive effects within web browsers.
                 = link_to "Learn here..!" , "https://developer.mozilla.org/en/docs/Web/JavaScript", :target => "_blank"
               %br
-              %h3.black
+              %br
+              %br
+              %h3.white
                 PSQL
               %IMG{:ALIGN => "Left", :BORDER => "0", :SRC => "/assets/s113251950.png"} 
               %h4.white
@@ -283,7 +288,7 @@
 
       #section5.section.hero
         
-        .row 
+        .row.inner 
           .pic-container
             .col-sm-12
               .view1.view-portfolio
@@ -331,7 +336,7 @@
                 
             
       #section6.section.hero
-        .col-sm-12
+        .col-sm-12.inner
           .career-container
             %center
               %h3
@@ -358,7 +363,7 @@
                 %p * Get kicks on using vi or emacs
                 %br
                 %p * Huge Plus Ruby/Rails Experience
-            %center
+          
               %h4.white
                 %p 
                   If you are interested send us your GitHub Handle (if any), reference to any previous work, blog and linkedin profile to  
@@ -368,12 +373,12 @@
 
 
       #section7.section.hero
-        .row 
+        .row.inner 
           .pic-container
-            .white
-              %center
-                %h1
-                  Contact Us
+            -# .white
+            -#   %center
+            -#     %h1
+            -#       Contact Us
             .col-sm-12
               .col-sm-1
               .col-sm-4
