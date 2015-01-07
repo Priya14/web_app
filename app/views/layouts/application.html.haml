@@ -7,10 +7,11 @@
     = favicon_link_tag 'favicon.ico'
     .container-fluid
       .header
+        %img.img-responsive{:src => "/assets/transparent_text_effect (5).png", :style => "width:20%; height:auto;"}/
         %center
           %ul#myMenu
-            -# .pull-left
-            -#   %img.img-responsive{:src => "/assets/logo.jpg", :style => "width:70%; height:auto;"}/
+            .pull-left
+             
             %li.active{"data-menuanchor" => "home"}
               %a{:href => "/home"}
                 HOME
@@ -18,7 +19,7 @@
               %a{:href => "/home#projects"}
                 PROJECTS
             %li{"data-menuanchor" => "blog"}
-              %a{:href => "/home/blog"}
+              %a{:href => "/home/blog", :target => "_blank"}
                 BLOG
             %li{"data-menuanchor" => "training"}
               %a{:href => "/home#training"} 
