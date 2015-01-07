@@ -1,12 +1,9 @@
 .hero, .content{
-  //text-align:center; 
-  /* position:relative; */
-  width: 100%;
+    width: 100%;
 }
 
 .inner{
     min-height: 100%;
-    /* position: relative; */
 }
 
 .hero .inner{
@@ -14,23 +11,23 @@
 
 
 .copy{
-  position:absolute; 
-  top:20%; 
-  height:10em; 
-  margin-top:-5em; 
-  width:100%;
+    position:absolute; 
+    top:20%; 
+    height:10em; 
+    margin-top:-5em; 
+    width:100%;
 }
 
 .hero h1, .hero p{ 
-  color:#fff;
+    color:#fff;
 }
 
 .content h1, .content p{
-  color:#333;
+    color:#333;
 }
 
 .bdd-cont {
-    height: 200px;
+    height: 220px;
     background-color: #6C7A89;
 }
 .bdd {
@@ -51,7 +48,7 @@
 
 
 .angular-cont {
-    height: 200px;
+    height: 220px;
     background-color: #95A5A6;
 }
 .angular {
@@ -66,13 +63,12 @@
 .angular-container {
     width: 100%;
     height: 10%;
-   // background-color: white;
     color: white;
 }
 
 
 .ruby-cont {
-    height: 200px;
+    height: 220px;
     background-color: #6C7A89;
 }
 .ruby {
@@ -93,14 +89,14 @@
 
 .circle
 {
-width:30%;
-height: 80%;
-border-radius:50%;
-font-size:50px;
-color:#fff;
-line-height:150px;
-text-align:center;
-background:#000
+    width:30%;
+    height: 80%;
+    border-radius:50%;
+    font-size:50px;
+    color:#fff;
+    line-height:150px;
+    text-align:center;
+    background:#000
 }
 .slideLink {
   float: left;
@@ -248,7 +244,7 @@ background:#000
     top: 30%;
 }
 .view1 p {
-    font-family: Georgia, serif;
+    //font-family: Georgia, serif;
     font-style: italic;
     font-size: 1.5em;
     position: relative;
@@ -456,7 +452,7 @@ background:#000
 .block-text2 p {
     
     font-family: Georgia;
-    font-style: italic;
+    //font-style: italic;
     //line-height: 20px;
 }
 .block-text {
@@ -481,7 +477,7 @@ background:#000
 }
 .block-text p {
     //color: #585858;
-    font-family: Georgia;
+    /* font-family: Georgia; */
     font-style: italic;
     //line-height: 20px;
 }
@@ -492,20 +488,13 @@ background:#000
     background-position: 0 -1298px;
     height: 44px;
     width: 50px;
-   
-    //background-color: #E4E496;
 }
 .block-text ins {
-    //bottom: -44px;
     left: 50%;
-    //margin-left: -60px;
 }
 
 .block-text2 ins {
-    //bottom: -44px;
     left: 50%;
-    /* font-size: 1em; */
-    //margin-left: -60px;
 }
 
 
@@ -520,7 +509,6 @@ background:#000
 }
 
 .person-text {
-    //padding: 10px 0 0;
     text-align: center;
     z-index: 2;
 }
@@ -533,7 +521,7 @@ background:#000
 }
 .person-text i {
     color: white;
-    font-family: Georgia;
+    /* font-family: Georgia; */
     font-size: 1.2em;
 }
 .rel {
@@ -541,15 +529,15 @@ background:#000
 }
 
 h3.normal {
-    font-style: italic;
-    font-family: sans-serif;
+    //font-style: italic;
+    /* font-family: sans-serif; */
     font-size: 21px;
     color: #c8c8c9;
 }
 
 .shadow{
   margin-top: -5px;
-  font-family: Mr Dafoe, sans-serif;
+  /* font-family: Mr Dafoe, sans-serif; */
   font-size: 2em;
   text-align: center;
   //text-shadow: (0 1px 0 #FFF);
